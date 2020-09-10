@@ -417,7 +417,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			// now add back relevant values
 			cbxPrearmadaEscritorio.addItem("Seleccionar");
 			cbxPrearmadaEscritorio.addItem("Cpu Computador Gamer Intel Core I7 9na Gen 1tb 16gb Gtx1650");
-			cbxPrearmadaEscritorio.addItem("Computador Completo Para Hogar Cyber Oficina Core 2 I3 I5 I7");
+			cbxPrearmadaEscritorio.addItem("Computador Completo Para Hogar Cyber Oficina Core 2");
 			cbxPrearmadaEscritorio.addItem("Pc Cpu Gamer Lenovo Ryzen 7 2tb + 128ssd + 16 Gb + Video 4gb");
 			cbxPrearmadaEscritorio.addItem("CPc Gamer I7 I5 I3 Ryzen 5 7 Video Gtx 1660 2060 570");
 			cbxPrearmadaEscritorio.addItem("Lenovo Intel Core I5 9na 8 Gb + 1 Tb 4.1ghz");
@@ -752,22 +752,27 @@ public class GestionEscritorio extends javax.swing.JFrame {
 						" WIndows 8.1","USB 2.0 x 3","249.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computador Completo Para Hogar Cyber Oficina Core 2")) {
 			txaDetallesEscritorio.setText(
-				llenarPreArmadas("SERVICOMPU","Dell","Intel core 2 duo 3.0ghz",
+				llenarPreArmadas("PUERTO LIBRE","Dell","Intel core 2 duo 3.0ghz",
 						"160GB HDD","2 GB de DRAM DDR2","No Incluye",
 						"No Aplica","15Inc","DVD WRITER","INTEL GRAPHICS",
-						" WIndows 8.1","USB 2.0 x 3","130.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Cpu Computador Gamer Intel Core I7 9na Gen 1tb 16gb Gtx1650")) {
+						"Windows 10 Home","USB 2.0 x 3","130.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Pc Cpu Gamer Lenovo Ryzen 7 2tb + 128ssd + 16 Gb + Video 4gb")) {
 			txaDetallesEscritorio.setText(
-				llenarPreArmadas("SERVICOMPU","LENOVO","Intel core 2 duo",
-						"64GB HDD","2 GB de DRAM DDR2","No Incluye",
-						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
-						" WIndows 8.1","USB 2.0 x 3","249.00"));
+				llenarPreArmadas("PUERTO LIBRE","LENOVO","AMD Ryzen 7 2700",
+						"2TB HDD","16 GB de DRAM DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","AMD Radeon ™ RX 560 4GB",
+						"Windows 10 Home","USB 3.0 x 3","979.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPc Gamer I7 I5 I3 Ryzen 5 7 Video Gtx 1660 2060 570")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PUERTO LIBRE","LENOVO","AMD Ryzen 7 2700",
+						"2TB HDD","16 GB de DRAM DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","AMD Radeon ™ RX 560 4GB",
+						"Windows 10 Home","USB 3.0 x 3","979.00"));
 		} else {
 		}
         }//GEN-LAST:event_cbxPrearmadaEscritorioItemStateChanged
 /*
-			cbxPrearmadaEscritorio.addItem("");
-			cbxPrearmadaEscritorio.addItem("Computador Completo Para Hogar Cyber Oficina Core 2 I3 I5 I7");
+
 			cbxPrearmadaEscritorio.addItem("Pc Cpu Gamer Lenovo Ryzen 7 2tb + 128ssd + 16 Gb + Video 4gb");
 			cbxPrearmadaEscritorio.addItem("CPc Gamer I7 I5 I3 Ryzen 5 7 Video Gtx 1660 2060 570");
 			cbxPrearmadaEscritorio.addItem("Lenovo Intel Core I5 9na 8 Gb + 1 Tb 4.1ghz");
