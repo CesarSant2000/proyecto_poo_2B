@@ -1,4 +1,4 @@
-package proyecto;
+package final_poo;
 
 /**
  *
