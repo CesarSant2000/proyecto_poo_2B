@@ -45,12 +45,12 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 jPanel2 = new javax.swing.JPanel();
                 jButton1 = new javax.swing.JButton();
                 jPanel6 = new javax.swing.JPanel();
-                jComboBox3 = new javax.swing.JComboBox<>();
+                cbxProvincia = new javax.swing.JComboBox<>();
                 jCheckBox1 = new javax.swing.JCheckBox();
                 jPanel3 = new javax.swing.JPanel();
-                jComboBox2 = new javax.swing.JComboBox<>();
+                cbxPrearmadaEscritorio = new javax.swing.JComboBox<>();
                 jScrollPane2 = new javax.swing.JScrollPane();
-                jTextArea1 = new javax.swing.JTextArea();
+                txaDetallesEscritorio = new javax.swing.JTextArea();
                 jCheckBox2 = new javax.swing.JCheckBox();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -230,7 +230,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 jPanel2.setLayout(jPanel2Layout);
                 jPanel2Layout.setHorizontalGroup(
                         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 3, Short.MAX_VALUE)
                 );
                 jPanel2Layout.setVerticalGroup(
                         jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -241,7 +241,12 @@ public class GestionEscritorio extends javax.swing.JFrame {
 
                 jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Provincia donde desea buscar"));
 
-                jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Azuay", "Bolívar", "Cañar", "Chimborazo", "Cotopaxi", "Esmeraldas", "Guayas", "Imbabura", "Loja", "Los Ríos", "Manabí", "Napo", "Pastaza", "Pichincha", "Santo Domingo de los Tsáchilas", "Tungurahua" }));
+                cbxProvincia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Azuay", "Bolívar", "Cañar", "Chimborazo", "Cotopaxi", "Esmeraldas", "Guayas", "Imbabura", "Loja", "Los Ríos", "Manabí", "Napo", "Pastaza", "Pichincha", "Santo Domingo de los Tsáchilas", "Tungurahua" }));
+                cbxProvincia.addItemListener(new java.awt.event.ItemListener() {
+                        public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                                cbxProvinciaItemStateChanged(evt);
+                        }
+                });
 
                 javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
                 jPanel6.setLayout(jPanel6Layout);
@@ -249,28 +254,34 @@ public class GestionEscritorio extends javax.swing.JFrame {
                         jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbxProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
                 jPanel6Layout.setVerticalGroup(
                         jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbxProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
-                jCheckBox1.setText("jCheckBox1");
+                jCheckBox1.setText("Activar");
 
                 jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Pre-armadas"));
 
-                jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+                cbxPrearmadaEscritorio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar" }));
+                cbxPrearmadaEscritorio.addItemListener(new java.awt.event.ItemListener() {
+                        public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                                cbxPrearmadaEscritorioItemStateChanged(evt);
+                        }
+                });
 
                 jScrollPane2.setBorder(javax.swing.BorderFactory.createTitledBorder("Detalles"));
 
-                jTextArea1.setColumns(20);
-                jTextArea1.setRows(5);
-                jScrollPane2.setViewportView(jTextArea1);
+                txaDetallesEscritorio.setColumns(20);
+                txaDetallesEscritorio.setRows(5);
+                txaDetallesEscritorio.setEnabled(false);
+                jScrollPane2.setViewportView(txaDetallesEscritorio);
 
                 javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
                 jPanel3.setLayout(jPanel3Layout);
@@ -278,24 +289,24 @@ public class GestionEscritorio extends javax.swing.JFrame {
                         jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(23, 23, 23)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbxPrearmadaEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())
                 );
                 jPanel3Layout.setVerticalGroup(
                         jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(60, 60, 60)
+                                .addComponent(cbxPrearmadaEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())
                 );
 
-                jCheckBox2.setText("jCheckBox2");
+                jCheckBox2.setText("Activar");
 
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
                 getContentPane().setLayout(layout);
@@ -323,7 +334,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(jCheckBox2)
                                                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                                                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jCheckBox1)
@@ -346,7 +357,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                                                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(jCheckBox2)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)))
                                 .addComponent(jButton1)
@@ -356,6 +367,361 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 pack();
         }// </editor-fold>//GEN-END:initComponents
 
+        private void cbxProvinciaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxProvinciaItemStateChanged
+		// TODO add your handling code here:
+		if (cbxProvincia.getSelectedItem().equals("Seleccionar")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+		} else if (cbxProvincia.getSelectedItem().equals("Azuay")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Bolívar")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Cañar")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Chimborazo")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Cotopaxi")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Esmeraldas")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Guayas")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5");
+			cbxPrearmadaEscritorio.addItem("APPLE iMac Intel Core I7");
+			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 3070");
+			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070");
+			cbxPrearmadaEscritorio.addItem("DELL AIO OPTIPLEX 5270");
+			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070 UFF");
+			cbxPrearmadaEscritorio.addItem("DELL AIO Inspiron 5490");
+			cbxPrearmadaEscritorio.addItem("HP ProDesk 400 G6");
+			cbxPrearmadaEscritorio.addItem("HP AIO ProOne 400 G5");
+			cbxPrearmadaEscritorio.addItem("HP EliteDesk 800 G4");
+			cbxPrearmadaEscritorio.addItem("HP EliteDesk 705 G4");
+			cbxPrearmadaEscritorio.addItem("HP ProDesk 400 G6");
+			cbxPrearmadaEscritorio.addItem("QUASAD AIO Intel Celeron G4930");
+			cbxPrearmadaEscritorio.addItem("QUASAD I7-8700 Z370");
+			cbxPrearmadaEscritorio.addItem("QUASAD AIO T24");
+			cbxPrearmadaEscritorio.addItem("Dell Optiplex 7060");
+			cbxPrearmadaEscritorio.addItem("Dell Optiplex 3060");
+			cbxPrearmadaEscritorio.addItem("Dell Optiplex 3060 SFF");
+			cbxPrearmadaEscritorio.addItem("PBA Torre");
+		} else if (cbxProvincia.getSelectedItem().equals("Imbabura")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Loja")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Los Ríos")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Manabí")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Napo")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Pastaza")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Pichincha")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("HOGAR CI3-8");
+			cbxPrearmadaEscritorio.addItem("SEMIPROFESIONAL CI5-8");
+			cbxPrearmadaEscritorio.addItem("PROFESIONAL CI7-16");
+			cbxPrearmadaEscritorio.addItem("COMPUTADOR ARMADO I3");
+			cbxPrearmadaEscritorio.addItem("COMPUTADOR ARMADO I7");
+			cbxPrearmadaEscritorio.addItem("COMPUTADOR ARMADO I3-8VA GEN");
+
+		} else if (cbxProvincia.getSelectedItem().equals("Santo Domingo de los Tsáchilas")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else if (cbxProvincia.getSelectedItem().equals("Tungurahua")) {
+			// we know that the user picked "Course 1", now change box2 to match
+			// first clear everything
+			cbxPrearmadaEscritorio.removeAllItems();
+			// now add back relevant values
+			cbxPrearmadaEscritorio.addItem("Seleccionar");
+			cbxPrearmadaEscritorio.addItem("A1");
+			cbxPrearmadaEscritorio.addItem("A2");
+		} else {
+			// ...
+		}
+        }//GEN-LAST:event_cbxProvinciaItemStateChanged
+
+        private void cbxPrearmadaEscritorioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxPrearmadaEscritorioItemStateChanged
+		// TODO add your handling code here:
+		if (cbxPrearmadaEscritorio.getSelectedItem() == null) {
+			txaDetallesEscritorio.setText("");
+		}else
+		if (cbxPrearmadaEscritorio.getSelectedItem().equals("Seleccionar")) {
+			txaDetallesEscritorio.setText("");
+		}else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HOGAR CI3-8")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcLaptop","PC HOGAR","INTEL CORE I3",
+						"1 TB","8 RAM DDR4","Webcam + Micrófono",
+						"No Aplica","20Inc","DVD WRITER","INTEL GRAPHICS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","629.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("SEMIPROFESIONAL CI5-8")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcLaptop","PC SEMIPROFESIONAL","INTEL CORE I5",
+						"2 TB","8 RAM DDR4","Webcam + Micrófono",
+						"No Aplica","20Inc","DVD WRITER","INTEL GRAPHICS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","749.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("PROFESIONAL CI7-16")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcLaptop","PC PROFESIONAL","INTEL CORE I7",
+						"2 TB","16 RAM DDR4","Webcam + Micrófono",
+						"No Aplica","20Inc","DVD WRITER","4 GB DEDICADO PCI XPRESS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","1,099.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I3")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcShop","PCSHOP","Intel Core I3-9100 - 3.6ghz",
+						"WD 1tb 7200rpm","Kingston 8gb Ddr4 Pc-2400","No Incluye",
+						"No Aplica","LG 19.5","DVD WRITER","INTEL GRAPHICS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","560.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I7")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcShop","PCSHOP","Intel Core I7-9700 - 3.0ghz",
+						"WD 1tb 7200rpm","Kingston 8gb Ddr4 Pc-2400","No Incluye",
+						"No Aplica","LG 19.5","DVD WRITER","INTEL GRAPHICS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","899.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I3-8VA GEN")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcShop","PCSHOP","Intel Core I3-8100 - 3.6ghz",
+						"WD 1tb 7200rpm","Adata 4gb Pc-2400 Ddr4","No Incluye",
+						"No Aplica","HP 18.5","DVD WRITER","INTEL GRAPHICS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","516.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Apple","Intel Core I5",
+						"512GB-SSD","8GB","Si",
+						"No Aplica","27Inc 5K Retina","DVD WRITER","INTEL GRAPHICS",
+						"Mac OS","USB 3.0 x 4","2,726.67"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I7")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Apple","Intel Core I7",
+						"512GB-SSD","8GB","Si",
+						"No Aplica","27Inc 5K Retina","DVD WRITER","INTEL GRAPHICS",
+						"Mac OS","USB 3.0 x 4","3,128.89"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 3070")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Dell","Intel Core I5-9700",
+						"512GB-SSD","4GB","Si",
+						"No Aplica","MONITOR E2020H 20.5","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 6","886.67"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Dell","Intel Core I7-8565",
+						"256GB-M.2","16GB","Si",
+						"No Aplica","MONITOR E2020H 20.5","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 6","1,272.22"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL AIO OPTIPLEX 5270")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Dell","Intel Core I5-9500",
+						"256GB-M.2","8GB","No Incluye",
+						"No Aplica","DELL 20.5","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 5","1,041.11"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070 UFF")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Dell","Intel Core I5-8250",
+						"256GB-SDD","8GB","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 6","994.44"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL AIO Inspiron 5490")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Dell","Intel Core I5-10210U",
+						"1TB","12GB","Si",
+						"No Aplica","23.8 TOUCH","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 3","1,133.33"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ProDesk 400 G6")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-9700",
+						"1TB DW","8GB","Si",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 3","716.67"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP AIO ProOne 400 G5")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-9700",
+						"1TB DW","8GB","Si",
+						"No Aplica","23.8Inc","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.1 x 2","887.78"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 800 G4")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-8700",
+						"1TB DW","8GB","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.1 x 5","1,165.56"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 705 G4")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","HP","AMD Ryzen 5 Pro 2400g",
+						"1TB DW","8GB","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.1 x 5","1,082.22"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ProDesk 400 G6")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-9700",
+						"1TB DW","8GB","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 2","964.44"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("QUASAD AIO Intel Celeron G4930")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","QUASAD","Intel Celeron G4930",
+						"256GB-SSD","8GB","Si",
+						"No Aplica","23.8Inc","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 3","480.21"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("QUASAD I7-8700 Z370")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","QUASAD","Intel Core I7-8700",
+						"1TB","8GB","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 6","929.74"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("QUASAD AIO T24")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","QUASAD","Intel Core I7-7700",
+						"240GB SSD","8GB","Si",
+						"No Aplica","23.8Inc","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 3","1,073.19"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 7060")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("TecnoSmart","Dell","Intel Core i5 8500",
+						"1TB HHD","8GB DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 4","1,094.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 3060")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("TecnoSmart","Dell","Intel Core i5 8400",
+						"1TB HHD","4GB DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 4","889.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 3060 SFF")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("TecnoSmart","Dell","Intel Core i5 8400",
+						"500GB SSD","8GB DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 4","964.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("PBA Torre")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("TecnoSmart","Dell","AMD Ryzen 7 3700x",
+						"1TB HHD","16GB DDR4","No Incluye",
+						"No Aplica","GTX 1650 SUPER 4GB","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.1 x 6","1,264.99"));
+		} else {
+		}
+        }//GEN-LAST:event_cbxPrearmadaEscritorioItemStateChanged
+
+	private String llenarPreArmadas (String tienda, String marca, String procesador,
+					String disco, String memoria,
+					String webcam, String bateria,
+					String pantalla, String unidad,
+					String video, String so,
+					String puertos, String precio){
+		return "Tienda : " + tienda +"\n"
+				+ "\n"
+				+ "Marca : " + marca+"\n"
+				+ "\n"
+				+ "Procesador : "+ procesador +"\n"
+				+ "\n"
+				+ "Disco : "+ disco +"\n"
+				+ "\n"
+				+ "Memoria : "+memoria+"\n"
+				+ "\n"
+				+ "WebCam : "+webcam+"\n"
+				+ "\n"
+				+ "Bateria : "+bateria+"\n"
+				+ "\n"
+				+ "Pantalla : "+pantalla+"\n"
+				+ "\n"
+				+ "Unidad : "+unidad+"\n"
+				+ "\n"
+				+ "Video : "+video+"\n"
+				+ "\n"
+				+ "S.O : "+so+"\n"
+				+ "\n"
+				+ "Puertos : "+puertos+"\n"
+				+ "\n"
+				+ "Precio : US$ "+precio+"\n";
+	} 
 	/**
 	 * @param args the command line arguments
 	 */
@@ -392,12 +758,12 @@ public class GestionEscritorio extends javax.swing.JFrame {
 	}
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
+        private javax.swing.JComboBox<String> cbxPrearmadaEscritorio;
+        private javax.swing.JComboBox<String> cbxProvincia;
         private javax.swing.JButton jButton1;
         private javax.swing.JCheckBox jCheckBox1;
         private javax.swing.JCheckBox jCheckBox2;
         private javax.swing.JComboBox<String> jComboBox1;
-        private javax.swing.JComboBox<String> jComboBox2;
-        private javax.swing.JComboBox<String> jComboBox3;
         private javax.swing.JComboBox<String> jComboBox4;
         private javax.swing.JPanel jPanel1;
         private javax.swing.JPanel jPanel2;
@@ -409,7 +775,6 @@ public class GestionEscritorio extends javax.swing.JFrame {
         private javax.swing.JRadioButton jRadioButton1;
         private javax.swing.JRadioButton jRadioButton2;
         private javax.swing.JScrollPane jScrollPane2;
-        private javax.swing.JTextArea jTextArea1;
         private javax.swing.JPanel panelEProcesador;
         private javax.swing.JPanel panelVentilacion;
         private javax.swing.JRadioButton rbtnEi3;
@@ -417,6 +782,6 @@ public class GestionEscritorio extends javax.swing.JFrame {
         private javax.swing.JRadioButton rbtnEi7;
         private javax.swing.JRadioButton rbtnLiquida;
         private javax.swing.JRadioButton rbtnVentilador;
+        private javax.swing.JTextArea txaDetallesEscritorio;
         // End of variables declaration//GEN-END:variables
 }
-
