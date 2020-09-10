@@ -11,6 +11,13 @@ public class Tiendas {
     String ciudad;
     LinkedList<Producto> productos;
     
+    public Tiendas(String nombre, String provincia, String ciudad, LinkedList<Producto> productos) {
+        this.nombre = nombre;
+        this.provincia = provincia;
+        this.ciudad = ciudad;
+        this.productos = productos;
+    }
+    
     public static double totalFactura(LinkedList<Producto> productosComprados){
         double total = 0;
         for (Producto productoComprado : productosComprados) {
