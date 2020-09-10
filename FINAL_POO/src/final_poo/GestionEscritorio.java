@@ -394,8 +394,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			cbxPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
 			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("A1");
-			cbxPrearmadaEscritorio.addItem("A2");
+			cbxPrearmadaEscritorio.addItem("Pc Intel core 2 duo");
 		} else if (cbxProvincia.getSelectedItem().equals("Cañar")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
@@ -740,12 +739,17 @@ public class GestionEscritorio extends javax.swing.JFrame {
 						"2TB HHD + 128GB SSD M.2","16 GB de DRAM DDR4","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","RTX 2060 SUPER 8GB",
 						" WIndows 10 PRO","USB 3.1 x 6","2500.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Pc Intel core 2 duo")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("SERVICOMPU","Dell","Intel core 2 duo",
+						"2TB HHD + 128GB SSD M.2","16 GB de DRAM DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","RTX 2060 SUPER 8GB",
+						" WIndows 10 PRO","USB 3.1 x 6","2500.00"));
 		} else {
 		}
         }//GEN-LAST:event_cbxPrearmadaEscritorioItemStateChanged
 /*
-			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i9 ULTRA CREATORS");
-			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i9 ULTRA");	
+	
 	*/
 	private String llenarPreArmadas (String tienda, String marca, String procesador,
 					String disco, String memoria,
@@ -779,6 +783,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 				+ "\n"
 				+ "Precio : US$ "+precio+"\n";
 	} 
+
 	/**
 	 * @param args the command line arguments
 	 */
