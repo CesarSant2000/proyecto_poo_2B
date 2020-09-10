@@ -394,7 +394,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			cbxPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
 			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Pc Intel core 2 duo");
+			cbxPrearmadaEscritorio.addItem("");
 		} else if (cbxProvincia.getSelectedItem().equals("Cañar")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
@@ -409,16 +409,21 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			cbxPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
 			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("A1");
-			cbxPrearmadaEscritorio.addItem("A2");
+			cbxPrearmadaEscritorio.addItem("Pc Intel core 2 duo");
 		} else if (cbxProvincia.getSelectedItem().equals("Cotopaxi")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
 			cbxPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
 			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("A1");
-			cbxPrearmadaEscritorio.addItem("A2");
+			cbxPrearmadaEscritorio.addItem("Cpu Computador Gamer Intel Core I7 9na Gen 1tb 16gb Gtx1650");
+			cbxPrearmadaEscritorio.addItem("Computador Completo Para Hogar Cyber Oficina Core 2 I3 I5 I7");
+			cbxPrearmadaEscritorio.addItem("Pc Cpu Gamer Lenovo Ryzen 7 2tb + 128ssd + 16 Gb + Video 4gb");
+			cbxPrearmadaEscritorio.addItem("CPc Gamer I7 I5 I3 Ryzen 5 7 Video Gtx 1660 2060 570");
+			cbxPrearmadaEscritorio.addItem("Lenovo Intel Core I5 9na 8 Gb + 1 Tb 4.1ghz");
+			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 9na Gen 1tb 4gb Led 20 Computadora");
+			cbxPrearmadaEscritorio.addItem("Cpu Computadora Intel Core I5 8va Gen 1tb 4gb");
+			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
 		} else if (cbxProvincia.getSelectedItem().equals("Esmeraldas")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
@@ -616,37 +621,37 @@ public class GestionEscritorio extends javax.swing.JFrame {
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL AIO Inspiron 5490")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep","Dell","Intel Core I5-10210U",
-						"1TB","12GB","Si",
+						"1TB HDD","12GB","Si",
 						"No Aplica","23.8 TOUCH","DVD WRITER","INTEL GRAPHICS",
 						" WIndows 10 PRO","USB 3.0 x 3","1,133.33"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ProDesk 400 G6")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-9700",
-						"1TB DW","8GB","Si",
+						"1TB HDD","8GB","Si",
 						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
 						" WIndows 10 PRO","USB 3.0 x 3","716.67"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP AIO ProOne 400 G5")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-9700",
-						"1TB DW","8GB","Si",
+						"1TB HDD","8GB","Si",
 						"No Aplica","23.8Inc","DVD WRITER","INTEL GRAPHICS",
 						" WIndows 10 PRO","USB 3.1 x 2","887.78"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 800 G4")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-8700",
-						"1TB DW","8GB","No Incluye",
+						"1TB HDD","8GB","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
 						" WIndows 10 PRO","USB 3.1 x 5","1,165.56"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 705 G4")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep","HP","AMD Ryzen 5 Pro 2400g",
-						"1TB DW","8GB","No Incluye",
+						"1TB HDD","8GB","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","Radeon",
 						" WIndows 10 PRO","USB 3.1 x 5","1,082.22"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ProDesk 400 G6")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-9700",
-						"1TB DW","8GB","No Incluye",
+						"1TB HDD","8GB","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
 						" WIndows 10 PRO","USB 3.0 x 2","964.44"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("QUASAD AIO Intel Celeron G4930")) {
@@ -670,13 +675,13 @@ public class GestionEscritorio extends javax.swing.JFrame {
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 7060")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("TecnoSmart","Dell","Intel Core i5 8500",
-						"1TB HHD","8GB DDR4","No Incluye",
+						"1TB HDD","8GB DDR4","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
 						" WIndows 10 PRO","USB 3.0 x 4","1,094.99"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 3060")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("TecnoSmart","Dell","Intel Core i5 8400",
-						"1TB HHD","4GB DDR4","No Incluye",
+						"1TB HDD","4GB DDR4","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
 						" WIndows 10 PRO","USB 3.0 x 4","889.99"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 3060 SFF")) {
@@ -688,31 +693,31 @@ public class GestionEscritorio extends javax.swing.JFrame {
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("PBA Torre")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("TecnoSmart","Dell","AMD Ryzen 7 3700x",
-						"1TB HHD","16GB DDR4","No Incluye",
+						"1TB HDD","16GB DDR4","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","GTX 1650 SUPER 4GB",
 						" WIndows 10 PRO","USB 3.1 x 6","1,264.99"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ALL IN ONE 22-B201LA")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Computadoras De Venta","Hp","AMD Quad-Core A6-7310",
-						"1TB HHD","4 GB de DRAM DDR3","No Incluye",
+						"1TB HDD","4 GB de DRAM DDR3","No Incluye",
 						"No Aplica","21,5Inc","DVD WRITER","Radeon™ R4",
 						" WIndows 10","USB 3.1 x 2","580.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i3 MAX")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i3 9100F",
-						"1TB HHD","8 GB de DRAM DDR4","No Incluye",
+						"1TB HDD","8 GB de DRAM DDR4","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","GTX 1030 2GB",
 						" WIndows 10","USB 3.1 x 4","700.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i7 PLUS")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i7 10700",
-						"2TB HHD + 128GB SSD","16 GB de DRAM DDR4","No Incluye",
+						"2TB HDD + 128GB SSD","16 GB de DRAM DDR4","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","GTX 1660 SUPER 6GB",
 						" WIndows 10","USB 3.1 x 6","1600.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i7 MAX")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i3 9700F",
-						"1TB HHD + 128GB SSD","16 GB de DRAM DDR4","No Incluye",
+						"1TB HDD + 128GB SSD","16 GB de DRAM DDR4","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","GTX 1650 SUPER 4GB",
 						" WIndows 10","USB 3.1 x 4","1300.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i5 MAX")) {
@@ -724,32 +729,51 @@ public class GestionEscritorio extends javax.swing.JFrame {
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i3 PLUS")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i3 10100",
-						"1TB HHD + 240GB SSD","8 GB de DRAM DDR4","No Incluye",
+						"1TB HDD + 240GB SSD","8 GB de DRAM DDR4","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","GTX 1030 2GB",
 						" WIndows 10","USB 3.1 x 4","800.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i9 ULTRA CREATORS")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i9 9900k",
-						"2TB HHD + 128GB SSD M.2","32 GB de DRAM DDR4","No Incluye",
+						"2TB HDD + 128GB SSD M.2","32 GB de DRAM DDR4","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","RTX 2070 SUPER 8GB",
 						" WIndows 10 PRO","USB 3.1 x 6","3000.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i9 ULTRA")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i9 9900k",
-						"2TB HHD + 128GB SSD M.2","16 GB de DRAM DDR4","No Incluye",
+						"2TB HDD + 128GB SSD M.2","16 GB de DRAM DDR4","No Incluye",
 						"No Aplica","No Incluye","DVD WRITER","RTX 2060 SUPER 8GB",
 						" WIndows 10 PRO","USB 3.1 x 6","2500.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Pc Intel core 2 duo")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("SERVICOMPU","Dell","Intel core 2 duo",
-						"2TB HHD + 128GB SSD M.2","16 GB de DRAM DDR4","No Incluye",
-						"No Aplica","No Incluye","DVD WRITER","RTX 2060 SUPER 8GB",
-						" WIndows 10 PRO","USB 3.1 x 6","2500.00"));
+						"64GB HDD","2 GB de DRAM DDR2","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 8.1","USB 2.0 x 3","249.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computador Completo Para Hogar Cyber Oficina Core 2")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("SERVICOMPU","Dell","Intel core 2 duo 3.0ghz",
+						"160GB HDD","2 GB de DRAM DDR2","No Incluye",
+						"No Aplica","15Inc","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 8.1","USB 2.0 x 3","130.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Cpu Computador Gamer Intel Core I7 9na Gen 1tb 16gb Gtx1650")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("SERVICOMPU","LENOVO","Intel core 2 duo",
+						"64GB HDD","2 GB de DRAM DDR2","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 8.1","USB 2.0 x 3","249.00"));
 		} else {
 		}
         }//GEN-LAST:event_cbxPrearmadaEscritorioItemStateChanged
 /*
-	
+			cbxPrearmadaEscritorio.addItem("");
+			cbxPrearmadaEscritorio.addItem("Computador Completo Para Hogar Cyber Oficina Core 2 I3 I5 I7");
+			cbxPrearmadaEscritorio.addItem("Pc Cpu Gamer Lenovo Ryzen 7 2tb + 128ssd + 16 Gb + Video 4gb");
+			cbxPrearmadaEscritorio.addItem("CPc Gamer I7 I5 I3 Ryzen 5 7 Video Gtx 1660 2060 570");
+			cbxPrearmadaEscritorio.addItem("Lenovo Intel Core I5 9na 8 Gb + 1 Tb 4.1ghz");
+			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 9na Gen 1tb 4gb Led 20 Computadora");
+			cbxPrearmadaEscritorio.addItem("Cpu Computadora Intel Core I5 8va Gen 1tb 4gb");
+			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");	
 	*/
 	private String llenarPreArmadas (String tienda, String marca, String procesador,
 					String disco, String memoria,
