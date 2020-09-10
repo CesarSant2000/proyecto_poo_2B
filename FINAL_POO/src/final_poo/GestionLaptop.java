@@ -57,11 +57,10 @@ public class GestionLaptop extends javax.swing.JFrame {
         cmbProvincias = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("jpanel1");
+        setTitle("Laptop");
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Pre-armadas"));
 
-        cmbLaptop.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cmbLaptop.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 cmbLaptopItemStateChanged(evt);
@@ -79,10 +78,10 @@ public class GestionLaptop extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(cmbLaptop, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(cmbLaptop, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -349,100 +348,36 @@ public class GestionLaptop extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    public ArrayList datos(String dato){
-    ArrayList<String> computadores= new ArrayList<>();
-    if (!cmbProvincias.getSelectedItem().toString().equals("Seleccionar figura")) {
-                switch (cmbProvincias.getSelectedItem().toString()) {
-                    case "Azuay":
-                        break;
-                    case "Bolívar":
-                        break;
-                    case "Cañar":
-                        break;
-                    case "Chimborazo":
-                        break;
-                    case "Cotopaxi":
-                        break;
-                    case "Esmeraldas":
-                        break;
-                    case "Guayas":
-                        break;
-                    case "Imbabura":
-                        break;
-                    case "Loja":
-                        break;
-                    case "Los Ríos":
-                        break;
-                    case "Manabí":
-                        break;
-                    case "Napo":
-                        break;
-                    case "Pastaza":
-                        break;
-                    case "Pichincha": 
-                        computadores.add("DELL 15-5593");
-                        computadores.add("DELL G5 -5500");
-                        computadores.add("DELL 14-5493");
-                        computadores.add("DELL -14-3493");
-                        computadores.add("DELL G5-10MA GEN");
-                        computadores.add("DELL-15-3593 (CORE I5)");
-                        computadores.add("DELL 15-3593 (CORE I7)");
-                        computadores.add("PORTATIL HP PROBOOK 440 G6");
-                        computadores.add("PORTÁTIL INSPIRON DELL G7");
-                        computadores.add("MateBook D 15 AMD");
-                        computadores.add("A314-32-C0BJ 14");
-                        computadores.add("MateBook D 14 AMD");
-                        computadores.add("Notebook HP 14-dq1005la");
-                        computadores.add("DELL XPS 13 9380");
-                        computadores.add("Dell inspiron 3493");
-                        computadores.add("Dell Core I3 4gb");
-                        computadores.add("Portatil Dell Core I7 14 Pulgadas");
-                        computadores.add("Laptop Dell Core I5 14 Pulgadas");
-                        computadores.add("LAPTOP DELL 360");
-                        computadores.add("HP 240 G7");
-                        computadores.add("Laptop HP Gamer");
-                        computadores.add("HP AMD Ryzen 3 3250");
-                        computadores.add("TOUCHSMART");
-                        computadores.add("HP AMD A6");
-                        computadores.add("HP AMD A9 core i5");
-                        computadores.add("HP Gamer Ryzen 5 3500");
-                        computadores.add("HP Ryzen 7 gamer");
-                        computadores.add("HP Core i3 10ma");
-                        computadores.add("HP Core i7 10ma");
-                        computadores.add("RBELL");
-                        computadores.add("Toshiba Click 2 en 1");
-                        computadores.add("Acer Aspire");
-                        computadores.add("ASUS Gamer");
-                        computadores.add("Asus Core i3 10ma");
-                        computadores.add("Asus Gamer Core i7 9na");
-                        computadores.add("Asus AMD R3 3200");
-                        computadores.add("ASUS Intel");
-                        computadores.add("Lenovo Core i7 8va");
-                        computadores.add("Lenovo Ryzen 5 3500");
-                        computadores.add("Lenovo Core i5 8va");
-                        computadores.add("Lenovo Core i5 10ma");
-                        computadores.add("Lenovo AMD Ryzen 3 3250U");
-                        computadores.add("Lenovo Gamer Core i5 8va");
-                        computadores.add("Lenovo Core i3 8va");
-                        computadores.add("Lenovo Core i3 7ma");
-                        computadores.add("Gamer Amd Ryzen 3");
-                        computadores.add("Lenovo AMD A6 core i3");
-                        computadores.add("Lenovo Core i3 10ma");
-                        computadores.add("Lenovo AMD A6");
-                        computadores.add("Lenovo Gamer");
-                        computadores.add(" Lenovo Core i3 8va");                                        
-                       
-                
-                }
-        }
-        DefaultComboBoxModel dml = new DefaultComboBoxModel();
-        for (int i = 0; i < computadores.size(); i++) {
-            dml.addElement(computadores.get(i));
-        }
-        
-        return computadores;
-       
+   
+    
+    
+    private String llenarPreArmadas (String tienda, String marca, String procesador,String disco, String memoria, String webcam, String bateria,String pantalla, String unidad,String video, String so,String puertos, String precio){
+    return                      "Tienda : " + tienda +"\n"
+				+ "\n"
+				+ "Marca : " + marca+"\n"
+				+ "\n"
+				+ "Procesador : "+ procesador +"\n"
+				+ "\n"
+				+ "Disco : "+ disco +"\n"
+				+ "\n"
+				+ "Memoria : "+memoria+"\n"
+				+ "\n"
+				+ "WebCam : "+webcam+"\n"
+				+ "\n"
+				+ "Bateria : "+bateria+"\n"
+				+ "\n"
+				+ "Pantalla : "+pantalla+"\n"
+				+ "\n"
+				+ "Unidad : "+unidad+"\n"
+				+ "\n"
+				+ "Video : "+video+"\n"
+				+ "\n"
+				+ "S.O : "+so+"\n"
+				+ "\n"
+				+ "Puertos : "+puertos+"\n"
+				+ "\n"
+				+ "Precio : US$ "+precio+"\n";
+	
     }
     
     private void cmbProvinciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbProvinciasActionPerformed
@@ -477,7 +412,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : WINDOWS 10 HOME\n"
                                 + "\n"
                                 + "Puertos : 1 HDMI 2.0 1 USB 3.2 SuperSpeed de 1.ª generació\n"
+                                +"\n"
                                 + "Precio : $ 1568.00\n"
+                                +"\n"
                                 + "Tienda : PC LAPTOP");
                         break;
                     case "DELL 15-3593 (CORE I7)":
@@ -502,7 +439,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : WINDOWS 10 HOME\n"
                                 + "\n"
                                 + "Puertos : 1. Lector de tarjetas SD | 2. USB 2.0 | 3. Ranura\n"
+                                + "\n"
                                 + "Precio : $ 1215.00\n"
+                                +"\n"
                                 + "Tienda : PC LAPTOP");
                         break;
                     case "DELL G5 -5500":
@@ -527,7 +466,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : WINDOWS 10 HOME\n"
                                 + "\n"
                                 + "Puertos : 1 HDMI 2.0 1 USB 3.2 SuperSpeed de 1.ª generació\n"
+                                +"\n"
                                 + "Precio : $ 1512.00\n"
+                                +"\n"
                                 + "Tienda : PC LAPTOP");
                         break;
                     case "DELL -14-3493":
@@ -552,7 +493,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : WINDOWS 10 HOME\n"
                                 + "\n"
                                 + "Puertos : 1 x conector audio COMBO 1 x puerto(s) USB 2.0 1 x\n"
+                                +"\n"
                                 + "Precio : $ $ 616.00\n"
+                                +"\n"
                                 + "Tienda : PC LAPTOP");
                         break;
                     case "DELL 15-5593":
@@ -577,7 +520,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : WINDOWS 10 HOME\n"
                                 + "\n"
                                 + "Puertos : 1. Lector de tarjetas SD | 2. USB 2.0 | 3. Ranura\n"
+                                +"\n"
                                 + "Precio : $ 1159.00\n"
+                                +"\n"
                                 + "Tienda : PC LAPTOP");
                         break;
                     case "DELL 14-5493":
@@ -602,7 +547,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : WINDOWS 10 HOME\n"
                                 + "\n"
                                 + "Puertos : 1 x conector audio COMBO 1 x puerto(s) USB 2.0 1 x\n"
+                                +"\n"
                                 + "Precio : $ 1108.00\n"
+                                +"\n"
                                 + "Tienda : PC LAPTOP");
                         break;
                     case "DELL-15-3593 (CORE I5)":
@@ -627,7 +574,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : WINDOWS 10 HOME\n"
                                 + "\n"
                                 + "Puertos : 1 x conector audio COMBO 1 x puerto(s) USB 2.0 1 x\n"
+                                +"\n"
                                 + "Precio : $ 795.00\n"
+                                +"\n"
                                 + "Tienda : PC LAPTOP");
                         break;
                     case "PORTATIL HP PROBOOK 440 G6":
@@ -653,9 +602,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : Windows10-pro\n"
                                 + "\n"
                                 + "Puertos :  USB 3.1 Type-C (entrega de energía, DisplayPort)\n"
+                                +"\n"
                                 + "Precio : $ 795.00\n"
-                                + "Tienda : PC LAPTOP"
-                                + "Tipo : Not. Hp Probook 440 G6\n");
+                                +"\n"
+                                + "Tienda : PC LAPTOP");
                         
                         break;
                     case "PORTÁTIL INSPIRON DELL G7":
@@ -680,9 +630,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : Win-10home\n"
                                 + "\n"
                                 + "Puertos :  USB 3.1 Type-C (entrega de energía, DisplayPort)\n"
+                                +"\n"
                                 + "Precio : $ 2.163,39\n"
-                                + "Tienda : PC SHOP\n"
-                                + "Tipo : Not. Inspiron Dell G7\n");
+                                +"\n"
+                                + "Tienda : PC SHOP");
                        
                         break;
                     case "MateBook D 15 AMD":
@@ -712,9 +663,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "1 x USB-C\n"
                                 + "1 x HDMI 1.4b\n"
                                 + "1 x combinación de auriculares y micrófono\n"
+                                + "\n"
                                 + "Precio : $ 866.12\n"
-                                + "Tienda : Marcimex"
-                                + "Tipo :MateBook D15\n");
+                                + "\n"
+                                + "Tienda : Marcimex");
                         break;
                     case "MateBook D 14 AMD":
                         txaDetalles.setText("Marca : HUAWEI\n"
@@ -744,7 +696,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "1 x HDMI 1.4b\n"
                                 + "1 x combinación de auriculares y micrófono\n"
                                 + "Precio : $ 918.40\n"
+                                +"\n"
                                 + "Tienda : Marcimex"
+                                +"\n"
                                 + "Tipo :MateBook D14\n");
                                 
                               
@@ -775,9 +729,12 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "•1 x RJ-45\n"
                                 + "•1 x HDMI\n"
                                 + "•1 x combinación de auriculares y micrófono\n" 
-                                + "•1 x lector de tarjetas SD multiformato"
+                                + "•1 x lector de tarjetas SD multiformato\n"
+                                + "\n"
                                 + "Precio : $ 485.32\n"
+                                +"\n"
                                 + "Tienda : Marcimex"
+                                +"\n"
                                 + "Tipo :MateBook D14\n");
                         break;
                     case "Notebook HP 14-dq1005la":
@@ -807,10 +764,11 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "1 x HDMI 1.4b\n"
                                 + "1 x Smart Pin de CA\n"
                                 + "1 x Conector combinado de audífonos/micrófono\n" 
-                                + "1 x Lector de tarjetas multimedia SD multiformato"
+                                + "1 x Lector de tarjetas multimedia SD multiformato\n"
+                                +"\n"
                                 + "Precio : $ 1,200.04\n"
-                                + "Tienda : Marcimex"
-                                + "Tipo :MateBook D14\n");
+                                +"\n"
+                                + "Tienda : Marcimex");
                         break;
                     case "Laptop CW1001LA 15":
                         txaDetalles.setText("Marca : HP\n"
@@ -835,7 +793,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "Puertos : 1 HDMI; 1 combinación de auriculares y micrófono; 1 RJ-45; 1 conector inteligente CA; 1 USB 3.1 Gen 1 Type-C™ "
                                 + "(solo transferencia de datos, tasa de señalización de 5 Gb/s); 2 USB 3.1 Gen 1 Type-A (solo transferencia de datos)"
+                                + "\n"
                                 + "Precio : $ 849.69\n"
+                                +"\n"
                                 + "Tienda : Marcimex");
                         break;
                     case "DELL XPS 13 9380":
@@ -851,7 +811,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "Bateria : 4 celdas 52 Wh\n"
                                 + "\n"
-                                + "Pantalla : táctil InfinityEdge Full HD (1920 x 1080) de 13,3 \""
+                                + "Pantalla : táctil InfinityEdge Full HD (1920 x 1080) de 13,3 \n"
                                 + "\n"
                                 + "Unidad : SI"
                                 + "\n"
@@ -859,9 +819,11 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10 Pro\n"
                                 + "\n"
-                                + "Puertos : 2 puertos Thunderbolt 3 "
-                                + "1 x puertos USB 3.1 (3.1 Gen 2) tipo C"
+                                + "Puertos : 2 puertos Thunderbolt 3 \n"
+                                + "1 x puertos USB 3.1 (3.1 Gen 2) tipo C\n"
+                                +"\n"
                                 + "Precio : $ 955,00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                     case "Portatil Dell Core I7 14 Pulgadas":
@@ -877,7 +839,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "Bateria : 4 celdas \n"
                                 + "\n"
-                                + "Pantalla : 14.0 \"HD (1366 x 768) Antideslumbrante (16: 9)\""
+                                + "Pantalla : 14.0 \"HD (1366 x 768) Antideslumbrante (16: 9)\n"
                                 + "\n"
                                 + "Unidad : SI"
                                 + "\n"
@@ -886,11 +848,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : Windows 10 Pro\n"
                                 + "\n"
                                 + "Puertos : 3 USB 3.0 (uno con PowerShare)\n"
-                                + "\n"
-                                + "HDMI\n"
-                                + "\n" 
-                                + "VGA"
+                                + "HDMI\n" 
+                                + "VGA\n"
                                 + "Precio : $ 660,00 \n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Dell inspiron 3493":
@@ -915,15 +876,13 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : Windows 10 Home\n"
                                 + "\n"
                                 + "Puertos : 1 x puerto RJ-45\n"
-                                + "\n"
                                 + "1 x puerto USB 2.0\n"
-                                + "\n"
                                 + "2 x puertos USB 3.1 de 1. generación\n"
-                                + "\n"
                                 + "1 x puerto para auriculares\n"
-                                + "\n"
-                                + "1 puerto HDMI"
+                                + "1 puerto HDMI\n"
+                                +"\n"
                                 + "Precio : $ 639,00 \n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Laptop Dell Core I3 4gb":
@@ -947,8 +906,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10 Home\n"
                                 + "\n"
-                                + "Puertos : HDMI"
+                                + "Puertos : HDMI\n"
+                                +"\n"
                                 + "Precio : $ 650,00 \n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Laptop Dell Core I5 14 Pulgadas":
@@ -972,8 +933,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10 Pro\n"
                                 + "\n"
-                                + "Puertos : HDMI"
+                                + "Puertos : HDMI\n"
+                                +"\n"
                                 + "Precio : $ 475,00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "LAPTOP DELL 360":
@@ -997,8 +960,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10 Pro\n"
                                 + "\n"
-                                + "Puertos : " 
+                                + "Puertos : \n"
+                                +"\n"
                                 + "Precio : $ 974,40 \n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;case "HP 240 G7":
                         txaDetalles.setText("Marca : HP\n"
@@ -1022,17 +987,14 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : Windows 10 Pro\n"
                                 + "\n"
                                 + "Puertos : 2 USB 3.1 Gen 1 \n"
-                                + "\n"
                                 + "1 USB 2.0 \n"
-                                + "\n"
                                 + "1 HDMI 1.4b \n"
-                                + "\n"
                                 + "1 RJ-45 \n"
-                                + "\n"
                                 + "1 combo de auriculares / micrófono \n"
-                                + "\n"
-                                + "1 alimentación de CA "
+                                + "1 alimentación de CA\n "
+                                +"\n"
                                 + "Precio : $ 799,00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Laptop HP Gamer":
@@ -1057,9 +1019,11 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : Windows 10 Home\n"
                                 + "\n"
                                 + "Puertos : 1 PUERTO HDMI\n"
-                                + " 2 PUERTOS USB 2.0\n"
+                                + "2 PUERTOS USB 2.0\n"
                                 + "2 PUERTOS USB 3.0 , 1 X USB TIPO C\n"
+                                +"\n"
                                 + "Precio : $ 788\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "HP AMD Ryzen 3 3250":
@@ -1087,7 +1051,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "2 PUERTOS USB 2.0\n"
                                 + " 2 PUERTOS USB 3.0\n"
                                 + "1 X USB TIPO C\n"
+                                +"\n"
                                 + "Precio : $ 590.00\n"
+                                +"\n"
                                 + "Tienda : novicompu");
                         break;
                         
@@ -1112,8 +1078,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10\n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                + "\n" 
                                 + "Precio : $ 785.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;case "HP AMD A6":
                         txaDetalles.setText("Marca : HP\n"
@@ -1136,8 +1104,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : DOS\n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                +"\n"
                                 + "Precio : $ 475.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "HP AMD A9 core i5":
@@ -1164,7 +1134,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "Puertos : USB 2.0 2\n"
                                 + "USB 3.0 1\n"
                                 + "HDMI 1\n"
+                                +"\n"
                                 + "Precio : $ 465.00\n"
+                                +"\n"
                                 + "Tienda : NOVICOMPU");
                         break;
                         case "HP Gamer Ryzen 5 3500":
@@ -1188,8 +1160,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : FreeDOS\n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                +"\n"
                                 + "Precio : $ 670,00\n"
+                                +"\n"
                                 + "Tienda : NOVICOMPU");
                         break;
                        
@@ -1215,8 +1189,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : Windows 10 Home\n"
                                 + "\n"
                                 + "Puertos : HDMI"
-                                + "3x USB (2x 3.0 / 3.1 / 3.2 Gen 1, 1x 2.0)"
+                                + "3x USB (2x 3.0 / 3.1 / 3.2 Gen 1, 1x 2.0)\n"
+                                +"\n"
                                 + "Precio : $ 985.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "HP Core i3 10ma":
@@ -1240,8 +1216,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10 Home en modo S\n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                +"\n"
                                 + "Precio : $ 555.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case " HP Core i7 10ma":
@@ -1265,8 +1243,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10 \n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                +"\n"
                                 + "Precio : $ 980.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "RBELL":
@@ -1291,7 +1271,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : Windows 10 \n"
                                 + "\n"
                                 + "Puertos : mini HDMI\n"
+                                +"\n"
                                 + "Precio : $ 219.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Toshiba Click 2 en 1":
@@ -1315,8 +1297,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 8\n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                +"\n"
                                 + "Precio : $ 399.99\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Acer Aspire":
@@ -1340,8 +1324,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10\n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                +"\n"
                                 + "Precio : $ 860.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "ASUS Gamer":
@@ -1368,7 +1354,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "Puertos : USB 3.1 Tipo-C\n"
                                 + "USB 3.1 Tipo-A\n"
                                 + "USB 2.0 y HDMI\n"
+                                +"\n"
                                 + "Precio : $ 1.455,99 \n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Asus Core i3 10ma":
@@ -1397,7 +1385,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "HDMI 1\n"
                                 + "\n"
                                 + "Puerto combinado para auriculares / micrófono "
+                                +"\n"
                                 + "Precio : $ 710.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Asus Gamer Core i7 9na":
@@ -1422,15 +1412,13 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : Windows 10\n"
                                 + "\n"
                                 + "Puertos : puertos tipo A USB 3.2 Gen 1 \n"
-                                + "\n"
-                                + " puertos tipo C USB 3.2 Gen 2 \n"
-                                + "\n"
+                                + "Puertos tipo C USB 3.2 Gen 2 \n"
                                 + "Versión HDMI 2.0b\n"
-                                + "\n"
                                 + "Puerto combinado para auriculares / micrófono Y\n"
-                                + "\n"
-                                + "Puertos Ethernet LAN (RJ-45) 1"
+                                + "Puertos Ethernet LAN (RJ-45) 1\n"
+                                +"\n"
                                 + "Precio : $ 1.999,00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Asus AMD R3 3200":
@@ -1454,8 +1442,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10 HOME S (64 bits)\n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                +"\n"
                                 + "Precio : $ 530.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "ASUS Intel":
@@ -1479,8 +1469,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10\n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                +"\n"
                                 + "Precio : $ 375.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Lenovo Core i7 8va":
@@ -1505,15 +1497,13 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : SIN SISTEMA OPERATIVO\n"
                                 + "\n"
                                 + "Puertos : 1 x HDMI\n"
-                                + "\n"
                                 + "1 x RJ45\n"
-                                + "\n"
                                 + "1 x Combo Audio\n"
-                                + "\n"
                                 + "2 x USB 3.0\n"
-                                + "\n"
                                 +"1 x USB-C"
+                                +"\n"
                                 + "Precio : $ 870.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Lenovo Ryzen 5 3500":
@@ -1538,13 +1528,12 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : instalado NO\n"
                                 + "\n"
                                 + "Puertos : HDMI 1\n"
-                                + "\n"
                                 + "Puerto combinado para auriculares / micrófono SI\n"
-                                + "\n"
                                 + "Ranura de bloqueo de cable SI\n"
-                                + "\n"
-                                + "Tipo de puerto de carga Conector de entrada de CC"
+                                + "Tipo de puerto de carga Conector de entrada de CC\n"
+                                +"\n"
                                 + "Precio : $ 660.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Lenovo Core i5 8va":
@@ -1569,20 +1558,15 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : Windows 10\n"
                                 + "\n"
                                 + "Puertos : USB Sleep-and-Charge (carga y reposo) \n"
-                                + "\n"
                                 + "Versión HDMI 1.4b\n"
-                                + "\n"
                                 + "Puertos tipo A USB 3.0\n"
-                                + "\n"
                                 + "Combo de salida de auriculares / micrófono del puerto \n"
-                                + "\n"
                                 + "Charging port type Toma de entrada de CC\n"
-                                + "\n"
                                 + "Puertos tipo C USB 3.0 \n"
-                                + "\n"
                                 + "Puertos USB Sleep-and-Charge (carga y reposo) 1\n"
                                 + "\n"
                                 + "Precio : $ 720.00\n"
+                                + "\n"
                                 + "Tienda : Novicompu");
                         break;
                         case "Lenovo Core i5 10ma":
@@ -1610,8 +1594,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "1 puerto USB 3.1 Gen 1 (tipo C)\n"
                                 + "HDMI\n"
                                 + "lector de tarjetas SD 4 en 1\n"
-                                + "conector combinado de audio"
+                                + "conector combinado de audio\n"
+                                +"\n"
                                 + "Precio : $ 799.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break; case "Lenovo AMD Ryzen 3 3250U":
                         txaDetalles.setText("Marca : Lenovo\n"
@@ -1637,7 +1623,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "Puertos : HDMI\n"
                                 + "\n"  
                                 +"Puertos de micrófono\n"
+                                +"\n"
                                 + "Precio : $ 575.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                          case "Lenovo Gamer Core i5 8va":
@@ -1661,8 +1649,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Free Dos\n"
                                 + "\n"
-                                + "Puertos : SD / 3 USB / HDMI"
+                                + "Puertos : SD / 3 USB / HDMI\n"
+                                +"\n"
                                 + "Precio : $ 760.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                          case "Lenovo Core i3 8va":
@@ -1686,8 +1676,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : FreeDos (Sistema Libre)\n"
                                 + "\n"
-                                + "Puertos :  puertos USB 3.0 | USB 2.0 | HDMI | Lector de tarjetas 4 en 1| Puerto combinado para auriculares y micrófono"
+                                + "Puertos :  puertos USB 3.0 | USB 2.0 | HDMI | Lector de tarjetas 4 en 1| Puerto combinado para auriculares y micrófono\n"
+                                + "\n"
                                 + "Precio : $ 599.00\n"
+                                + "\n"
                                 + "Tienda : Novicompu");
                         break;
                          case "Lenovo Core i3 7ma":
@@ -1714,7 +1706,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "Puertos : USB 3.2 Gen 1 | puertos tipo A | Tipo de puerto de carga Conector de entrada de CC\n"
                                 + "Puerto combinado para auriculares / micrófono Y\n"
                                 + "HDMI | Puertos Ethernet LAN (RJ-45)\n"
+                                +"\n"
                                 + "Precio : $ 599.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                          case "Gamer Amd Ryzen 3":
@@ -1738,8 +1732,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Ninguno\n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                +"\n"
                                 + "Precio : $ 560.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                          case "Lenovo AMD A6 core i3":
@@ -1764,7 +1760,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "S.O : Windows 10\n"
                                 + "\n"
                                 + "Puertos : 2 puertos USB | 2 puertos USB 3.0 tipo A | 1 HDMI " 
+                                +"\n"
                                 + "Precio : $ 475.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                          case "Lenovo Core i3 10ma":
@@ -1790,7 +1788,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "Puertos : "
                                 + "HDMI\n"
+                                +"\n"
                                 + "Precio : $ 660.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                          case "Lenovo AMD A6":
@@ -1814,8 +1814,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10 Pro 64n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                + "\n"
                                 + "Precio : $ 435.00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
                          case "Lenovo Gamer":
@@ -1839,11 +1841,13 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Microsoft Windows 10 Inicio0\n"
                                 + "\n"
-                                + "Puertos : "
+                                + "Puertos : \n"
+                                +"\n"
                                 + "Precio : $ 1.540,00\n"
+                                +"\n"
                                 + "Tienda : Novicompu");
                         break;
-                         case " Lenovo Core i3 8va":
+                         case "Lenovo Core i3 8va Platinum":
                         txaDetalles.setText("Marca : Lenovo\n"
                                 + "\n"
                                 + "Procesador : Intel Core i3-8145U Capacidad N\n"
@@ -1864,9 +1868,225 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "S.O : Windows 10\n"
                                 + "\n"
-                                + "Puertos :"
+                                + "Puertos :\n"
+                                + "\n"
                                 + "Precio : $ 595.00\n"
+                                + "\n"
                                 + "Tienda : Novicompu");
+                        break;
+                        case "ACER CELERON 2.16 GHZ":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","Acer","Intel Celeron N2840 (2.16 GHz)",
+						"500 GB DDR3","4GB","Si Incluye",
+						"No Aplica","11 Pulgadas 1366 x 768 pixels"," ","Intel HD Graphics 1366 x 768",
+						" Windows 7 – 8","HDMI\nUSB 3.0 x 2","340.00"));
+                              
+                        break;
+                        case "ASUS CELERON X541SA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","ASUS","Intel® Celeron® Dual-Core N3060",
+						"500GB","4GB","NO Incluye",
+						"No Aplica","15.6 Pulgada","No aplica","Intel integrada HD Graphics",
+						" Windows 10 Home","HDMI\nVGA\nUSB 3.0","350.00"));
+                              
+                        break;
+                        case "ASUS VIVOBOOK MAX X441NA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","ASUS","Intel® Celeron® Dual-Core N3350",
+						"500 GB DDR3","4GB","SI Incluye",
+						"No Aplica","14.0″ (16:9) LED backlit HD (1366×768)","Super Multi DVD","Multi-format card reader (SD/SDHC/SDXC)",
+						"Windows 10 Home","USB 3.0 HDMI","390.00"));
+                              
+                        break;
+                        case "ASUS X441UA – I3-6006U":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","ASUS","INTEL CORE i3-6006U",
+						"1 TB","4GB","SI Incluye",
+						"No Aplica","14″ LED HD","LECTOR DVDRW","TARJETA GRAFICA INTEL HD GRAPHICS",
+						"WINDOWS 10","1 USB 2.0/ 1 USB 3.0/ 1 USB C/ 1 HDMI/","570.00"));
+                              
+                        break;
+                        case "DELL INSPIRON 15 – 5100":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","Dell","Intel Core i3 – 7 Generación",
+						"TB 5400 RPM","8GB DDR4","Si Incluye",
+						"No Aplica","15.6 HD Pantalla Táctil","DVD Writer","Intel® HD Graphics 620",
+						"Windows 10","USB 3.0\nHDMI","625.00"));
+                              
+                        break;
+                        case "DELL INSPIRON 3467":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","Dell","Intel Core i3 – 6 Generación",
+						"1TB 5400 RPM","6GB DDR4","Si Incluye",
+						"No Aplica","14 HD 1366 * 768","DVDrw","No aplica",
+						"Ubuntu / Windows 10","USB 3.0\nHDMI","550.00"));
+                              
+                        break;
+                        case "DELL INSPIRON 5567 CI7":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","Dell","Intel Core™ i7-7500U (4M Cache, up to 3.5 GHz)",
+						"1TB 5400 rpm Hard Drive","8GB, 2400MHz, DDR4","Si Incluye",
+						"No Aplica","15.6-inch HD (1366 x 768) Truelife LED-Backlit Display","Tray Loading Dual Layer DVD Burner","AMD Radeon™ R7 M445 Graphics with 4G GDDR5 graphics memory",
+						"Windows 10 Home","Usb 3.0\nHDMI ","1,095.00"));
+                              
+                        break;
+                        case "HP 15 CD005LA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","HP","APU AMD Quad-Core A12-9720P",
+						"SATA de 1 TB y 5400 rpm","12 GB de SDRAM DDR3-1333","Si Incluye",
+						"No Aplica","HD WLED (15,6″)  1366 x 768","No aplica","Gráficos AMD Radeon™ 530 (4 GB de DDR3 dedicados)",
+						"Windows 10","HDMI\nUSB 3.0 x 2","675.00"));
+                              
+                        break;
+                        case "HP 245 G5":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","HP","AMD E2-7110 ★ Quad Core",
+						"500GB ★ 7200rpm HDD","4GB DDR3L","Si Incluye",
+						"4 celdas 41Wh 6.5 Horas","14.0″ HD (1366 x 768px)","SuperMulti DVD+/-R/RW Doble Capa","AMD Radeon™ R2",
+						"Windows 8 o 10.","HDMI + VGA","380.00"));
+                              
+                        break;
+                        case "HP CORE I3 14-BS013LA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","HP","Intel® Core™ i3-6006U (2 GHz, 3 MB de caché)",
+						"SATA de 500 GB, 5400 rpm","4 GB de SDRAM DDR4-2133","Si Incluye",
+						"No incluye","HD de 35,6 cm (14 pulg.) en diagonal","Lector DV","Intel® HD 520",
+						"Windows 10 Home 64","HDMI\nUSB 3.0 x 2","540.00"));
+                              
+                        break;
+                        case "LAPTOP DELL VOSTRO 14-3480":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","Dell","8th Generation Intel® Core™ i5-8265U (4 núcleos, caché de 6 MB, 1,6 GHz, 15 W)",
+						"1 TB","8GB DDR4","No Incluye",
+						"capacidad de 4 celdas de 56 Whr ExpressChargeTM","14.0 LED antirreflectante, no táctil, cámara y micrófono, compatible con WLAN","No incluye","Intel® UHD 620 para Intel 8th Gen Core i5-8265U",
+						"Windows 10 Pro 64bit","USB 2.0\nVGA\nConector de alimentación\nHDMI. RJ-45\nUSB 3.1 Type-A de 1.ª gen\nUSB 3.1 Type-A de 1.ª gen","769.44"));
+                              
+                        break;
+                        case "LAPTOP HP 240 G7":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","HP","Intel i3-7020U DE 2.3GHZ",
+						"1 TB 5400 RPM","4GB DDR4-2133 266 MHz","No Incluye",
+						"No Aplica","LCD 14″HD (1366 x 768)","No aplica","No aplica",
+						"Windows 10 Pro de 64 bits","USB/HDMI/RJ45","547.68"));
+                              
+                        break;
+                        case "LENOVO IDEAPAD 310 (15″)":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","Lenovo","Intel® Core™ i7 6° generación",
+						"1 TB 5400rpm","12 GB DDR4","Si Incluye",
+						"No Aplica","15,6″ HD (1366 x 768)","Unidad óptica con grabadora de DVD integrada","No aplica",
+						"Windows 10","USB 3.0 HDMI","990.00"));
+                              
+                        break;
+                        case "NOTEBOOK HP CEL N3060":
+                        txaDetalles.setText(
+				llenarPreArmadas("Computadoras De Venta","HP","Intel® Celeron® N3060 Dual-Core",
+						"1TB 5400 RPM","4 GB DDR3L de SDRAM (1 DIMM)","Si Incluye",
+						"No Aplica","14 HD SVA BrightView 1366 x 768","No incluye","No incluye",
+						"Windows 10","1 USB 2.0\nHDMI","390.00"));
+                              
+                        break;
+                        case "ASUS 14X409M":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compu Plusec","ASUS","INTEL CELERON N4020 1.10/2.80GHZ 2N/2H",
+						"1TB","4GB DDR4 2600MHZ","NO Incluye",
+						"No Aplica","14'' LED IPS HD MATE","No incluye","INTEL UHD 600",
+						"Windows 10 HOME X64","NO APLICA","399.00"));
+                              
+                        break;
+                        case "NASUS 15 X509J":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compu Plusec","ASUS","INTEL CORE i5-1035G1 1.0/3.6GHZ 4N/8H",
+						"512 SSD M.2","4 GB DDR4 2600MHZ","NO Incluye",
+						"No Aplica","15.6''LED IPS FULL HD MATE","No incluye","NVIDIA GEFORCE 2GB GDDRS",
+						"Windows 10","No aplica","749.00"));
+                              
+                        break;
+                        case "ASUS TUF GAMING FX505D / R7":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compu Plusec","ASUS","AMD RYZEN 7-3750H 2.1/3.7GHZ -4N/8H",
+						"256GB SSD/ 1TB","16GB DDR4 2666MHZ (EXP 32GB)","NO Incluye",
+						"No Aplica","15.6''LED IPS FULL HD 1080P MATE","No incluye","GEFORCE RTX-2060 6GB GDDR6",
+						"Windows 10 HOME X64","No aplica","1,699.00"));
+                              
+                        break;
+                        case "MSI GF65 THIN 9SEXR":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compu Plusec","MSI","INTEL CORE i7-9750H 2.6/4.4 GHZ -6N/12H",
+						"512GB $$D NVME/","16GB DDR4 2666MHZ (EXP 32GB)","NO Incluye",
+						"No Aplica","15.6''LED ANTIREFLEJO FHD","No incluye","NVIDIA GEFORCE RTX-2060 6GB GDDR6",
+						"Windows 10 HOME X64","No aplica","1,799.00"));
+                              
+                        break;
+                        case "MSI GL65 LEOPARD 10SFK":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compu Plusec","ASUS","INTEL CORE i7-10750H 2.6/5.0GHZ-6N/12H",
+						"512GB SSD NVME","16GB DDR4 2666MHZ (EXP 32GB)","NO Incluye",
+						"No Aplica","15.6''LED ANTIREFLEJO FHD 144HZ 100% SRGB","No incluye","NVIDIA GEFORCE RTX-2070 8GB-2070 8GB GDDR6",						
+                                                "Windows 10 HOME X64","No aplica","2,250.00"));
+                        break;
+                        case "PAVILION 15-CW1004LA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Gigacomputers","HP","AMD RYZEN 5 3500U",
+						"128GB + 1TB","12GB DDR4","NO Incluye",
+						"No Aplica","LED 15″ 1366X768","No incluye","No aplica",						
+                                                "Windows 10 HOME","No aplica","793.99.00"));
+                        break;
+                        case "IDEAPAD V145-14AST español":
+                        txaDetalles.setText(
+				llenarPreArmadas("Gigacomputers","LENOVO","AMD A4-9125",
+						"1 TB","4GB DDR4","NO Incluye",
+						"No Aplica","14″ HD","No incluye","INTEGRADOS",						
+                                                "Free DOS","No aplica","368.99"));
+                        break;
+                        case "	240 G7(i3)":
+                        txaDetalles.setText(
+				llenarPreArmadas("Gigacomputers","HP","INTEL CORE I3-8130U",
+						"1 TB","4GB DDR4","NO Incluye",
+						"No Aplica","LED 14″ 1366X768","No incluye","No incluye",						
+                                                "FREE DOS","No aplica","505.99"));
+                        break;
+                        case "TUF FX505D":
+                        txaDetalles.setText(
+				llenarPreArmadas("Gigacomputers","ASUS","AMD RYZEN 5",
+						"1 TB","8GB DDR4","NO Incluye",
+						"Batería de 3 celdas","Pantalla 15,6″ FHD 1920×1080","No incluye","Nvidia GeFORCE gtx 1650 4GB",						
+                                                "No aplica","1 x COMBO audio jack\n1 x Type-A USB2.0\n2 x USB 3.0 port(s) Type A\n1 x RJ45 LAN jack for LAN insert\n1 x HDMI, HDMI support 1.4","966.99"));
+                        break;
+                        case "V330-14IKB":
+                        txaDetalles.setText(
+				llenarPreArmadas("Gigacomputers","LENOVO","INTEL CORE I7-8550U",
+						"1 TB","8GB DDR4","NO Incluye",
+						"No Aplica","LED 14″ HD 1366X768","No incluye","Intel integrado",						
+                                                "Windows 10 Pro","No aplica","1,024.99"));
+                        break;
+                        case "IDEAPAD S145S-14IWL":
+                        txaDetalles.setText(
+				llenarPreArmadas("Gigacomputers","LENOVO","INTEL CORE i3-8145U",
+						"1 TB","4GB DDR4","NO Incluye",
+						"No Aplica","Pantalla 35,56 cm (14″) BORDES DELGADOS","No incluye","Intel integrada",						
+                                                "FREE DOS","No aplica","569.99"));
+                        break;
+                        case "15-DA2004LA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Gigacomputers","HP","INTEL CORE i7-10510U  (HASTA 4.9 Ghz)",
+						"1 TB","8GB DDR4","NO Incluye",
+						"No Aplica","	Pantalla HD 15.6″","No incluye","NVIDIA GFORCE MX130 4GB",						
+                                                "FREE DOS","No aplica","889.99"));
+                        break;
+                        case "240 G7(i5)":
+                        txaDetalles.setText(
+				llenarPreArmadas("Gigacomputers","HP","INTEL CORE I5-1035G1",
+						"1 TB","8GB DDR4","NO Incluye",
+						"No Aplica","LED 14″ 1366X768","No incluye","No incluye",						
+                                                "FREE DOS","No aplica","699.00"));
+                        break;
+                        case "INSPIRON 3593":
+                        txaDetalles.setText(
+				llenarPreArmadas("Gigacomputers","DELL","Intel Core i7-1065G7",
+						"SSD: 256GB","8GB DDR4","NO Incluye",
+						"No Aplica","Pantalla 15,6″ FHD","No incluye","NVidea GEFORCE 4GB",						
+                                                "Free","1 tarjeta SD\n1 USB 2.0\n1 ranura de bloqueo en forma de cuña\n1 HDMI 1.4b\n 1 RJ45\n2 USB 3.1 de 1.ª gen\n1 conector para auriculares y micrófono","1,154.99"));
                         break;
                 
                 
@@ -1880,7 +2100,119 @@ public class GestionLaptop extends javax.swing.JFrame {
 
         if (evt.getStateChange() == ItemEvent.SELECTED) {
             if (!cmbProvincias.getSelectedItem().toString().equals("Seleccionar figura")) {
-                //this.cmbLaptop.setModel(new DefaultComboBoxModel<String>(datos(this.cmbProvincias.getSelectedItem().)));
+                switch (cmbProvincias.getSelectedItem().toString()) {
+                    case "Azuay":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("ACER CELERON 2.16 GHZ");
+                        cmbLaptop.addItem("ASUS CELERON X541SA");
+                        cmbLaptop.addItem("ASUS VIVOBOOK MAX X441NA");
+                        cmbLaptop.addItem("ASUS X441UA – I3-6006U");
+                        cmbLaptop.addItem("DELL INSPIRON 15 – 5100");
+                        cmbLaptop.addItem("DELL INSPIRON 3467");
+                        cmbLaptop.addItem("DELL INSPIRON 5567 CI7");
+                        cmbLaptop.addItem("HP 15 CD005LA");
+                        cmbLaptop.addItem("HP 245 G5");
+                        cmbLaptop.addItem("HP CORE I3 14-BS013LA");
+                        cmbLaptop.addItem("LAPTOP DELL VOSTRO 14-3480");
+                        cmbLaptop.addItem("LAPTOP HP 240 G7");
+                        cmbLaptop.addItem("LENOVO IDEAPAD 310 (15″)");
+                        cmbLaptop.addItem("NOTEBOOK HP CEL N3060");
+                        cmbLaptop.addItem("ASUS 14X409M");
+                        cmbLaptop.addItem("ASUS 15 X509J");
+                        cmbLaptop.addItem("ASUS TUF GAMING FX505D / R7");
+                        cmbLaptop.addItem("MSI GF65 THIN 9SEXR");
+                        cmbLaptop.addItem("MSI GL65 LEOPARD 10SFK");
+                        cmbLaptop.addItem("PAVILION 15-CW1004LA");
+                        cmbLaptop.addItem("IDEAPAD V145-14AST español");
+                        cmbLaptop.addItem("240 G7(i3)");
+                        cmbLaptop.addItem("TUF FX505D");
+                        cmbLaptop.addItem("V330-14IKB");
+                        cmbLaptop.addItem("IDEAPAD S145S-14IWL");
+                        cmbLaptop.addItem("15-DA2004LA");
+                        cmbLaptop.addItem("240 G7(i5)");
+                        cmbLaptop.addItem("INSPIRON 3593");
+                        
+                        break;
+                    case "Bolívar":
+                        break;
+                    case "Cañar":
+                        break;
+                    case "Chimborazo":
+                        break;
+                    case "Cotopaxi":
+                        break;
+                    case "Esmeraldas":
+                        break;
+                    case "Guayas":
+                        break;
+                    case "Imbabura":
+                        break;
+                    case "Loja":
+                        break;
+                    case "Los Ríos":
+                        break;
+                    case "Manabí":
+                        break;
+                    case "Napo":
+                        break;
+                    case "Pastaza":
+                        break;
+                    case "Pichincha":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("DELL 15-5593");
+                        cmbLaptop.addItem("DELL G5 -5500");
+                        cmbLaptop.addItem("DELL 14-5493");
+                        cmbLaptop.addItem("DELL -14-3493");
+                        cmbLaptop.addItem("DELL G5-10MA GEN");
+                        cmbLaptop.addItem("DELL-15-3593 (CORE I5)");
+                        cmbLaptop.addItem("DELL 15-3593 (CORE I7)");
+                        cmbLaptop.addItem("PORTATIL HP PROBOOK 440 G6");
+                        cmbLaptop.addItem("PORTÁTIL INSPIRON DELL G7");
+                        cmbLaptop.addItem("MateBook D 15 AMD");
+                        cmbLaptop.addItem("A314-32-C0BJ 14");
+                        cmbLaptop.addItem("MateBook D 14 AMD");
+                        cmbLaptop.addItem("Notebook HP 14-dq1005la");
+                        cmbLaptop.addItem("DELL XPS 13 9380");
+                        cmbLaptop.addItem("Dell inspiron 3493");
+                        cmbLaptop.addItem("Dell Core I3 4gb");
+                        cmbLaptop.addItem("Portatil Dell Core I7 14 Pulgadas");
+                        cmbLaptop.addItem("Laptop Dell Core I5 14 Pulgadas");
+                        cmbLaptop.addItem("LAPTOP DELL 360");
+                        cmbLaptop.addItem("HP 240 G7");
+                        cmbLaptop.addItem("Laptop HP Gamer");
+                        cmbLaptop.addItem("HP AMD Ryzen 3 3250");
+                        cmbLaptop.addItem("TOUCHSMART");
+                        cmbLaptop.addItem("HP AMD A6");
+                        cmbLaptop.addItem("HP AMD A9 core i5");
+                        cmbLaptop.addItem("HP Gamer Ryzen 5 3500");
+                        cmbLaptop.addItem("HP Ryzen 7 gamer");
+                        cmbLaptop.addItem("HP Core i3 10ma");
+                        cmbLaptop.addItem("HP Core i7 10ma");
+                        cmbLaptop.addItem("RBELL");
+                        cmbLaptop.addItem("Toshiba Click 2 en 1");
+                        cmbLaptop.addItem("Acer Aspire");
+                        cmbLaptop.addItem("ASUS Gamer");
+                        cmbLaptop.addItem("Asus Core i3 10ma");
+                        cmbLaptop.addItem("Asus Gamer Core i7 9na");
+                        cmbLaptop.addItem("Asus AMD R3 3200");
+                        cmbLaptop.addItem("ASUS Intel");
+                        cmbLaptop.addItem("Lenovo Core i7 8va");
+                        cmbLaptop.addItem("Lenovo Ryzen 5 3500");
+                        cmbLaptop.addItem("Lenovo Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i5 10ma");
+                        cmbLaptop.addItem("Lenovo AMD Ryzen 3 3250U");
+                        cmbLaptop.addItem("Lenovo Gamer Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 7ma");
+                        cmbLaptop.addItem("Gamer Amd Ryzen 3");
+                        cmbLaptop.addItem("Lenovo AMD A6 core i3");
+                        cmbLaptop.addItem("Lenovo Core i3 10ma");
+                        cmbLaptop.addItem("Lenovo AMD A6");
+                        cmbLaptop.addItem("Lenovo Gamer");
+                        cmbLaptop.addItem("Lenovo Core i3 8va Platinum");
+
+                }
+
             }
         }
     }//GEN-LAST:event_cmbProvinciasItemStateChanged
