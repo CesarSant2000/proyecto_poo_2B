@@ -764,9 +764,9 @@ public class GestionEscritorio extends javax.swing.JFrame {
 						"Windows 10 Home","USB 3.0 x 3","979.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPc Gamer I7 I5 I3 Ryzen 5 7 Video Gtx 1660 2060 570")) {
 			txaDetallesEscritorio.setText(
-				llenarPreArmadas("PUERTO LIBRE","LENOVO","AMD Ryzen 7 2700",
-						"2TB HDD","16 GB de DRAM DDR4","No Incluye",
-						"No Aplica","No Incluye","DVD WRITER","AMD Radeon ™ RX 560 4GB",
+				llenarPreArmadas("DIGITAL","Sin Marca","AMD Ryzen 3 2300",
+						"1TB HDD","4 GB de DRAM DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","Graficos Integrados",
 						"Windows 10 Home","USB 3.0 x 3","979.00"));
 		} else {
 		}
