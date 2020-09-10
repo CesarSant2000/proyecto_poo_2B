@@ -443,6 +443,10 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			cbxPrearmadaEscritorio.addItem("QUASAD AIO Intel Celeron G4930");
 			cbxPrearmadaEscritorio.addItem("QUASAD I7-8700 Z370");
 			cbxPrearmadaEscritorio.addItem("QUASAD AIO T24");
+			cbxPrearmadaEscritorio.addItem("Dell Optiplex 7060");
+			cbxPrearmadaEscritorio.addItem("Dell Optiplex 3060");
+			cbxPrearmadaEscritorio.addItem("Dell Optiplex 3060 SFF");
+			cbxPrearmadaEscritorio.addItem("PBA Torre");
 		} else if (cbxProvincia.getSelectedItem().equals("Imbabura")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
@@ -533,576 +537,191 @@ public class GestionEscritorio extends javax.swing.JFrame {
 		if (cbxPrearmadaEscritorio.getSelectedItem().equals("Seleccionar")) {
 			txaDetallesEscritorio.setText("");
 		}else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HOGAR CI3-8")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : PcLaptop"
-				+ "Marca : PC HOGAR\n"
-				+ "\n"
-				+ "Procesador : INTEL CORE I3\n"
-				+ "\n"
-				+ "HDD : 1 TB\n"
-				+ "\n"
-				+ "Memoria : 8 RAM DDR4\n"
-				+ "\n"
-				+ "WebCam : Webcam + Micrófono + WIFI\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : 20\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video : INTEL GRAPHICS\n"
-				+ "\n"
-				+ "S.O : WINDOWS 10 ORIGINAL\n"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 3"
-				+ "\n"
-				+ "Precio : US$ 629.00");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcLaptop","PC HOGAR","INTEL CORE I3",
+						"1 TB","8 RAM DDR4","Webcam + Micrófono",
+						"No Aplica","20Inc","DVD WRITER","INTEL GRAPHICS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","629.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("SEMIPROFESIONAL CI5-8")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : PcLaptop"
-				+ "Marca : PC SEMIPROFESIONAL\n"
-				+ "\n"
-				+ "Procesador : INTEL CORE I5\n"
-				+ "\n"
-				+ "HDD : 2 TB\n"
-				+ "\n"
-				+ "Memoria : 8 RAM DDR4\n"
-				+ "\n"
-				+ "WebCam : Webcam + Micrófono + WIFI\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : 20\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video : INTEL GRAPHICS\n"
-				+ "\n"
-				+ "S.O : WINDOWS 10"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 3"
-				+ "\n"
-				+ "Precio : US$ 749.00");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcLaptop","PC SEMIPROFESIONAL","INTEL CORE I5",
+						"2 TB","8 RAM DDR4","Webcam + Micrófono",
+						"No Aplica","20Inc","DVD WRITER","INTEL GRAPHICS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","749.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("PROFESIONAL CI7-16")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : PcLaptop"
-				+ "Marca : PC PROFESIONAL\n"
-				+ "\n"
-				+ "Procesador : INTEL CORE I7\n"
-				+ "\n"
-				+ "HDD : 2 TB\n"
-				+ "\n"
-				+ "Memoria : 16 RAM DDR4\n"
-				+ "\n"
-				+ "WebCam :\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : 20\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video : 4 GB DEDICADO PCI XPRESS\n"
-				+ "\n"
-				+ "S.O : WINDOWS 10 ORIGINAL"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 3"
-				+ "\n"
-				+ "Precio : US$ 1,099.00");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcLaptop","PC PROFESIONAL","INTEL CORE I7",
+						"2 TB","16 RAM DDR4","Webcam + Micrófono",
+						"No Aplica","20Inc","DVD WRITER","4 GB DEDICADO PCI XPRESS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","1,099.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I3")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : PcShop"
-				+ "Marca : PCSHOP\n"
-				+ "\n"
-				+ "Procesador : Intel Core I3-9100 - 3.6ghz\n"
-				+ "\n"
-				+ "HDD : WD 1tb 7200rpm\n"
-				+ "\n"
-				+ "Memoria : Kingston 8gb Ddr4 Pc-2400\n"
-				+ "\n"
-				+ "WebCam :\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : LG 19.5\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WINDOWS 10 ORIGINAL"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 3"
-				+ "\n"
-				+ "Precio : US$ 560.00");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcShop","PCSHOP","Intel Core I3-9100 - 3.6ghz",
+						"WD 1tb 7200rpm","Kingston 8gb Ddr4 Pc-2400","No Incluye",
+						"No Aplica","LG 19.5","DVD WRITER","INTEL GRAPHICS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","560.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I7")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : PcShop"
-				+ "Marca : PCSHOP\n"
-				+ "\n"
-				+ "Procesador : Intel Core I7-9700 - 3.0ghz\n"
-				+ "\n"
-				+ "HDD : WD 1tb 7200rpm\n"
-				+ "\n"
-				+ "Memoria : Kingston 8gb Ddr4 Pc-2400\n"
-				+ "\n"
-				+ "WebCam :\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : LG 19.5\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WINDOWS 10 ORIGINAL"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 3"
-				+ "\n"
-				+ "Precio : US$ 899.00");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcShop","PCSHOP","Intel Core I7-9700 - 3.0ghz",
+						"WD 1tb 7200rpm","Kingston 8gb Ddr4 Pc-2400","No Incluye",
+						"No Aplica","LG 19.5","DVD WRITER","INTEL GRAPHICS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","899.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I3-8VA GEN")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : PcShop"
-				+ "Marca : PCSHOP\n"
-				+ "\n"
-				+ "Procesador : Intel Core I3-8100 - 3.6ghz \n"
-				+ "\n"
-				+ "HDD : WD 1tb 7200rpm\n"
-				+ "\n"
-				+ "Memoria : Adata 4gb Pc-2400 Ddr4\n"
-				+ "\n"
-				+ "WebCam :\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : HP 18.5\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WINDOWS 10 ORIGINAL"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 3"
-				+ "\n"
-				+ "Precio : US$ 516.00");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("PcShop","PCSHOP","Intel Core I3-8100 - 3.6ghz",
+						"WD 1tb 7200rpm","Adata 4gb Pc-2400 Ddr4","No Incluye",
+						"No Aplica","HP 18.5","DVD WRITER","INTEL GRAPHICS",
+						"WINDOWS 10 ORIGINAL","USB 3.0 x 3","516.00"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : Apple\n"
-				+ "\n"
-				+ "Procesador : Intel Core I5 \n"
-				+ "\n"
-				+ "HDD : 512GB-SSD\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam : Si\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : 27Inc 5K Retina\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : Mac OS"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 4"
-				+ "\n"
-				+ "Precio : US$ 2726.67");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Apple","Intel Core I5",
+						"512GB-SSD","8GB","Si",
+						"No Aplica","27Inc 5K Retina","DVD WRITER","INTEL GRAPHICS",
+						"Mac OS","USB 3.0 x 4","2,726.67"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I7")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : Apple\n"
-				+ "\n"
-				+ "Procesador : Intel Core I7 \n"
-				+ "\n"
-				+ "HDD : 512GB-SSD\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam : Si\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : 27Inc 5K Retina\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : Mac OS"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 4"
-				+ "\n"
-				+ "Precio : US$ 3128.89");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Apple","Intel Core I7",
+						"512GB-SSD","8GB","Si",
+						"No Aplica","27Inc 5K Retina","DVD WRITER","INTEL GRAPHICS",
+						"Mac OS","USB 3.0 x 4","3,128.89"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 3070")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : Dell\n"
-				+ "\n"
-				+ "Procesador : Intel Core I5-9700 \n"
-				+ "\n"
-				+ "HDD : 512GB-SSD\n"
-				+ "\n"
-				+ "Memoria : 4GB\n"
-				+ "\n"
-				+ "WebCam : Si\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : MONITOR E2020H 20.5\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WIndows 10"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 6"
-				+ "\n"
-				+ "Precio : US$ 886.67");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Dell","Intel Core I5-9700",
+						"512GB-SSD","4GB","Si",
+						"No Aplica","MONITOR E2020H 20.5","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 6","886.67"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : Dell\n"
-				+ "\n"
-				+ "Procesador : Intel Core I7-8565 \n"
-				+ "\n"
-				+ "HDD : 256GB-M.2\n"
-				+ "\n"
-				+ "Memoria : 16GB\n"
-				+ "\n"
-				+ "WebCam : Si\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : MONITOR E2020H 20.5\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 6"
-				+ "\n"
-				+ "Precio : US$ 1272.22");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Dell","Intel Core I7-8565",
+						"256GB-M.2","16GB","Si",
+						"No Aplica","MONITOR E2020H 20.5","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 6","1,272.22"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL AIO OPTIPLEX 5270")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : Dell\n"
-				+ "\n"
-				+ "Procesador : Intel Core I5-9500 \n"
-				+ "\n"
-				+ "HDD : 256GB-M.2\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam :\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : DELL 20.5\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 5"
-				+ "\n"
-				+ "Precio : US$ 1041.11");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Dell","Intel Core I5-9500",
+						"256GB-M.2","8GB","No Incluye",
+						"No Aplica","DELL 20.5","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 5","1,041.11"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070 UFF")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : Dell\n"
-				+ "\n"
-				+ "Procesador : Intel Core I5-8250 \n"
-				+ "\n"
-				+ "HDD : 256GB-SDD\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam :\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla :\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 6"
-				+ "\n"
-				+ "Precio : US$ 994.44");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Dell","Intel Core I5-8250",
+						"256GB-SDD","8GB","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 6","994.44"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL AIO Inspiron 5490")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : Dell\n"
-				+ "\n"
-				+ "Procesador : Intel Core I5-10210U \n"
-				+ "\n"
-				+ "HDD : 1TB\n"
-				+ "\n"
-				+ "Memoria : 12GB\n"
-				+ "\n"
-				+ "WebCam : Si\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : 23.8 TOUCH\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 3"
-				+ "\n"
-				+ "Precio : US$ 1133.33");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","Dell","Intel Core I5-10210U",
+						"1TB","12GB","Si",
+						"No Aplica","23.8 TOUCH","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 3","1,133.33"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ProDesk 400 G6")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : HP\n"
-				+ "\n"
-				+ "Procesador : Intel Core I7-9700 \n"
-				+ "\n"
-				+ "HDD : 1TB DW\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam : Si\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla :\n"
-				+ "\n"
-				+ "Unidad :\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 3"
-				+ "\n"
-				+ "Precio : US$ 716.67");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-9700",
+						"1TB DW","8GB","Si",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 3","716.67"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP AIO ProOne 400 G5")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : HP\n"
-				+ "\n"
-				+ "Procesador : Intel Core i7-9700 \n"
-				+ "\n"
-				+ "HDD : 1TB DW\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam : Si\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : 23.8Inc\n"
-				+ "\n"
-				+ "Unidad :\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.1 x 2"
-				+ "\n"
-				+ "Precio : US$ 887.78");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-9700",
+						"1TB DW","8GB","Si",
+						"No Aplica","23.8Inc","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.1 x 2","887.78"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 800 G4")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : HP\n"
-				+ "\n"
-				+ "Procesador : Intel Core I7-8700 \n"
-				+ "\n"
-				+ "HDD : 1TB DW\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam :\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla :\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.1 x 5"
-				+ "\n"
-				+ "Precio : US$ 1165.56");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-8700",
+						"1TB DW","8GB","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.1 x 5","1,165.56"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 705 G4")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : HP\n"
-				+ "\n"
-				+ "Procesador : AMD Ryzen 5 Pro 2400g \n"
-				+ "\n"
-				+ "HDD : 1TB DW\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam :\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla :\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.1 x 5"
-				+ "\n"
-				+ "Precio : US$ 1082.22");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","HP","AMD Ryzen 5 Pro 2400g",
+						"1TB DW","8GB","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.1 x 5","1,082.22"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ProDesk 400 G6")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : HP\n"
-				+ "\n"
-				+ "Procesador : Intel Core I7-9700 \n"
-				+ "\n"
-				+ "HDD : 1TB DW\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam :\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla :\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 2"
-				+ "\n"
-				+ "Precio : US$ 964.44");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","HP","Intel Core I7-9700",
+						"1TB DW","8GB","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 2","964.44"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("QUASAD AIO Intel Celeron G4930")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : QUASAD\n"
-				+ "\n"
-				+ "Procesador : Intel Celeron G4930 \n"
-				+ "\n"
-				+ "HDD : 256GB-SSD\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam : Si\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : 23.8Inc\n"
-				+ "\n"
-				+ "Unidad :\n"
-				+ "\n"
-				+ "Video :\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 3"
-				+ "\n"
-				+ "Precio : US$ 480.21");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","QUASAD","Intel Celeron G4930",
+						"256GB-SSD","8GB","Si",
+						"No Aplica","23.8Inc","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 3","480.21"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("QUASAD I7-8700 Z370")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : QUASAD\n"
-				+ "\n"
-				+ "Procesador : Intel Core I7-8700 \n"
-				+ "\n"
-				+ "HDD : 1TB\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam :\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla :\n"
-				+ "\n"
-				+ "Unidad : DVD WRITER \n"
-				+ "\n"
-				+ "Video : VD-2GB\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 6"
-				+ "\n"
-				+ "Precio : US$ 929.74");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","QUASAD","Intel Core I7-8700",
+						"1TB","8GB","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 6","929.74"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("QUASAD AIO T24")) {
-			// we know that the user picked "Course 1", now change box2 to match
-			// first clear everything
-			txaDetallesEscritorio.setText("Tienda : Tecnomega Store"
-				+ "Marca : QUASAD\n"
-				+ "\n"
-				+ "Procesador : Intel Core I7-7700 \n"
-				+ "\n"
-				+ "HDD : 240SSD\n"
-				+ "\n"
-				+ "Memoria : 8GB\n"
-				+ "\n"
-				+ "WebCam : Si\n"
-				+ "\n"
-				+ "Bateria :\n"
-				+ "\n"
-				+ "Pantalla : 23.8Inc\n"
-				+ "\n"
-				+ "Unidad :\n"
-				+ "\n"
-				+ "Video : GTX220 2GB\n"
-				+ "\n"
-				+ "S.O : WIndows 10 PRO"
-				+ "\n"
-				+ "Puertos : USB 3.0 x 3"
-				+ "\n"
-				+ "Precio : US$ 1073.19");
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Tecnomega Storep","QUASAD","Intel Core I7-7700",
+						"240GB SSD","8GB","Si",
+						"No Aplica","23.8Inc","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 3","1,073.19"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 7060")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("TecnoSmart","Dell","Intel Core i5 8500",
+						"1TB HHD","8GB DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 4","1,094.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 3060")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("TecnoSmart","Dell","Intel Core i5 8400",
+						"1TB HHD","4GB DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 4","889.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 3060 SFF")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("TecnoSmart","Dell","Intel Core i5 8400",
+						"500GB SSD","8GB DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.0 x 4","964.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("PBA Torre")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("TecnoSmart","Dell","AMD Ryzen 7 3700x",
+						"1TB HHD","16GB DDR4","No Incluye",
+						"No Aplica","GTX 1650 SUPER 4GB","DVD WRITER","INTEL GRAPHICS",
+						" WIndows 10 PRO","USB 3.1 x 6","1,264.99"));
 		} else {
 		}
         }//GEN-LAST:event_cbxPrearmadaEscritorioItemStateChanged
 
+	private String llenarPreArmadas (String tienda, String marca, String procesador,
+					String disco, String memoria,
+					String webcam, String bateria,
+					String pantalla, String unidad,
+					String video, String so,
+					String puertos, String precio){
+		return "Tienda : " + tienda +"\n"
+				+ "\n"
+				+ "Marca : " + marca+"\n"
+				+ "\n"
+				+ "Procesador : "+ procesador +"\n"
+				+ "\n"
+				+ "Disco : "+ disco +"\n"
+				+ "\n"
+				+ "Memoria : "+memoria+"\n"
+				+ "\n"
+				+ "WebCam : "+webcam+"\n"
+				+ "\n"
+				+ "Bateria : "+bateria+"\n"
+				+ "\n"
+				+ "Pantalla : "+pantalla+"\n"
+				+ "\n"
+				+ "Unidad : "+unidad+"\n"
+				+ "\n"
+				+ "Video : "+video+"\n"
+				+ "\n"
+				+ "S.O : "+so+"\n"
+				+ "\n"
+				+ "Puertos : "+puertos+"\n"
+				+ "\n"
+				+ "Precio : US$ "+precio+"\n";
+	} 
 	/**
 	 * @param args the command line arguments
 	 */
