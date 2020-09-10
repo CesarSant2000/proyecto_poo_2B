@@ -380,8 +380,14 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			cbxPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
 			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("");
-			cbxPrearmadaEscritorio.addItem("A2");
+			cbxPrearmadaEscritorio.addItem("HP ALL IN ONE 22-B201LA");
+			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i3 MAX");
+			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i7 PLUS");
+			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i7 MAX");
+			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i5 MAX");
+			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i3 PLUS");
+			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i9 ULTRA CREATORS");
+			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i9 ULTRA");
 		} else if (cbxProvincia.getSelectedItem().equals("Bolívar")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
@@ -636,7 +642,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep","HP","AMD Ryzen 5 Pro 2400g",
 						"1TB DW","8GB","No Incluye",
-						"No Aplica","No Incluye","DVD WRITER","INTEL GRAPHICS",
+						"No Aplica","No Incluye","DVD WRITER","Radeon",
 						" WIndows 10 PRO","USB 3.1 x 5","1,082.22"));
 		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ProDesk 400 G6")) {
 			txaDetallesEscritorio.setText(
@@ -684,12 +690,63 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("TecnoSmart","Dell","AMD Ryzen 7 3700x",
 						"1TB HHD","16GB DDR4","No Incluye",
-						"No Aplica","GTX 1650 SUPER 4GB","DVD WRITER","INTEL GRAPHICS",
+						"No Aplica","No Incluye","DVD WRITER","GTX 1650 SUPER 4GB",
 						" WIndows 10 PRO","USB 3.1 x 6","1,264.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ALL IN ONE 22-B201LA")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Computadoras De Venta","Hp","AMD Quad-Core A6-7310",
+						"1TB HHD","4 GB de DRAM DDR3","No Incluye",
+						"No Aplica","21,5Inc","DVD WRITER","Radeon™ R4",
+						" WIndows 10","USB 3.1 x 2","580.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i3 MAX")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i3 9100F",
+						"1TB HHD","8 GB de DRAM DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","GTX 1030 2GB",
+						" WIndows 10","USB 3.1 x 4","700.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i7 PLUS")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i7 10700",
+						"2TB HHD + 128GB SSD","16 GB de DRAM DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","GTX 1660 SUPER 6GB",
+						" WIndows 10","USB 3.1 x 6","1600.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i7 MAX")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i3 9700F",
+						"1TB HHD + 128GB SSD","16 GB de DRAM DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","GTX 1650 SUPER 4GB",
+						" WIndows 10","USB 3.1 x 4","1300.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i5 MAX")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i5 9400F",
+						"480GB SSD","8 GB de DRAM DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","GTX 1650 SUPER 4GB",
+						" WIndows 10","USB 3.1 x 4","900.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i3 PLUS")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i3 10100",
+						"1TB HHD + 240GB SSD","8 GB de DRAM DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","GTX 1030 2GB",
+						" WIndows 10","USB 3.1 x 4","800.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i9 ULTRA CREATORS")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i9 9900k",
+						"2TB HHD + 128GB SSD M.2","32 GB de DRAM DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","RTX 2070 SUPER 8GB",
+						" WIndows 10 PRO","USB 3.1 x 6","3000.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i9 ULTRA")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("CompuPlucEC","New Era","Intel Core i9 9900k",
+						"2TB HHD + 128GB SSD M.2","16 GB de DRAM DDR4","No Incluye",
+						"No Aplica","No Incluye","DVD WRITER","RTX 2060 SUPER 8GB",
+						" WIndows 10 PRO","USB 3.1 x 6","2500.00"));
 		} else {
 		}
         }//GEN-LAST:event_cbxPrearmadaEscritorioItemStateChanged
-
+/*
+			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i9 ULTRA CREATORS");
+			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i9 ULTRA");	
+	*/
 	private String llenarPreArmadas (String tienda, String marca, String procesador,
 					String disco, String memoria,
 					String webcam, String bateria,
