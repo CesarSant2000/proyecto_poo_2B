@@ -5,6 +5,10 @@
  */
 package final_poo;
 
+import java.awt.event.ItemEvent;
+import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
+
 /**
  *
  * @author Cesar J. Santacruz
@@ -28,9 +32,9 @@ public class GestionLaptop extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        cmbLaptop = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txaDetalles = new javax.swing.JTextArea();
         jPanel4 = new javax.swing.JPanel();
         panelBateria = new javax.swing.JPanel();
         rbtnBSi = new javax.swing.JRadioButton();
@@ -50,20 +54,25 @@ public class GestionLaptop extends javax.swing.JFrame {
         jCheckBox2 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        cmbProvincias = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("jpanel1");
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Pre-armadas"));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbLaptop.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbLaptop.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbLaptopItemStateChanged(evt);
+            }
+        });
 
         jScrollPane2.setBorder(javax.swing.BorderFactory.createTitledBorder("Detalles"));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        txaDetalles.setColumns(20);
+        txaDetalles.setRows(5);
+        jScrollPane2.setViewportView(txaDetalles);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -71,7 +80,7 @@ public class GestionLaptop extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbLaptop, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -80,7 +89,7 @@ public class GestionLaptop extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbLaptop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
@@ -267,10 +276,15 @@ public class GestionLaptop extends javax.swing.JFrame {
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("PROVINCIA QUE DESEA BUSCAR"));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Azuay", "Bolívar", "Cañar", "Chimborazo", "Cotopaxi", "Esmeraldas", "Guayas", "Imbabura", "Loja", "Los Ríos", "Manabí", "Napo", "Pastaza", "Pichincha", "Santo Domingo de los Tsáchilas", "Tungurahua" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+        cmbProvincias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Azuay", "Bolívar", "Cañar", "Chimborazo", "Cotopaxi", "Esmeraldas", "Guayas", "Imbabura", "Loja", "Los Ríos", "Manabí", "Napo", "Pastaza", "Pichincha", "Santo Domingo de los Tsáchilas", "Tungurahua" }));
+        cmbProvincias.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbProvinciasItemStateChanged(evt);
+            }
+        });
+        cmbProvincias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+                cmbProvinciasActionPerformed(evt);
             }
         });
 
@@ -280,14 +294,14 @@ public class GestionLaptop extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbProvincias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(40, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cmbProvincias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -336,9 +350,1540 @@ public class GestionLaptop extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+    public ArrayList datos(String dato){
+    ArrayList<String> computadores= new ArrayList<>();
+    if (!cmbProvincias.getSelectedItem().toString().equals("Seleccionar figura")) {
+                switch (cmbProvincias.getSelectedItem().toString()) {
+                    case "Azuay":
+                        break;
+                    case "Bolívar":
+                        break;
+                    case "Cañar":
+                        break;
+                    case "Chimborazo":
+                        break;
+                    case "Cotopaxi":
+                        break;
+                    case "Esmeraldas":
+                        break;
+                    case "Guayas":
+                        break;
+                    case "Imbabura":
+                        break;
+                    case "Loja":
+                        break;
+                    case "Los Ríos":
+                        break;
+                    case "Manabí":
+                        break;
+                    case "Napo":
+                        break;
+                    case "Pastaza":
+                        break;
+                    case "Pichincha": 
+                        computadores.add("DELL 15-5593");
+                        computadores.add("DELL G5 -5500");
+                        computadores.add("DELL 14-5493");
+                        computadores.add("DELL -14-3493");
+                        computadores.add("DELL G5-10MA GEN");
+                        computadores.add("DELL-15-3593 (CORE I5)");
+                        computadores.add("DELL 15-3593 (CORE I7)");
+                        computadores.add("PORTATIL HP PROBOOK 440 G6");
+                        computadores.add("PORTÁTIL INSPIRON DELL G7");
+                        computadores.add("MateBook D 15 AMD");
+                        computadores.add("A314-32-C0BJ 14");
+                        computadores.add("MateBook D 14 AMD");
+                        computadores.add("Notebook HP 14-dq1005la");
+                        computadores.add("DELL XPS 13 9380");
+                        computadores.add("Dell inspiron 3493");
+                        computadores.add("Dell Core I3 4gb");
+                        computadores.add("Portatil Dell Core I7 14 Pulgadas");
+                        computadores.add("Laptop Dell Core I5 14 Pulgadas");
+                        computadores.add("LAPTOP DELL 360");
+                        computadores.add("HP 240 G7");
+                        computadores.add("Laptop HP Gamer");
+                        computadores.add("HP AMD Ryzen 3 3250");
+                        computadores.add("TOUCHSMART");
+                        computadores.add("HP AMD A6");
+                        computadores.add("HP AMD A9 core i5");
+                        computadores.add("HP Gamer Ryzen 5 3500");
+                        computadores.add("HP Ryzen 7 gamer");
+                        computadores.add("HP Core i3 10ma");
+                        computadores.add("HP Core i7 10ma");
+                        computadores.add("RBELL");
+                        computadores.add("Toshiba Click 2 en 1");
+                        computadores.add("Acer Aspire");
+                        computadores.add("ASUS Gamer");
+                        computadores.add("Asus Core i3 10ma");
+                        computadores.add("Asus Gamer Core i7 9na");
+                        computadores.add("Asus AMD R3 3200");
+                        computadores.add("ASUS Intel");
+                        computadores.add("Lenovo Core i7 8va");
+                        computadores.add("Lenovo Ryzen 5 3500");
+                        computadores.add("Lenovo Core i5 8va");
+                        computadores.add("Lenovo Core i5 10ma");
+                        computadores.add("Lenovo AMD Ryzen 3 3250U");
+                        computadores.add("Lenovo Gamer Core i5 8va");
+                        computadores.add("Lenovo Core i3 8va");
+                        computadores.add("Lenovo Core i3 7ma");
+                        computadores.add("Gamer Amd Ryzen 3");
+                        computadores.add("Lenovo AMD A6 core i3");
+                        computadores.add("Lenovo Core i3 10ma");
+                        computadores.add("Lenovo AMD A6");
+                        computadores.add("Lenovo Gamer");
+                        computadores.add(" Lenovo Core i3 8va");                                        
+                       
+                
+                }
+        }
+        DefaultComboBoxModel dml = new DefaultComboBoxModel();
+        for (int i = 0; i < computadores.size(); i++) {
+            dml.addElement(computadores.get(i));
+        }
+        
+        return computadores;
+       
+    }
+    
+    private void cmbProvinciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbProvinciasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+        
+    }//GEN-LAST:event_cmbProvinciasActionPerformed
+
+    private void cmbLaptopItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbLaptopItemStateChanged
+        // TODO add your handling code here:
+         if (evt.getStateChange() == ItemEvent.SELECTED) {
+         if (!cmbProvincias.getSelectedItem().toString().equals("Seleccionar figura")) {
+                switch (cmbLaptop.getSelectedItem().toString()) {
+                    case "DELL G5-10MA GEN":
+                        txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : CORE I7- 10MA GENERACION\n"
+                                + "\n"
+                                + "HDD : 512 NVME\n"
+                                + "\n"
+                                + "Memoria : 16 GB DE RAM -DR4/2933MHZ\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : Batería de 4 celdas, 68 Wh (integrada)\n"
+                                + "\n"
+                                + "Pantalla : 15.6 FHD -144 HZ\n"
+                                + "\n"
+                                + "Unidad : NO\n"
+                                + "\n"
+                                + "Video : 6GB -NVIDIA GEFORCE RTX 2060\n"
+                                + "\n"
+                                + "S.O : WINDOWS 10 HOME\n"
+                                + "\n"
+                                + "Puertos : 1 HDMI 2.0 1 USB 3.2 SuperSpeed de 1.ª generació\n"
+                                + "Precio : $ 1568.00\n"
+                                + "Tienda : PC LAPTOP");
+                        break;
+                    case "DELL 15-3593 (CORE I7)":
+                        txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : CORE I7- 10MA GENERACION\n"
+                                + "\n"
+                                + "HDD : 500 SSD+ 2TB D .DURO\n"
+                                + "\n"
+                                + "Memoria : 16GB DE RAN EXP 32\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 3 CELDAS\n"
+                                + "\n"
+                                + "Pantalla : 15.6 FHD\n"
+                                + "\n"
+                                + "Unidad : NO\n"
+                                + "\n"
+                                + "Video : 4GB GFORCE MX230\n"
+                                + "\n"
+                                + "S.O : WINDOWS 10 HOME\n"
+                                + "\n"
+                                + "Puertos : 1. Lector de tarjetas SD | 2. USB 2.0 | 3. Ranura\n"
+                                + "Precio : $ 1215.00\n"
+                                + "Tienda : PC LAPTOP");
+                        break;
+                    case "DELL G5 -5500":
+                         txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : CORE I7- 10MA- UP TO 5.0 GHZ\n"
+                                + "\n"
+                                + "HDD : 512 NVME M.2\n"
+                                + "\n"
+                                + "Memoria : 16GB DE RAN EXP 32\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : Batería de 4 celdas, 68 Wh (integrada)\n"
+                                + "\n"
+                                + "Pantalla : 15.6 FHD -144 HZ\n"
+                                + "\n"
+                                + "Unidad : NO\n"
+                                + "\n"
+                                + "Video : NVIDIA GTX-1660 TI 6GB -DRR6\n"
+                                + "\n"
+                                + "S.O : WINDOWS 10 HOME\n"
+                                + "\n"
+                                + "Puertos : 1 HDMI 2.0 1 USB 3.2 SuperSpeed de 1.ª generació\n"
+                                + "Precio : $ 1512.00\n"
+                                + "Tienda : PC LAPTOP");
+                        break;
+                    case "DELL -14-3493":
+                        txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : CORE I3 -10 MA GEN\n"
+                                + "\n"
+                                + "HDD : 128 SSD+1TB DISCO DURO\n"
+                                + "\n"
+                                + "Memoria : RAM 8GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 3 CELDAS\n"
+                                + "\n"
+                                + "Pantalla : 14.0 HD\n"
+                                + "\n"
+                                + "Unidad : NO\n"
+                                + "\n"
+                                + "Video : NO\n"
+                                + "\n"
+                                + "S.O : WINDOWS 10 HOME\n"
+                                + "\n"
+                                + "Puertos : 1 x conector audio COMBO 1 x puerto(s) USB 2.0 1 x\n"
+                                + "Precio : $ $ 616.00\n"
+                                + "Tienda : PC LAPTOP");
+                        break;
+                    case "DELL 15-5593":
+                        txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : CORE I7- 10MA GENERACION\n"
+                                + "\n"
+                                + "HDD : 256 SSD+ 1TB D .DURO\n"
+                                + "\n"
+                                + "Memoria : 16GB DE RAN EXP 32\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 3 CELDAS\n"
+                                + "\n"
+                                + "Pantalla : 15.6 FHD 4K\n"
+                                + "\n"
+                                + "Unidad : NO\n"
+                                + "\n"
+                                + "Video : 4GB GFORCE MX230\n"
+                                + "\n"
+                                + "S.O : WINDOWS 10 HOME\n"
+                                + "\n"
+                                + "Puertos : 1. Lector de tarjetas SD | 2. USB 2.0 | 3. Ranura\n"
+                                + "Precio : $ 1159.00\n"
+                                + "Tienda : PC LAPTOP");
+                        break;
+                    case "DELL 14-5493":
+                        txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : CORE I7- 10MA GENERACION\n"
+                                + "\n"
+                                + "HDD : 512 NVME\n"
+                                + "\n"
+                                + "Memoria : 8GB -EXP 32\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 3 CELDAS\n"
+                                + "\n"
+                                + "Pantalla : 14.0 FULL HD/TOUCHSCREEN 2 IN 1\n"
+                                + "\n"
+                                + "Unidad : NO\n"
+                                + "\n"
+                                + "Video : NO\n"
+                                + "\n"
+                                + "S.O : WINDOWS 10 HOME\n"
+                                + "\n"
+                                + "Puertos : 1 x conector audio COMBO 1 x puerto(s) USB 2.0 1 x\n"
+                                + "Precio : $ 1108.00\n"
+                                + "Tienda : PC LAPTOP");
+                        break;
+                    case "DELL-15-3593 (CORE I5)":
+                        txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : CORE I5-1035G1 -10 GEN\n"
+                                + "\n"
+                                + "HDD : 256 SSD +1TB HDD\n"
+                                + "\n"
+                                + "Memoria : 8GB -EXP 32\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 3 CELDAS\n"
+                                + "\n"
+                                + "Pantalla : 15.6 HD\n"
+                                + "\n"
+                                + "Unidad : NO\n"
+                                + "\n"
+                                + "Video : NO\n"
+                                + "\n"
+                                + "S.O : WINDOWS 10 HOME\n"
+                                + "\n"
+                                + "Puertos : 1 x conector audio COMBO 1 x puerto(s) USB 2.0 1 x\n"
+                                + "Precio : $ 795.00\n"
+                                + "Tienda : PC LAPTOP");
+                        break;
+                    case "PORTATIL HP PROBOOK 440 G6":
+                        txaDetalles.setText(
+                                "Marca : HP\n"
+                                + "\n"
+                                + "Procesador : I5-8265u\n"
+                                + "\n"
+                                + "HDD : 1TB \n"
+                                + "\n"
+                                + "Memoria : 8GB -EXP 32\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 3 CELDAS\n"
+                                + "\n"
+                                + "Pantalla : 14inc. Sd Bt Lan Hdmi 4usb\n"
+                                + "\n"
+                                + "Unidad : "
+                                + "\n"
+                                + "Video : NO\n"
+                                + "\n"
+                                + "S.O : Windows10-pro\n"
+                                + "\n"
+                                + "Puertos :  USB 3.1 Type-C (entrega de energía, DisplayPort)\n"
+                                + "Precio : $ 795.00\n"
+                                + "Tienda : PC LAPTOP"
+                                + "Tipo : Not. Hp Probook 440 G6\n");
+                        
+                        break;
+                    case "PORTÁTIL INSPIRON DELL G7":
+                        txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : Core I7-8750h\n"
+                                + "\n"
+                                + "HDD : 1TB \n"
+                                + "\n"
+                                + "Memoria : 16 GB \n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 60 Whr \n"
+                                + "\n"
+                                + "Pantalla : 17.3inch\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Win-10home\n"
+                                + "\n"
+                                + "Puertos :  USB 3.1 Type-C (entrega de energía, DisplayPort)\n"
+                                + "Precio : $ 2.163,39\n"
+                                + "Tienda : PC SHOP\n"
+                                + "Tipo : Not. Inspiron Dell G7\n");
+                       
+                        break;
+                    case "MateBook D 15 AMD":
+                        txaDetalles.setText("Marca : HUAWEI\n"
+                                + "\n"
+                                + "Procesador : AMD Ryzen 5 3500U\n"
+                                + "\n"
+                                + "HDD :256 GB PCIe SSD \n"
+                                + "\n"
+                                + "Memoria : 8 GB DDR4 \n"
+                                + "\n"
+                                + "WebCam : SI\n Cámara escondida / Píxeles de cámara: 1 MP (720P HD)"
+                                + "\n"
+                                + "Bateria : Batería de litio-ion 56Wh \n"
+                                + "\n"
+                                + "Pantalla : 14inch\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Home\n"
+                                + "\n"
+                                + "Puertos :  \n"
+                                + "1 x USB-A 3.0\n"
+                                + "2 x USB-A 2.0\n"
+                                + "1 x USB-C\n"
+                                + "1 x HDMI 1.4b\n"
+                                + "1 x combinación de auriculares y micrófono\n"
+                                + "Precio : $ 866.12\n"
+                                + "Tienda : Marcimex"
+                                + "Tipo :MateBook D15\n");
+                        break;
+                    case "MateBook D 14 AMD":
+                        txaDetalles.setText("Marca : HUAWEI\n"
+                                + "\n"
+                                + "Procesador : AMD Ryzen 5 3500U\n"
+                                + "\n"
+                                + "HDD :512 GB PCIe SSD\n"
+                                + "\n"
+                                + "Memoria : 8 GB DDR4 \n"
+                                + "\n"
+                                + "WebCam : SI\n Cámara escondida / Píxeles de cámara: 1 MP (720P HD)"
+                                + "\n"
+                                + "Bateria : Batería de litio-ion 56Wh \n"
+                                + "\n"
+                                + "Pantalla : 14inch\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Home\n"
+                                + "\n"
+                                + "Puertos : \n"
+                                + "1 x USB-A 3.0\n"
+                                + "1 x USB-A 2.0\n"
+                                + "1 x USB-C\n"
+                                + "1 x HDMI 1.4b\n"
+                                + "1 x combinación de auriculares y micrófono\n"
+                                + "Precio : $ 918.40\n"
+                                + "Tienda : Marcimex"
+                                + "Tipo :MateBook D14\n");
+                                
+                              
+                    case "A314-32-C0BJ 14":
+                        txaDetalles.setText("Marca : ACER\n"
+                                + "\n"
+                                + "Procesador : Intel® Celeron® dual-core processor N4000\n"
+                                + "\n"
+                                + "HDD :500 GB 2.5-inch 5400 RPM\n"
+                                + "\n"
+                                + "Memoria : 4 GB DDR4 \n"
+                                + "\n"
+                                + "WebCam : SI\n "
+                                + "\n"
+                                + "Bateria : 37 Wh 4810 mAh 7.7 V 2-cell Li-ion \n"
+                                + "\n"
+                                + "Pantalla : 14\"HD SVA BrightView con micromarco\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Home\n"
+                                + "\n"
+                                + "Puertos : \n"
+                                + "2 x USB 2.0\n"
+                                + "•1 x USB 3.0\n"
+                                + "•1 x RJ-45\n"
+                                + "•1 x HDMI\n"
+                                + "•1 x combinación de auriculares y micrófono\n" 
+                                + "•1 x lector de tarjetas SD multiformato"
+                                + "Precio : $ 485.32\n"
+                                + "Tienda : Marcimex"
+                                + "Tipo :MateBook D14\n");
+                        break;
+                    case "Notebook HP 14-dq1005la":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador : Core™ i7-1065G7(2b) 10ª generación de Intel®\n"
+                                + "\n"
+                                + "HDD : 256 GB SSD\n"
+                                + "\n"
+                                + "Memoria : 8 GB DDR4 \n"
+                                + "\n"
+                                + "WebCam : SI\n Cámara web HP TrueVision HD con dos micrófonos digitales integrados"
+                                + "\n"
+                                + "Bateria : Batería de litio-ion de 3 celdas de 41 Wh \n"
+                                + "\n"
+                                + "Pantalla :  14\"HD SVA BrightView con micromarco\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Home\n"
+                                + "\n"
+                                + "Puertos : \n"
+                                + "1 x USB 3.1 Gen 1 Type-C™ (Solo transferencia de datos, velocidad de señalización de 5 Gb/s)\n"
+                                + "2 x USB 3.1 Gen 1 Type-A (Solo transferencia de datos)\n"
+                                + "1 x HDMI 1.4b\n"
+                                + "1 x Smart Pin de CA\n"
+                                + "1 x Conector combinado de audífonos/micrófono\n" 
+                                + "1 x Lector de tarjetas multimedia SD multiformato"
+                                + "Precio : $ 1,200.04\n"
+                                + "Tienda : Marcimex"
+                                + "Tipo :MateBook D14\n");
+                        break;
+                    case "Laptop CW1001LA 15":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador : AMD Ryzen™ 3 con gráficos Radeon™ Vega 6 (velocidad base de 2,1 GHz con sistema Turbobost hasta 3,5 GHz, 6 MB de caché y 4 núcleos)\n"
+                                + "\n"
+                                + "HDD :SATA de 1 TB y 5400 rpm\n"
+                                + "\n"
+                                + "Memoria : 12 GB de SDRAM DDR4-2400ia \n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : Iones de litio de 3 celdas y 41 Wh \n"
+                                + "\n"
+                                + "Pantalla : Pantalla BrightView con retroiluminación WLED HD SVA antirreflectante con microborde, de 15,6\" en diagonal (1366 x 768)\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Home\n"
+                                + "\n"
+                                + "Puertos : 1 HDMI; 1 combinación de auriculares y micrófono; 1 RJ-45; 1 conector inteligente CA; 1 USB 3.1 Gen 1 Type-C™ "
+                                + "(solo transferencia de datos, tasa de señalización de 5 Gb/s); 2 USB 3.1 Gen 1 Type-A (solo transferencia de datos)"
+                                + "Precio : $ 849.69\n"
+                                + "Tienda : Marcimex");
+                        break;
+                    case "DELL XPS 13 9380":
+                        txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : Intel Core i5-8365U (cuatro núcleos, hasta 4,10 GHz, 6 MB de caché, 15 W)\n"
+                                + "\n"
+                                + "HDD :256 GB SCD\n"
+                                + "\n"
+                                + "Memoria : 8 GB de RAM (LPDDR3-SDRAM de 2133 MHz) \n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 4 celdas 52 Wh\n"
+                                + "\n"
+                                + "Pantalla : táctil InfinityEdge Full HD (1920 x 1080) de 13,3 \""
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Pro\n"
+                                + "\n"
+                                + "Puertos : 2 puertos Thunderbolt 3 "
+                                + "1 x puertos USB 3.1 (3.1 Gen 2) tipo C"
+                                + "Precio : $ 955,00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                    case "Portatil Dell Core I7 14 Pulgadas":
+                        txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : Intel® Core ™ i7-5600U (2.1 GHz)\n"
+                                + "\n"
+                                + "HDD :256 GB SSD de disco\n"
+                                + "\n"
+                                + "Memoria :  8GB \n"
+                                + "\n"
+                                + "WebCam : SI\t HD 720P \n"
+                                + "\n"
+                                + "Bateria : 4 celdas \n"
+                                + "\n"
+                                + "Pantalla : 14.0 \"HD (1366 x 768) Antideslumbrante (16: 9)\""
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Pro\n"
+                                + "\n"
+                                + "Puertos : 3 USB 3.0 (uno con PowerShare)\n"
+                                + "\n"
+                                + "HDMI\n"
+                                + "\n" 
+                                + "VGA"
+                                + "Precio : $ 660,00 \n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Dell inspiron 3493":
+                        txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : Intel Core i3-1005G1 4 M de caché, hasta 3,40 GHz\n"
+                                + "\n"
+                                + "HDD : 1 TB HHD\n"
+                                + "\n"
+                                + "Memoria : 4GB DDR4 (4GBx1), Dos slot uno ocupado uno libre\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 3 celdas, 42Whr, adaptador 45W\n"
+                                + "\n"
+                                + "Pantalla : 14.0 PULGADAS HD (1366 x 768) Anti-Glare LED-Backlit Non-touch Display \""
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Home\n"
+                                + "\n"
+                                + "Puertos : 1 x puerto RJ-45\n"
+                                + "\n"
+                                + "1 x puerto USB 2.0\n"
+                                + "\n"
+                                + "2 x puertos USB 3.1 de 1. generación\n"
+                                + "\n"
+                                + "1 x puerto para auriculares\n"
+                                + "\n"
+                                + "1 puerto HDMI"
+                                + "Precio : $ 639,00 \n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Laptop Dell Core I3 4gb":
+                        txaDetalles.setText("Marca : Dell\n"
+                                + "\n"
+                                + "Procesador :Intel® Core™ i3 de 10ma Generación\n"
+                                + "\n"
+                                + "HDD :128 GB SSD\n"
+                                + "\n"
+                                + "Memoria : 4 GB \n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : Iones de litio de 3 celdas y 41 Wh \n"
+                                + "\n"
+                                + "Pantalla : 39.6 cm (15.6\")\n"
+                                + "\n"
+                                + "Unidad : NO"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Home\n"
+                                + "\n"
+                                + "Puertos : HDMI"
+                                + "Precio : $ 650,00 \n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Laptop Dell Core I5 14 Pulgadas":
+                       txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : Brand Intel\n"
+                                + "\n"
+                                + "HDD :256 GB SCD\n"
+                                + "\n"
+                                + "Memoria : 8 GB de RAM (LPDDR3-SDRAM de 2133 MHz) \n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 3 celdas 52 Wh\n"
+                                + "\n"
+                                + "Pantalla : 14 inch\""
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Pro\n"
+                                + "\n"
+                                + "Puertos : HDMI"
+                                + "Precio : $ 475,00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "LAPTOP DELL 360":
+                        txaDetalles.setText("Marca : DELL\n"
+                                + "\n"
+                                + "Procesador : Intel Core i7-855U (8MB de Caché, 4.0 GHZ)\n"
+                                + "\n"
+                                + "HDD :1TB RPM Discoduro SATA.\n"
+                                + "\n"
+                                + "Memoria : 8GB DDR4 / Ampliable hasta 16GB. \n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 4 celdas 52 Wh\n"
+                                + "\n"
+                                + "Pantalla : 15.6″ Full HD (1920 x 1080) Ips True Life LED\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Pro\n"
+                                + "\n"
+                                + "Puertos : " 
+                                + "Precio : $ 974,40 \n"
+                                + "Tienda : Novicompu");
+                        break;case "HP 240 G7":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador : Intel® Core ™ i5-8265U de 8.a generación (caché de 6 MB, hasta 3,9 GHz)\n"
+                                + "\n"
+                                + "HDD :256 SSD SATA3 256G M.2\n"
+                                + "\n"
+                                + "Memoria : 8 GB de RAM  \n"
+                                + "\n"
+                                + "WebCam : SI: HP VGA\n"
+                                + "\n"
+                                + "Bateria : De iones de litio, 3 celdas, 41 Wh\n"
+                                + "\n"
+                                + "Pantalla : HD 1366 x 768\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Pro\n"
+                                + "\n"
+                                + "Puertos : 2 USB 3.1 Gen 1 \n"
+                                + "\n"
+                                + "1 USB 2.0 \n"
+                                + "\n"
+                                + "1 HDMI 1.4b \n"
+                                + "\n"
+                                + "1 RJ-45 \n"
+                                + "\n"
+                                + "1 combo de auriculares / micrófono \n"
+                                + "\n"
+                                + "1 alimentación de CA "
+                                + "Precio : $ 799,00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Laptop HP Gamer":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador : Intel Core i5 Nvidia Mx110\n"
+                                + "\n"
+                                + "HDD : 1 TB HDD \n"
+                                + "\n"
+                                + "Memoria : 4GB \n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : IONES DE LITIO DE 3 CELDAS,\n"
+                                + "\n"
+                                + "Pantalla : \n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Home\n"
+                                + "\n"
+                                + "Puertos : 1 PUERTO HDMI\n"
+                                + " 2 PUERTOS USB 2.0\n"
+                                + "2 PUERTOS USB 3.0 , 1 X USB TIPO C\n"
+                                + "Precio : $ 788\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "HP AMD Ryzen 3 3250":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador : AMD RYZEN 3 3250U DUAL-CORE 2.6GHZ\n"
+                                + "\n"
+                                + "HDD : 1 TB HDD\n"
+                                + "\n"
+                                + "Memoria : 4 GB \n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : Iones de litio de 3 celdas \n"
+                                + "\n"
+                                + "Pantalla :  "
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Home\n"
+                                + "\n"
+                                + "Puertos :1 PUERTO HDMI\n"
+                                + "2 PUERTOS USB 2.0\n"
+                                + " 2 PUERTOS USB 3.0\n"
+                                + "1 X USB TIPO C\n"
+                                + "Precio : $ 590.00\n"
+                                + "Tienda : novicompu");
+                        break;
+                        
+                        case "TOUCHSMART":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador : Intel Core™ i5-1035G1 1.0GHz\n"
+                                + "\n"
+                                + "HDD :256GB SSD+ 16GB Optane\n"
+                                + "\n"
+                                + "Memoria : 12 GB \n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria :  \n"
+                                + "\n"
+                                + "Pantalla : \n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10\n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 785.00\n"
+                                + "Tienda : Novicompu");
+                        break;case "HP AMD A6":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador :  AMD A6-9225 de 1.8GHz.\n"
+                                + "\n"
+                                + "HDD : 1 TB a 5400 rpm.\n"
+                                + "\n"
+                                + "Memoria : 4 GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla :  35,56 cm (14,0 pulgadas) en diagonal HD SVA eDP antirreflejo con retroiluminación WLED plana, 67% sRGB, 220 cd / m2 (1366 x 768).)\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : DOS\n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 475.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "HP AMD A9 core i5":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador : A-Series\n"
+                                + "\n"
+                                + "HDD :128 GB\n"
+                                + "\n"
+                                + "Memoria : 4 GB \n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : Lithium Battery Packaging Baterías integradas en el equipo \n"
+                                + "\n"
+                                + "Pantalla : 14 pulgadas (1366 x 768)\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 \n"
+                                + "\n"
+                                + "Puertos : USB 2.0 2\n"
+                                + "USB 3.0 1\n"
+                                + "HDMI 1\n"
+                                + "Precio : $ 465.00\n"
+                                + "Tienda : NOVICOMPU");
+                        break;
+                        case "HP Gamer Ryzen 5 3500":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador : Familia de procesadores AMD Ryzen 5\n"
+                                + "\n"
+                                + "HDD :1 TB \n"
+                                + "\n"
+                                + "Memoria : 4 GB \n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria :  \n"
+                                + "\n"
+                                + "Pantalla : Diagonal de pantalla 15,6 pulgadas\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : FreeDOS\n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 670,00\n"
+                                + "Tienda : NOVICOMPU");
+                        break;
+                       
+                        case "HP Ryzen 7 gamer":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador : AMD Ryzen 7 3700U de 4 núcleos\n"
+                                + "\n"
+                                + "HDD :2 TB\n"
+                                + "\n"
+                                + "Memoria : 12GB DDR4  \n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria :  \n"
+                                + "\n"
+                                + "Pantalla : SVA Full HD de 15.6 \"(1920 x 1080 píxeles)\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Home\n"
+                                + "\n"
+                                + "Puertos : HDMI"
+                                + "3x USB (2x 3.0 / 3.1 / 3.2 Gen 1, 1x 2.0)"
+                                + "Precio : $ 985.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "HP Core i3 10ma":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador : Intel® Core i3-1005G1 de 10.a generación \n" 
+                                + "\n"
+                                + "HDD :128 GB \n"
+                                + "\n"
+                                + "Memoria : 4 GB DDR4-2666 SDRAM (1 x 4 GB) \n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : Carga en aproximadamente 45 minutos \n"
+                                + "\n"
+                                + "Pantalla : 14.0 pulgadas en diagonal HD SVA BrightView con retroiluminación WLED\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Home en modo S\n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 555.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case " HP Core i7 10ma":
+                        txaDetalles.setText("Marca : HP\n"
+                                + "\n"
+                                + "Procesador :  Intel Core i7\n"
+                                + "\n"
+                                + "HDD :512 GB\n"
+                                + "\n"
+                                + "Memoria :  8 GB\n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla : 14 Pulgadas\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 \n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 980.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "RBELL":
+                        txaDetalles.setText("Marca : RBELL\n"
+                                + "\n"
+                                + "Procesador :  Intel Atom 1.44GHZ \n" 
+                                + "\n"
+                                + "HDD :32 GB \n"
+                                + "\n"
+                                + "Memoria : 2 GB \n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : Incorporada de 10,000 mAh/3.7V \n"
+                                + "\n"
+                                + "Pantalla : 12.5” DH Screen /1366 x 768\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 \n"
+                                + "\n"
+                                + "Puertos : mini HDMI\n"
+                                + "Precio : $ 219.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Toshiba Click 2 en 1":
+                        txaDetalles.setText("Marca : Toshiba\n"
+                                + "\n"
+                                + "Procesador : AMD Serie A\n"
+                                + "\n"
+                                + "HDD : 500GB\n"
+                                + "\n"
+                                + "Memoria : 4GB\n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla : 13.3\"\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 8\n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 399.99\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Acer Aspire":
+                        txaDetalles.setText("Marca : Acer\n"
+                                + "\n"
+                                + "Procesador : Intel Core i5 10maA\n"
+                                + "\n"
+                                + "HDD : 256GB\n"
+                                + "\n"
+                                + "Memoria : 8GB\n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla : 1920x1080 Píxeles\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10\n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 860.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "ASUS Gamer":
+                        txaDetalles.setText("Marca : Asus\n"
+                                + "\n"
+                                + "Procesador : Intel Core i7-9750H (caché de 12 M, hasta 4,5 GHz)\n"
+                                + "\n"
+                                + "HDD : 1TB\n"
+                                + "\n"
+                                + "Memoria : 16GB DDR4\n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla :  Nanoedge Full HD de 15.6 '' y 120Hzn"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 home\n"
+                                + "\n"
+                                + "Puertos : USB 3.1 Tipo-C\n"
+                                + "USB 3.1 Tipo-A\n"
+                                + "USB 2.0 y HDMI\n"
+                                + "Precio : $ 1.455,99 \n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Asus Core i3 10ma":
+                        txaDetalles.setText("Marca : Asus\n"
+                                + "\n"
+                                + "Procesador : Intel core i3-1005G1\n"
+                                + "\n"
+                                + "HDD : 1 TB\n"
+                                + "\n"
+                                + "Memoria : 4GB\n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : CA 45 W\n"
+                                + "\n"
+                                + "Pantalla : 1920x1080 Píxeles\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10\n"
+                                + "\n"
+                                + "Puertos : USB 2.0 2\n"
+                                + "\n"
+                                + "HDMI 1\n"
+                                + "\n"
+                                + "Puerto combinado para auriculares / micrófono "
+                                + "Precio : $ 710.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Asus Gamer Core i7 9na":
+                        txaDetalles.setText("Marca : Asus\n"
+                                + "\n"
+                                + "Procesador : Intel Core i7 de novena generación\n"
+                                + "\n"
+                                + "HDD : 512GB\n"
+                                + "\n"
+                                + "Memoria : 16GB\n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla : 1920x1080 Píxeles\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10\n"
+                                + "\n"
+                                + "Puertos : puertos tipo A USB 3.2 Gen 1 \n"
+                                + "\n"
+                                + " puertos tipo C USB 3.2 Gen 2 \n"
+                                + "\n"
+                                + "Versión HDMI 2.0b\n"
+                                + "\n"
+                                + "Puerto combinado para auriculares / micrófono Y\n"
+                                + "\n"
+                                + "Puertos Ethernet LAN (RJ-45) 1"
+                                + "Precio : $ 1.999,00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Asus AMD R3 3200":
+                        txaDetalles.setText("Marca : Asus\n"
+                                + "\n"
+                                + "Procesador : AMD de doble núcleo R3-3200U\n"
+                                + "\n"
+                                + "HDD : 128GB\n"
+                                + "\n"
+                                + "Memoria : 8GB\n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla : 15,6 pulg\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 HOME S (64 bits)\n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 530.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "ASUS Intel":
+                        txaDetalles.setText("Marca : Asus\n"
+                                + "\n"
+                                + "Procesador : Intel Celeron N\n"
+                                + "\n"
+                                + "HDD : 64GB\n"
+                                + "\n"
+                                + "Memoria : 4GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla : 14 Pulgadas\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10\n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 375.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Lenovo Core i7 8va":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : Intel Core i7-8550U (4C, 1.8 / 4.0GHz, 8MB) N\n"
+                                + "\n"
+                                + "HDD : 1 TB\n"
+                                + "\n"
+                                + "Memoria : 4GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria :  2 celdas 30WH\n"
+                                + "\n"
+                                + "Pantalla :  15.6\" HD 1366 x 768 Pixeles\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : SIN SISTEMA OPERATIVO\n"
+                                + "\n"
+                                + "Puertos : 1 x HDMI\n"
+                                + "\n"
+                                + "1 x RJ45\n"
+                                + "\n"
+                                + "1 x Combo Audio\n"
+                                + "\n"
+                                + "2 x USB 3.0\n"
+                                + "\n"
+                                +"1 x USB-C"
+                                + "Precio : $ 870.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Lenovo Ryzen 5 3500":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : AMD Ryzen 53500U N\n"
+                                + "\n"
+                                + "HDD : 1 TB\n"
+                                + "\n"
+                                + "Memoria : 4GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria :  Iones de litio CA 65 W\n"
+                                + "\n"
+                                + "Pantalla : 1366 x 768 píxeles\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : instalado NO\n"
+                                + "\n"
+                                + "Puertos : HDMI 1\n"
+                                + "\n"
+                                + "Puerto combinado para auriculares / micrófono SI\n"
+                                + "\n"
+                                + "Ranura de bloqueo de cable SI\n"
+                                + "\n"
+                                + "Tipo de puerto de carga Conector de entrada de CC"
+                                + "Precio : $ 660.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Lenovo Core i5 8va":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : Intel® Core™ i5-8xxx\n"
+                                + "\n"
+                                + "HDD : 128GB\n"
+                                + "\n"
+                                + "Memoria : 8GB\n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla : 1366 x 768 Pixeles\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10\n"
+                                + "\n"
+                                + "Puertos : USB Sleep-and-Charge (carga y reposo) \n"
+                                + "\n"
+                                + "Versión HDMI 1.4b\n"
+                                + "\n"
+                                + "Puertos tipo A USB 3.0\n"
+                                + "\n"
+                                + "Combo de salida de auriculares / micrófono del puerto \n"
+                                + "\n"
+                                + "Charging port type Toma de entrada de CC\n"
+                                + "\n"
+                                + "Puertos tipo C USB 3.0 \n"
+                                + "\n"
+                                + "Puertos USB Sleep-and-Charge (carga y reposo) 1\n"
+                                + "\n"
+                                + "Precio : $ 720.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                        case "Lenovo Core i5 10ma":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : Intel Core i5-8265U, procesador Quad Core de 1,60 GHz (caché de 6 M, hasta 3.90 GHz) N\n"
+                                + "\n"
+                                + "HDD :SSD M.2 NVMe de 8 GB\n"
+                                + "\n"
+                                + "Memoria : 256GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla : Full HD de 15,6\" (1920 x 1080), LCD con retroiluminación LED (antirreflejos).\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10\n"
+                                + "\n"
+                                + "Puertos : 2 puertos USB 3.1\n"
+                                + "1 puerto USB 3.1 Gen 1 (tipo C)\n"
+                                + "HDMI\n"
+                                + "lector de tarjetas SD 4 en 1\n"
+                                + "conector combinado de audio"
+                                + "Precio : $ 799.00\n"
+                                + "Tienda : Novicompu");
+                        break; case "Lenovo AMD Ryzen 3 3250U":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : AMD Serie R 2,60 GHz\n"
+                                + "\n"
+                                + "HDD :256GB\n"
+                                + "\n"
+                                + "Memoria : 8GB\n"
+                                + "\n"
+                                + "WebCam : NO\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla :Píxeles Full HD de 1080p\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O ::Inicio de Windows 10\n"
+                                + "\n"
+                                + "Puertos : HDMI\n"
+                                + "\n"  
+                                +"Puertos de micrófono\n"
+                                + "Precio : $ 575.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                         case "Lenovo Gamer Core i5 8va":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : Intel Core i5-8265U\n"
+                                + "\n"
+                                + "HDD :1 TB\n"
+                                + "\n"
+                                + "Memoria : 4 GB\n"
+                                + "\n"
+                                + "WebCam : SI - 0.3MP\n"
+                                + "\n"
+                                + "Bateria : En  2 celdas\n"
+                                + "\n"
+                                + "Pantalla : 15.6 pulgadas HD\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Free Dos\n"
+                                + "\n"
+                                + "Puertos : SD / 3 USB / HDMI"
+                                + "Precio : $ 760.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                         case "Lenovo Core i3 8va":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : Intel Core i3-8130U (2C / 4T, 2.2 / 3.4GHz, 4MB)\n"
+                                + "\n"
+                                + "HDD : 1 TB\n"
+                                + "\n"
+                                + "Memoria : 4 GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : Integrada 30Wh integrado\n"
+                                + "\n"
+                                + "Pantalla : 15.6 \"HD (1366×768) TN 220nits antideslumbrante.\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : FreeDos (Sistema Libre)\n"
+                                + "\n"
+                                + "Puertos :  puertos USB 3.0 | USB 2.0 | HDMI | Lector de tarjetas 4 en 1| Puerto combinado para auriculares y micrófono"
+                                + "Precio : $ 599.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                         case "Lenovo Core i3 7ma":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : Familia de procesadores Intel Core i3 de 7.a generación\n"
+                                + "\n"
+                                + "HDD : 1TB \n"
+                                + "\n"
+                                + "Memoria : 4GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla : Polímero de litio (LiPo)- 30 Wh\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Instalado norte\n"
+                                + "\n"
+                                + "Puertos : USB 3.2 Gen 1 | puertos tipo A | Tipo de puerto de carga Conector de entrada de CC\n"
+                                + "Puerto combinado para auriculares / micrófono Y\n"
+                                + "HDMI | Puertos Ethernet LAN (RJ-45)\n"
+                                + "Precio : $ 599.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                         case "Gamer Amd Ryzen 3":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : AMD Ryzen 3 3200U N\n"
+                                + "\n"
+                                + "HDD :1 TB\n"
+                                + "\n"
+                                + "Memoria : 4 GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla : 15.6 ″ HD (1366 × 768) TN 200nits Antideslumbrante\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Ninguno\n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 560.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                         case "Lenovo AMD A6 core i3":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : AMD A6\n"
+                                + "\n"
+                                + "HDD :500 GB\n"
+                                + "\n"
+                                + "Memoria :8GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 2 celdas\n"
+                                + "\n"
+                                + "Pantalla : 15.6 pulgadas, LED de pantalla ancha,1366 x 768 (HD)\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10\n"
+                                + "\n"
+                                + "Puertos : 2 puertos USB | 2 puertos USB 3.0 tipo A | 1 HDMI " 
+                                + "Precio : $ 475.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                         case "Lenovo Core i3 10ma":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : Intel® Celeron® N4000 Processor (4M Cache, hasta 2.60 GHz)\n"
+                                + "\n"
+                                + "HDD :500 GB\n"
+                                + "\n"
+                                + "Memoria : 4 GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla :  14\" HD TN\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 home\n"
+                                + "\n"
+                                + "Puertos : "
+                                + "HDMI\n"
+                                + "Precio : $ 660.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                         case "Lenovo AMD A6":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : AMD® A6-9220C de doble núcleo (1.80 GHz, hasta 2.7 GHz Max Boost, caché de 1 MB)\n"
+                                + "\n"
+                                + "HDD :EMMC de 64 GB\n"
+                                + "\n"
+                                + "Memoria : 4 GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : Polímero de litio de 3 celdas 57Wh\n"
+                                + "\n"
+                                + "Pantalla : 14 \"FHD (1920 x 1080) antideslumbrante, 220 liendres\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10 Pro 64n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 435.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                         case "Lenovo Gamer":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : Intel Core i7-9750H 2.6GHz N\n"
+                                + "\n"
+                                + "HDD :1 TB\n"
+                                + "\n"
+                                + "Memoria : 16 GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : \n"
+                                + "\n"
+                                + "Pantalla : retroiluminación LED antideslumbrante Full HD IPS de 15.6 \"\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Microsoft Windows 10 Inicio0\n"
+                                + "\n"
+                                + "Puertos : "
+                                + "Precio : $ 1.540,00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                         case " Lenovo Core i3 8va":
+                        txaDetalles.setText("Marca : Lenovo\n"
+                                + "\n"
+                                + "Procesador : Intel Core i3-8145U Capacidad N\n"
+                                + "\n"
+                                + "HDD :1 TB\n"
+                                + "\n"
+                                + "Memoria : 4 GB\n"
+                                + "\n"
+                                + "WebCam : SI\n"
+                                + "\n"
+                                + "Bateria : 8,50 h Modelo - 81N800D2US\n"
+                                + "\n"
+                                + "Pantalla : 15,60 inch\n"
+                                + "\n"
+                                + "Unidad : SI"
+                                + "\n"
+                                + "Video : SI\n"
+                                + "\n"
+                                + "S.O : Windows 10\n"
+                                + "\n"
+                                + "Puertos :"
+                                + "Precio : $ 595.00\n"
+                                + "Tienda : Novicompu");
+                        break;
+                
+                
+                }
+        }
+         }
+    }//GEN-LAST:event_cmbLaptopItemStateChanged
+
+    private void cmbProvinciasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbProvinciasItemStateChanged
+        // TODO add your handling code here:
+
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
+            if (!cmbProvincias.getSelectedItem().toString().equals("Seleccionar figura")) {
+                //this.cmbLaptop.setModel(new DefaultComboBoxModel<String>(datos(this.cmbProvincias.getSelectedItem().)));
+            }
+        }
+    }//GEN-LAST:event_cmbProvinciasItemStateChanged
 
 	/**
 	 * @param args the command line arguments
@@ -377,12 +1922,12 @@ public class GestionLaptop extends javax.swing.JFrame {
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cmbLaptop;
+    private javax.swing.JComboBox<String> cmbProvincias;
     private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -391,7 +1936,6 @@ public class GestionLaptop extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel lblBrillo;
     private javax.swing.JPanel panelBateria;
     private javax.swing.JPanel panelLProcesador;
@@ -400,6 +1944,7 @@ public class GestionLaptop extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbtnLi3;
     private javax.swing.JRadioButton rbtnLi5;
     private javax.swing.JRadioButton rbtnLi7;
+    private javax.swing.JTextArea txaDetalles;
     private javax.swing.JTextField txtBrillo;
     // End of variables declaration//GEN-END:variables
 }
