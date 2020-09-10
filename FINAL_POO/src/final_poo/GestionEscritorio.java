@@ -510,8 +510,10 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			cbxPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
 			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("A1");
-			cbxPrearmadaEscritorio.addItem("A2");
+			cbxPrearmadaEscritorio.addItem("Computadora de escritorio Intel Celeron");
+			cbxPrearmadaEscritorio.addItem("Computadora de escritorio Intel i5");
+			cbxPrearmadaEscritorio.addItem("Computadora de escritorio XTRATECH");
+			cbxPrearmadaEscritorio.addItem("Computadora de escritorio AMD Athlon");
 		} else if (cbxProvincia.getSelectedItem().equals("Napo")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
@@ -905,6 +907,30 @@ public class GestionEscritorio extends javax.swing.JFrame {
 					"1TB HDD", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "Radeon Graphics",
 					"Ubuntu", "USB3.1 x 3", "358.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio Intel Celeron")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Compulaser", "Sin Marca", "Intel Celeron Core i3 de 9na Generación",
+					"1TB HDD", "8GB DDR4", "No Incluye",
+					"No Aplica", "20Inc", "DVD WRITER \n Teclado \n Mouse", "INTEL GRAPHICS",
+					"Windows 10", "USB3.1 x 3", "749.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio Intel i5")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Compulaser", "Sin Marca", "Intel Core i5 de 9na Generación",
+					"1TB HDD", "8GB DDR4", "Si",
+					"No Aplica", "20Inc", "DVD WRITER \n Teclado \n Mouse", "INTEL GRAPHICS",
+					"Windows 10", "USB3.1 x 3", "824.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio XTRATECH")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Compulaser", "Sin Marca", "AMD Athlon 3000G 3.5 Ghz",
+					"1TB HDD", "4GB DDR4", "Si",
+					"No Aplica", "20Inc", "DVD WRITER \n Teclado \n Mouse", "Radeon",
+					"Windows 10", "USB3.1 x 3", "516.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio AMD Athlon")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Compulaser", "Sin Marca", "AMD Athlon 3000G 3.5 Ghz",
+					"1TB HDD", "4GB DDR4", "Si",
+					"No Aplica", "20Inc", "DVD WRITER \n Teclado \n Mouse", "Radeon",
+					"Windows 10", "USB3.1 x 3", "690.00"));
 		} else {
 		}
         }//GEN-LAST:event_cbxPrearmadaEscritorioItemStateChanged
@@ -915,8 +941,10 @@ public class GestionEscritorio extends javax.swing.JFrame {
 	    this.setVisible(false);
     }//GEN-LAST:event_btnInicioActionPerformed
 	/*
-
-    
+    cbxPrearmadaEscritorio.addItem("Computadora de escritorio Intel Celeron");
+    cbxPrearmadaEscritorio.addItem("Computadora de escritorio Intel i5");
+    cbxPrearmadaEscritorio.addItem("Computadora de escritorio XTRATECH");
+    cbxPrearmadaEscritorio.addItem("Computadora de escritorio AMD Athlon");
 	 */
 	private String llenarPreArmadas(String tienda, String marca, String procesador,
 		String disco, String memoria,
