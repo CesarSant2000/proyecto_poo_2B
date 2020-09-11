@@ -35,6 +35,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 btaDisco = new javax.swing.ButtonGroup();
                 btaVentilacion = new javax.swing.ButtonGroup();
                 btaCA = new javax.swing.ButtonGroup();
+                btaEProcesador1 = new javax.swing.ButtonGroup();
                 jPanel1 = new javax.swing.JPanel();
                 panelEProcesador = new javax.swing.JPanel();
                 rbtnEi7 = new javax.swing.JRadioButton();
@@ -227,15 +228,15 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 panelEProcesador1.setBorder(javax.swing.BorderFactory.createTitledBorder("Procesador AMD"));
                 panelEProcesador1.setEnabled(false);
 
-                btaEProcesador.add(rbtnE7);
+                btaEProcesador1.add(rbtnE7);
                 rbtnE7.setText("Ryzen 7");
                 rbtnE7.setEnabled(false);
 
-                btaEProcesador.add(rbtnE5);
+                btaEProcesador1.add(rbtnE5);
                 rbtnE5.setText("Ryzen 5");
                 rbtnE5.setEnabled(false);
 
-                btaEProcesador.add(rbtnE3);
+                btaEProcesador1.add(rbtnE3);
                 rbtnE3.setText("Ryzen 3");
                 rbtnE3.setEnabled(false);
 
@@ -1457,6 +1458,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
         private javax.swing.ButtonGroup btaCA;
         private javax.swing.ButtonGroup btaDisco;
         private javax.swing.ButtonGroup btaEProcesador;
+        private javax.swing.ButtonGroup btaEProcesador1;
         private javax.swing.ButtonGroup btaVentilacion;
         private javax.swing.JButton btnECotizacion;
         private javax.swing.JButton btnInicio;

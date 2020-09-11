@@ -10,6 +10,8 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="btaCA">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="btaEProcesador1">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -476,7 +478,7 @@
             <Component class="javax.swing.JRadioButton" name="rbtnE7">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btaEProcesador"/>
+                  <ComponentRef name="btaEProcesador1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ryzen 7"/>
                 <Property name="enabled" type="boolean" value="false"/>
@@ -485,7 +487,7 @@
             <Component class="javax.swing.JRadioButton" name="rbtnE5">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btaEProcesador"/>
+                  <ComponentRef name="btaEProcesador1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ryzen 5"/>
                 <Property name="enabled" type="boolean" value="false"/>
@@ -494,7 +496,7 @@
             <Component class="javax.swing.JRadioButton" name="rbtnE3">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btaEProcesador"/>
+                  <ComponentRef name="btaEProcesador1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ryzen 3"/>
                 <Property name="enabled" type="boolean" value="false"/>
