@@ -37,6 +37,7 @@ public class GestionLogin extends javax.swing.JFrame {
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
                 setTitle("Parts & Bits");
+                setIconImage(getIconImage());
 
                 cbxEscritorio.setText("Escritorio");
 
