@@ -277,7 +277,7 @@ public class GestionLaptop extends javax.swing.JFrame {
 
                 btnLCotizzacion.setText("Crear Cotizacion");
 
-                jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("PROVINCIA QUE DESEA BUSCAR"));
+                jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PROVINCIA QUE DESEA BUSCAR", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
                 cmbProvincias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Azuay", "Bolívar", "Cañar", "Chimborazo", "Cotopaxi", "Esmeraldas", "Guayas", "Imbabura", "Loja", "Los Ríos", "Manabí", "Napo", "Pastaza", "Pichincha", "Santo Domingo de los Tsáchilas", "Tungurahua" }));
                 cmbProvincias.addItemListener(new java.awt.event.ItemListener() {
@@ -339,7 +339,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addGap(0, 0, Short.MAX_VALUE)
                                                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(57, 57, 57)
+                                                .addGap(110, 110, 110)
                                                 .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap())
                 );
