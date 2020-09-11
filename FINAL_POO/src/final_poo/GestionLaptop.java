@@ -2233,7 +2233,403 @@ public class GestionLaptop extends javax.swing.JFrame {
                                                 "Windows 10 Home en modo S","1 velocidad de señalización SuperSpeed ​​USB Type-C® 5Gbps\n2 SuperSpeed ​​USB Tipo-A Velocidad de señalización de 5 Gbps\n"
                                                         + "1 HDMI 1.4b; 1 RJ-45\n1 pin inteligente de CA\n1 combo de auriculares / micrófono","499,96 "));
                         break;
-    
+                        case "PORTATIL LENOVO S330 (13501)":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compulaser","LENOVO","Intel Celeron",
+						"1000 GB","4 GB ","NO Incluye",
+						"Hasta 7 horas*","FHD IPS de 39,62 cm (15,6\") y resolución 1920 × 1080","SI incluye","Intel integrada",						
+                                                "Windows 10 Home","USB 3.1 tipo C\n2 USB 3.0\nHDMI","550.00 "));
+                        break;
+                        case "PORTATIL ENVI (13452)":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compulaser","HP","6ta generación Intel® Core™ i5",
+						"34 SSD","4 GB ","NO Incluye",
+						"No aplica","14 pulgadas","NO incluye","No aplica",						
+                                                "Windows 10","3x USB 3.0, HDMI","279.00"));
+                        break;
+                        case "MINI NOTEBOOK XTRATECH (13428)":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compulaser","XTRATECH","Intel Quadcore",
+						"64 GB","4 GB ","NO Incluye",
+						"No aplica","10.0 pulgadas","NO incluye","No incluye",						
+                                                "Windows 10","HDMI","310.00 "));
+                        break;
+                        case "PORTÁTIL DELL 3493 (13485)":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compulaser","DELL"," Intel® Core™ i3 de 10ma generación",
+						"1TB", "8GB, DDR4", "integrada con resolución HD",
+                                            "Integrada, de 3 celdas y 42 WHr", "14.0-inch FHD (1920 x 1080) Anti-Glare LED Backlit Non-touch WVA Display", "NO incluye", "Gráficos AMD Radeon ™",
+                                            "UBUNTU", "1 x SD Card Reader\n"
+                                            + "1 x USB 2.0\n"
+                                            + "1 x Wedge-shaped lock slot\n"
+                                            + "1 x Power\n"
+                                            + "1 x HDMI 1.4b\n"
+                                            + "1 x RJ45\n"
+                                            + "2 x USB 3.1 Gen 1\n"
+                                            + "1 x Headphone & Microphone Audio Jack", "662,99"));
+                        break;
+                        case "COMAPLMWP52EA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","APPLE","MacBook Pro Core I5 10ma",
+						"1 TB","16 GB ","SI Incluye",
+						"No aplica","13.0 pulgadas","SI incluye","SI incluye",						
+                                                "iOS","HDMI","2482.22"));
+                        break;
+                        case "COMAPLMWP72EA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","APPLE","Core I5 10ma",
+						"512 GB -SSD","16 GB ","SI Incluye",
+						"No aplica","13.0 pulgadas","NO incluye","No incluye",						
+                                                "iOS","HDMI","2240"));
+                        break;
+                        case "COMDELL5410CT01":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","DELL","i5-10210U",
+						"1 TB","8 GB ","NO Incluye",
+						"No aplica","14 pulgadas","NO incluye","No incluye",						
+                                                "UBUNTU","HDMI\n3USB3.1","891.11"));
+                        break;
+                        case "COMDEL6T2VF":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","DELL","i5-8265U",
+						"1 TB","8 GB ","NO Incluye",
+						"No aplica","14 pulgadas","NO incluye","No incluye",						
+                                                "Windows 10 PRO","HDMI","1054.44"));
+                        break;
+                        case "COMDELK8P04":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","DELL","I7-8665U",
+						"512 GB","16 GB ","NO Incluye",
+						"No aplica","14 pulgadas","NO incluye","No incluye",						
+                                                "Windows 10 PRO","HDMI","1876.67"));
+                        break;
+                        case "COMDELL3400I701":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","DELL","i7-8565U",
+						"1 TB","8 GB ","NO Incluye",
+						"No aplica","14 pulgadas","NO incluye","No incluye",						
+                                                "Windows 10 PRO","HDMI\n3USB 3.1","1106.67"));
+                        break;
+                        case "COMDELL5410CT02":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","DELL","i5-10210U",
+						"256 GB","8 GB ","NO Incluye",
+						"No aplica","14 pulgadas","NO incluye","No incluye",						
+                                                "UBUNTU","HDMI\n3USB 3.1","910.00 "));
+                        break;
+                        case "COMDELTKKD8":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","DELL","I5-8265U",
+						"512 GB","16 GB ","NO Incluye",
+						"No aplica","14 pulgadas","NO incluye","No incluye",						
+                                                "Windows 10 PRO","HDMI\nUSB-C\nUSB3.0 ","1368.89"));
+                        break;
+                        case "COMHPX6QV86LA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","HP","13-ar0003la Ryzen",
+						"512 GB SSD","8 GB ","NO Incluye",
+						"No aplica","13 pulgadas","NO incluye","No incluye",						
+                                                "Windows 10 HOME","No incluye","1215.56"));
+                        break;
+                        case "COMMSICR600032A":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","MSI","Core 2 Duo T6500",
+						"320 GB","4 GB ","NO Incluye",
+						"No aplica","16 pulgadas","DVDW","No incluye",						
+                                                "Windows HOME","No incluye","793.22"));
+                        break;
+                        case "COMQUAQCR5-S9RY":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","QUASAD","I5-7200U",
+						"256 GB-SSD","8 GB ","NO Incluye",
+						"No aplica","14 pulgadas","NO incluye","No incluye",						
+                                                "Windows 10","2USB-C\nUSB2.0","811.1"));
+                        break;
+                        case "COMAPLMVVJ2EA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnomegastore","APPLE","ID-Bar I7 9na.",
+						"512 GB","16 GB ","NO Incluye",
+						"No aplica","16 pulgadas","NO incluye","No incluye",						
+                                                "OS X","No incluye","3142.22"));
+                        break;
+                        case "Dell Inspiron GAMORA":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","DELL","7 ª generación de procesadores Intel Core i7-7500U",
+						"1 TB 5400 rpm","16 GB ","NO Incluye",
+						"42WHr de 3 celdas","FHD de 15,6 pulgadas","SI incluye","AMD M445 R7 GDDR5 4G",						
+                                                "Windows 10 64 bits","USB 3.0","1199"));
+                        break;
+                        case "Lenovo Gaming Legion Y520":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","LENOVO","Intel core i7-7700HQ 7ma generacion",
+						"2 TB","32 GB ","SI Incluye",
+						"No incluye","15,6 LED BLACKLIT","SI incluye","NVIDIA",						
+                                                "Windows 10","HDMI\nUSB 2.0-3.0","1899"));
+                        break;
+                        case "Dell Inspiron":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","DELL","Intel core i7-7700HQ",
+						"512 GB","16 GB ","SI Incluye",
+						"74WR DE 6 CELDAS","15,6 FULL DH Antireflejo","NO incluye","NO INCLUYE",						
+                                                "Windows 10","HDMI\nUSB 2.0-3.0","1349"));
+                        break;
+                        case "Lenovo Ideapad":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","LENOVO","Intel 4405G",
+						"500 GB","DDR 4GB","NO Incluye",
+						"NO INCLUYE","15,6 LED","DVDRW","AMD M445 R7 GDDR5 4G",						
+                                                "Windows 10","NO APLICA","499"));
+                        break;
+                        case "Hp 245 G6":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","HP","AMD E2-7110",
+						"500 GB","4 GB ","NO Incluye",
+						"No aplica","14 pulgadas","SI incluye","No incluye",						
+                                                "Windows 10","HDMI\nUSB 2.0-3.0","399"));
+                        break;
+                        case "Asus FX503 VD":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","ASUS","Intel core i7-7700HQ 2.8 GHz",
+						"1 TB","16 GB ","SI Incluye",
+						"No aplica","15,6 Full HD 1080p","SI incluye","GEFORCE FTX 1050 4GB",						
+                                                "Windows 10","No incluye","1549"));
+                        break;
+                        case "Asus FX502VD":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","ASUS","7ma-GEN Core i7 Quad-core 7700HQ 2.8",
+						"1 TB","16 GB ","SI Incluye",
+						"No incluye","15,6 FULL HD","SI incluye","NVIDIA 4GB",						
+                                                "Windows 10","No incluye","1549"));
+                        break;
+                        case "Dell Gaming G3579":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","DELL","Intel core 17-7850H",
+						"1 TB","8 GB ","Si Incluye",
+						"No aplica","15,6 FULL HD","SI incluye","NVIDIA GEFORCE GTX 1050 Ti",						
+                                                "Windows 10 64 bits","No incluye","1399"));
+                        break;
+                        case "Dell I5570-780SLV":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","DELL","intel core i7 8th Gen",
+						"1 TB","32 GB ","Si Incluye",
+						"No incluye","15,6 1080p FULL HD","DVD-RW","RADEON",						
+                                                "Windows 10","No incluye","1349"));
+                        break;
+                        case "Hp Notebook Pavilion":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","HP","Intel 8TH Gen",
+						"2 TB","8 GB ","Si Incluye",
+						"No inclye","15,6 Full HD","SI incluye","NVIDIA GEFORCE GTX",						
+                                                "Windows 10","No incluye","1149"));
+                        break;
+                        case "Dell Inspiron I5570":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","DELL","Intel core i7-7500U",
+						"1 TB","20 GB ","Si Incluye",
+						"No incluye","No incluye","Si incluye","Intel UHD Graphics",						
+                                                "Windows 10","No incluye","949"));
+                        break;
+                        case "Legion Y7000 Gaming":
+                        txaDetalles.setText(
+				llenarPreArmadas("GYGABYTE","Legion","Intel Core i7-8750H",
+						"1 TB","16 GB ","Si Incluye",
+						"No incluye","No incluye","SI incluye","Intel GEFORCE 1060 Graphics",						
+                                                "Windows 10 Home","No incluye","1649"));
+                       
+                        break;
+                        case "ACER A315-54-51VR":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","ACER","CI5-10210U",
+						"1 TB","4 GB ","No Incluye",
+						"No incluye","15.6 pulgadas Full HD","No incluye","No incluye",						
+                                                "Linux","No incluye","624.11"));
+                       
+                        break;
+                        case "ACER NITRO 5 GAMER":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","ACER","CI7-9750H",
+						"256 TB","16 GB ","No Incluye",
+						"No incluye","15.6 pulgadas Full HD","TVIDEO","NVIDA GEFORCE RTX 2060",						
+                                                "Windows 10","No incluye","1,410.71"));
+                       
+                        break;
+                        case "ASUS ROG ZEPHYRUS GAMER":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","ACER","CI7-10750H",
+						"1 TB","16 GB ","SI Incluye",
+						"No incluye","15.6 pulgadas Full HD","T.VIDEO","NVIDA GEFORCE RTX2070",						
+                                                "Windows 10 64 bits","No incluye","2,013.39"));
+                       
+                        break;
+                        case "DELL VOSTRO 3590":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","DELL","I5 10210U",
+						"1 TB","4 GB ","No Incluye",
+						"No incluye","15.6 pulgadas Full HD","T.VIDEO","RADEON 610",						
+                                                "FREE DOS","No incluye","778.57"));
+                       
+                        break;
+                        case "DELL 14-3490":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","DELL","CI7-1051U",
+						"256 GB","8 GB ","No Incluye",
+						"No incluye","14 pulgadas Full HD","T.VIDEO","RADEON610",						
+                                                "UBUNTU","No incluye","888.39"));
+                       
+                        break;
+                        case "DELL 14-3493":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","DELL","CI5-1035G7",
+						"128 TB","4 GB ","No Incluye",
+						"No incluye","14 pulgadas Full HD","No incluye","No incluye",						
+                                                "Windows 10","No incluye","708.04"));
+                       
+                        break;
+                        case "DELL 15-3593":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","DELL","CI7-1065G7",
+						"2 TB","16 GB ","Si Incluye",
+						"No incluye","15.6 pulgadas Full HD","DVD","GeForce MX230",						
+                                                "UBUNTU","No incluye","1,116.07"));
+                       
+                        break;
+                        case "DELL 5593":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","DELL","CI7-1065G1",
+						"1 TB","8 GB ","SI Incluye",
+						"No incluye","15.6 pulgadas Full HD","T.VIDEO","GeForce MX120",						
+                                                "UBUNTU","No incluye","1,120.54"));
+                       
+                        break;
+                        case "HP 15-DA2204NIA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","HP","CI7-10510U",
+						"1 TB","8 GB ","No Incluye",
+						"No incluye","15.6 pulgadas Full HD","T.VIDEO","NVIDIA GEFORCE",						
+                                                "FREE DOS","No incluye","964.29"));
+                       
+                        break;
+                        case "HP 15-DK0056WM GAMING":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","HP","CI5-9300H",
+						"256 GB","8 GB ","No Incluye",
+						"No incluye","15.6 pulgadas Full HD","T.VIDEO","NVIDA GEFORCE GTX1650",						
+                                                "WINDOWS 10","No incluye","986.61"));
+                       
+                        break;
+                        case "HP 16-A0032DX GAMING":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","HP","CI5-10300H",
+						"512 TB","8 GB ","Si Incluye",
+						"No incluye","16.1 pulgadas Full HD","T.VIDEO","NVIDIA GEFORCE GTX1660Ti",						
+                                                "WINDOWS 10","No incluye","1,125.00"));
+                       
+                        break;
+                        case "LENOVO LEGION Y540":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","LENOVO","CI7-9750H",
+						"256 TB","16 GB ","So Incluye",
+						"No incluye","15.6 pulgadas Full HD","T.VIDEO","NVIDIA GEFORCE GTX",						
+                                                "WINDOWS 10","No incluye","1,500.00"));
+                       
+                        break;
+                        case "LENOVO L340 GAMING":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","LENOVO","CI5-9300H",
+						"256 GB","8 GB ","No Incluye",
+						"No incluye","15.6 pulgadas Full HD","TVIDEO","NVIDA GEFORCE GTX",						
+                                                "WINDOWS 10","No incluye","933.04"));
+                       
+                        break;
+                        case "LENOVO S145-14ILL":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","LENOVO","CI3-1005G1",
+						"1 TB","4 GB ","SI Incluye",
+						"No incluye","14 pulgadas Full HD","No incluye","No incluye",						
+                                                "FREE DOS","No incluye","568.75"));
+                       
+                        break;
+                        case "LENOVO THINKPAD":
+                        txaDetalles.setText(
+				llenarPreArmadas("Partes y Piezas","LENOVO","CI5-10210U",
+						"1 TB","4 GB ","No Incluye",
+						"No incluye","15.6 pulgadas Full HD","No incluye","No incluye",						
+                                                "FREEDOS","No incluye","776.79"));
+                       
+                        break;
+                        case "Workstation móvil HP EliteBook":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","HP","Core i7-3610M",
+						"1 TB","8 GB ","720p HD ",
+						"De 8 celdas (83 WHr) Li-Ion","1,36 x 15 x 10,1 cm (3,45 x 38,2 x 25,75 cm) ","Blu-ray R / RE DVD + /-RW SuperMulti DL","AMD FirePro ™ M4000",						
+                                               "Windows 8 64 ", "2 USB 3.0\n"
+                                            + "1 USB 2.0\n"
+                                            + "1 USB 2.0 de carga\n"
+                                            + "1 eSATA / USB 2.0 combo\n"
+                                            + "1 DisplayPort", "2,449.00"));
+                       
+                        break;
+                        case "Notebook Dell Inspiron 15 5593":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","Core i7-1065G7",
+						"256 GB","8 GB ","720p HD ",
+						"3 celdas, 42 WHr, batería integrada","15.6 FullHD con retroiluminación LED antirreflejo", "No incluye", " GDDR5 de 4 GB",
+                                            "Windows 10 (64bit)", "2 USB 3.1 de primera generación\n"
+                                            + "1 USB 2.0\n"
+                                            + "1 HDMI\n"
+                                            + "1 USB 3.1 de primera generación Tipo-C\n"
+                                            + "1 RJ45-10/100 Mbps", "1,149.99"));
+
+                        break;
+                        case "Laptop ASUS TUF":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","Quad-core AMD Ryzen 7 R7-3750H",
+						"1 TB","16 GB ","720p HD ",
+						"48WHrs, 3S1P, 3-cell Li-ion","15.6PULG Full HD (1920*1080)", "No incluye", "NVIDIA GeForce GTX 1660 Ti 6GB",
+                                            "Windows 10 (64bit)", "2x USB Type A 3.1", "1,299.99"));
+
+                        break;
+                        case "Notebook Lenovo ideaPad":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","LENOVO","Core i7-9750H 6-Cores",
+						"1 TB","12 GB ","No incluye",
+						"Hasta 9,5 horas* con tecnología Rapid Charge","IPS WLed Full HD 1920x1080p","No incluye", "NVIDIA® GeForce® GTX 1650 de 4 GB",
+                                            " preinstalado de fábrica", "No incluye", "1,419.99"));
+
+                        break;
+                        case "Notebook Dell Inspiron 3579 G3":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","Intel Core i7-8750H de 8ª generación - 6 Núcleos",
+						"1 TB","16 GB ","No incluye",
+						"No incluye","15.6\" LED Full HD", "No incluye", "NVIDIA® GeForce® GTX 1050 Ti ",
+                                            "Windows 10 Home 64bit", "No incluye", "1,415.99"));
+
+                        break;
+                        case "Notebook Dell Inspiron 15 5593":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","Core i7-1065G7",
+						"256 GB","8 GB ","720p HD ",
+						"3 celdas, 42 WHr, batería integrada","15.6 FullHD con retroiluminación LED antirreflejo", "No incluye", " GDDR5 de 4 GB",
+                                            "Windows 8 64 ", "2 USB 3.1 de primera generación\n"
+                                            + "1 USB 2.0\n"
+                                            + "1 HDMI\n"
+                                            + "1 USB 3.1 de primera generación Tipo-C\n"
+                                            + "1 RJ45-10/100 Mbps", "1,149.99"));
+
+                        break;
+                        case "Notebook Dell Inspiron 15 5593":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","Core i7-1065G7",
+						"256 GB","8 GB ","720p HD ",
+						"3 celdas, 42 WHr, batería integrada","15.6 FullHD con retroiluminación LED antirreflejo", "No incluye", " GDDR5 de 4 GB",
+                                            "Windows 8 64 ", "2 USB 3.1 de primera generación\n"
+                                            + "1 USB 2.0\n"
+                                            + "1 HDMI\n"
+                                            + "1 USB 3.1 de primera generación Tipo-C\n"
+                                            + "1 RJ45-10/100 Mbps", "1,149.99"));
+
+                        break;
+                        
                 }
         }
          }
@@ -2345,6 +2741,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
                         cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
                         cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
+                        cmbLaptop.addItem("240 G7");
+                        cmbLaptop.addItem("Dell Inspiron 15 3593");
+                        cmbLaptop.addItem("3493-3464BLK");
+                        cmbLaptop.addItem("DK1003DX");
                         break;
                     case "Esmeraldas":
                         cmbLaptop.removeAllItems();
@@ -2356,6 +2756,107 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
                         break;
                     case "Guayas":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
+                        cmbLaptop.addItem("DELL XPS 13 9380");
+                        cmbLaptop.addItem("Dell inspiron 3493");
+                        cmbLaptop.addItem("Dell Core I3 4gb");
+                        cmbLaptop.addItem("Portatil Dell Core I7 14 Pulgadas");
+                        cmbLaptop.addItem("Laptop Dell Core I5 14 Pulgadas");
+                        cmbLaptop.addItem("LAPTOP DELL 360");
+                        cmbLaptop.addItem("HP 240 G7");
+                        cmbLaptop.addItem("Laptop HP Gamer");
+                        cmbLaptop.addItem("HP AMD Ryzen 3 3250");
+                        cmbLaptop.addItem("TOUCHSMART");
+                        cmbLaptop.addItem("HP AMD A6");
+                        cmbLaptop.addItem("HP AMD A9 core i5");
+                        cmbLaptop.addItem("HP Gamer Ryzen 5 3500");
+                        cmbLaptop.addItem("HP Ryzen 7 gamer");
+                        cmbLaptop.addItem("HP Core i3 10ma");
+                        cmbLaptop.addItem("HP Core i7 10ma");
+                        cmbLaptop.addItem("RBELL");
+                        cmbLaptop.addItem("Toshiba Click 2 en 1");
+                        cmbLaptop.addItem("Acer Aspire");
+                        cmbLaptop.addItem("ASUS Gamer");
+                        cmbLaptop.addItem("Asus Core i3 10ma");
+                        cmbLaptop.addItem("Asus Gamer Core i7 9na");
+                        cmbLaptop.addItem("Asus AMD R3 3200");
+                        cmbLaptop.addItem("ASUS Intel");
+                        cmbLaptop.addItem("Lenovo Core i7 8va");
+                        cmbLaptop.addItem("Lenovo Ryzen 5 3500");
+                        cmbLaptop.addItem("Lenovo Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i5 10ma");
+                        cmbLaptop.addItem("Lenovo AMD Ryzen 3 3250U");
+                        cmbLaptop.addItem("Lenovo Gamer Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 7ma");
+                        cmbLaptop.addItem("Gamer Amd Ryzen 3");
+                        cmbLaptop.addItem("Lenovo AMD A6 core i3");
+                        cmbLaptop.addItem("Lenovo Core i3 10ma");
+                        cmbLaptop.addItem("Lenovo AMD A6");
+                        cmbLaptop.addItem("Lenovo Gamer");
+                        cmbLaptop.addItem("Lenovo Core i3 8va Platinum");
+                        cmbLaptop.addItem("COMDELK8P04");
+                        cmbLaptop.addItem("COMDELL3400I701");
+                        cmbLaptop.addItem("COMDELL5410CT01");
+                        cmbLaptop.addItem("COMDELL5410CT02");
+                        cmbLaptop.addItem("COMDELTKKD8");
+                        cmbLaptop.addItem("COMHPX6QV86LA");
+                        cmbLaptop.addItem("COMMSICR600032A");
+                        cmbLaptop.addItem("COMQUAQCR5-S9RY");
+                        cmbLaptop.addItem("COMAPLMVVJ2EA");
+                        cmbLaptop.addItem("COMAPLMWP52EA");
+                        cmbLaptop.addItem("COMAPLMWP72EA");
+                        cmbLaptop.addItem("COMDEL6T2VF");
+                        cmbLaptop.addItem("Dell Inspiron GAMORA");
+                        cmbLaptop.addItem("Lenovo Gaming Legion Y520");
+                        cmbLaptop.addItem("Dell Inspiron");
+                        cmbLaptop.addItem("Lenovo Ideapad");
+                        cmbLaptop.addItem("Hp 245 G6");
+                        cmbLaptop.addItem("Asus FX503 VD");
+                        cmbLaptop.addItem("Asus FX502VD");
+                        cmbLaptop.addItem("Dell Gaming G3579");
+                        cmbLaptop.addItem("Dell I5570-780SLV");
+                        cmbLaptop.addItem("Hp Notebook Pavilion");
+                        cmbLaptop.addItem("Dell Inspiron I5570");
+                        cmbLaptop.addItem("Legion Y7000 Gaming");
+                        cmbLaptop.addItem("ACER A315-54-51VR");
+                        cmbLaptop.addItem("ACER NITRO 5 GAMER");
+                        cmbLaptop.addItem("ASUS ROG ZEPHYRUS GAMER");
+                        cmbLaptop.addItem("DELL VOSTRO 3590");
+                        cmbLaptop.addItem("DELL 14-3490");
+                        cmbLaptop.addItem("DELL 14-3493");
+                        cmbLaptop.addItem("DELL 15-3593");
+                        cmbLaptop.addItem("DELL 5593");
+                        cmbLaptop.addItem("HP 15-DA2204NIA");
+                        cmbLaptop.addItem("HP 15-DK0056WM GAMING");
+                        cmbLaptop.addItem("HP 16-A0032DX GAMING");
+                        cmbLaptop.addItem("LENOVO LEGION Y540");
+                        cmbLaptop.addItem("LENOVO L340 GAMING");
+                        cmbLaptop.addItem("LENOVO S145-14ILL");
+                        cmbLaptop.addItem("LENOVO THINKPAD");
+                        cmbLaptop.addItem("Workstation móvil HP EliteBook");
+                        cmbLaptop.addItem("Notebook Dell Inspiron 15 5593");
+                        cmbLaptop.addItem("Laptop ASUS TUF");
+                        cmbLaptop.addItem("Notebook Lenovo ideaPad");
+                        cmbLaptop.addItem("Notebook Dell Inspiron 3579 G3");
+                        cmbLaptop.addItem("Notebook Dell Inspiron 15 5570");
+                        cmbLaptop.addItem("Notebook HP Spectre");
+                        cmbLaptop.addItem("Laptop HP 240 G5");
+                        cmbLaptop.addItem("Ultrabook Dell Inspiron");
+                        cmbLaptop.addItem("Notebok HP Pavilion");
+                        cmbLaptop.addItem("Apple MacBook Pro");
+                        cmbLaptop.addItem("Netbook Samsung NP");
+                        cmbLaptop.addItem("Netbook Acer Aspire");
+                        cmbLaptop.addItem("Workstation móvil HP EliteBook");
+                        cmbLaptop.addItem("Notebook Dell Inspiron 14 3493");
+                        
+                        
                         break;
                     case "Imbabura":
                         cmbLaptop.removeAllItems();
@@ -2423,6 +2924,12 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("Lenovo Gamer Core i5 8va");
                         cmbLaptop.addItem("Lenovo Core i3 8va");
                         cmbLaptop.addItem("Lenovo Core i3 7ma");
+                        cmbLaptop.addItem("Gamer Amd Ryzen 3");
+                        cmbLaptop.addItem("Lenovo AMD A6 core i3");
+                        cmbLaptop.addItem("Lenovo Core i3 10ma");
+                        cmbLaptop.addItem("Lenovo AMD A6");
+                        cmbLaptop.addItem("Lenovo Gamer");
+                        cmbLaptop.addItem("Lenovo Core i3 8va Platinum");
                         break;
                     case "Manabí":
                          cmbLaptop.removeAllItems();
@@ -2464,6 +2971,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("Lenovo Gamer Core i5 8va");
                         cmbLaptop.addItem("Lenovo Core i3 8va");
                         cmbLaptop.addItem("Lenovo Core i3 7ma");
+                        cmbLaptop.addItem("PORTATIL ENVI (13452)");
+                        cmbLaptop.addItem("PORTATIL LENOVO S330 (13501)");
+                        cmbLaptop.addItem("MINI NOTEBOOK XTRATECH (13428)");
+                        cmbLaptop.addItem("PORTÁTIL DELL 3493 (13485)");
                         break;
                     case "Napo":
                          cmbLaptop.removeAllItems();
@@ -2538,6 +3049,16 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("Lenovo AMD A6");
                         cmbLaptop.addItem("Lenovo Gamer");
                         cmbLaptop.addItem("Lenovo Core i3 8va Platinum");
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
+                        cmbLaptop.addItem("240 G7");
+                        cmbLaptop.addItem("Dell Inspiron 15 3593");
+                        cmbLaptop.addItem("3493-3464BLK");
+                        cmbLaptop.addItem("DK1003DX");
                         break;
                     case "Santo Domingo de los Tsáchilas":
                         cmbLaptop.removeAllItems();
@@ -2553,6 +3074,55 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("DK1003DX");
                         break;
                     case "Tungurahua":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
+                        cmbLaptop.addItem("240 G7");
+                        cmbLaptop.addItem("Dell Inspiron 15 3593");
+                        cmbLaptop.addItem("3493-3464BLK");
+                        cmbLaptop.addItem("DK1003DX");
+                         cmbLaptop.addItem("DELL XPS 13 9380");
+                        cmbLaptop.addItem("Dell inspiron 3493");
+                        cmbLaptop.addItem("Dell Core I3 4gb");
+                        cmbLaptop.addItem("Portatil Dell Core I7 14 Pulgadas");
+                        cmbLaptop.addItem("Laptop Dell Core I5 14 Pulgadas");
+                        cmbLaptop.addItem("LAPTOP DELL 360");
+                        cmbLaptop.addItem("HP 240 G7");
+                        cmbLaptop.addItem("Laptop HP Gamer");
+                        cmbLaptop.addItem("HP AMD Ryzen 3 3250");
+                        cmbLaptop.addItem("TOUCHSMART");
+                        cmbLaptop.addItem("HP AMD A6");
+                        cmbLaptop.addItem("HP AMD A9 core i5");
+                        cmbLaptop.addItem("HP Gamer Ryzen 5 3500");
+                        cmbLaptop.addItem("HP Ryzen 7 gamer");
+                        cmbLaptop.addItem("HP Core i3 10ma");
+                        cmbLaptop.addItem("HP Core i7 10ma");
+                        cmbLaptop.addItem("RBELL");
+                        cmbLaptop.addItem("Toshiba Click 2 en 1");
+                        cmbLaptop.addItem("Acer Aspire");
+                        cmbLaptop.addItem("ASUS Gamer");
+                        cmbLaptop.addItem("Asus Core i3 10ma");
+                        cmbLaptop.addItem("Asus Gamer Core i7 9na");
+                        cmbLaptop.addItem("Asus AMD R3 3200");
+                        cmbLaptop.addItem("ASUS Intel");
+                        cmbLaptop.addItem("Lenovo Core i7 8va");
+                        cmbLaptop.addItem("Lenovo Ryzen 5 3500");
+                        cmbLaptop.addItem("Lenovo Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i5 10ma");
+                        cmbLaptop.addItem("Lenovo AMD Ryzen 3 3250U");
+                        cmbLaptop.addItem("Lenovo Gamer Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 7ma");
+                        cmbLaptop.addItem("Gamer Amd Ryzen 3");
+                        cmbLaptop.addItem("Lenovo AMD A6 core i3");
+                        cmbLaptop.addItem("Lenovo Core i3 10ma");
+                        cmbLaptop.addItem("Lenovo AMD A6");
+                        cmbLaptop.addItem("Lenovo Gamer");
+                        cmbLaptop.addItem("Lenovo Core i3 8va Platinum");
                         break;
                                
 		}
