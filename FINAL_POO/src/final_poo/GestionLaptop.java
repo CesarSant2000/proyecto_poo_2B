@@ -2233,7 +2233,41 @@ public class GestionLaptop extends javax.swing.JFrame {
                                                 "Windows 10 Home en modo S","1 velocidad de señalización SuperSpeed ​​USB Type-C® 5Gbps\n2 SuperSpeed ​​USB Tipo-A Velocidad de señalización de 5 Gbps\n"
                                                         + "1 HDMI 1.4b; 1 RJ-45\n1 pin inteligente de CA\n1 combo de auriculares / micrófono","499,96 "));
                         break;
-    
+                        case "PORTATIL LENOVO S330 (13501)":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compulaser","LENOVO","Intel Celeron",
+						"1000 GB","4 GB ","NO Incluye",
+						"Hasta 7 horas*","FHD IPS de 39,62 cm (15,6\") y resolución 1920 × 1080","SI incluye","Intel integrada",						
+                                                "Windows 10 Home","USB 3.1 tipo C\n2 USB 3.0\nHDMI","550.00 "));
+                        break;
+                        case "PORTATIL ENVI (13452)":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compulaser","HP","6ta generación Intel® Core™ i5",
+						"34 SSD","4 GB ","NO Incluye",
+						"No aplica","14 pulgadas","NO incluye","No aplica",						
+                                                "Windows 10","3x USB 3.0, HDMI","279.00"));
+                        break;
+                        case "MINI NOTEBOOK XTRATECH (13428)":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compulaser","XTRATECH","ntel Quadcore",
+						"64 GB","4 GB ","NO Incluye",
+						"No aplica","10.0 pulgadas","NO incluye","No incluye",						
+                                                "Windows 10","HDMI","310.00 "));
+                        break;
+                        case "PORTÁTIL DELL 3493 (13485)":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compulaser","DELL"," Intel® Core™ i3 de 10ma generación",
+						"1TB", "8GB, DDR4", "integrada con resolución HD",
+                                            "Integrada, de 3 celdas y 42 WHr", "14.0-inch FHD (1920 x 1080) Anti-Glare LED Backlit Non-touch WVA Display", "NO incluye", "Gráficos AMD Radeon ™",
+                                            "UBUNTU", "1 x SD Card Reader\n"
+                                            + "1 x USB 2.0\n"
+                                            + "1 x Wedge-shaped lock slot\n"
+                                            + "1 x Power\n"
+                                            + "1 x HDMI 1.4b\n"
+                                            + "1 x RJ45\n"
+                                            + "2 x USB 3.1 Gen 1\n"
+                                            + "1 x Headphone & Microphone Audio Jack", "662,99"));
+                        break;
                 }
         }
          }
@@ -2464,6 +2498,10 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("Lenovo Gamer Core i5 8va");
                         cmbLaptop.addItem("Lenovo Core i3 8va");
                         cmbLaptop.addItem("Lenovo Core i3 7ma");
+                        cmbLaptop.addItem("PORTATIL ENVI (13452)");
+                        cmbLaptop.addItem("PORTATIL LENOVO S330 (13501)");
+                        cmbLaptop.addItem("MINI NOTEBOOK XTRATECH (13428)");
+                        cmbLaptop.addItem("PORTÁTIL DELL 3493 (13485)");
                         break;
                     case "Napo":
                          cmbLaptop.removeAllItems();
