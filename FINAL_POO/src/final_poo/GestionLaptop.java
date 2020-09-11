@@ -2551,11 +2551,83 @@ public class GestionLaptop extends javax.swing.JFrame {
                         break;
                         case "LENOVO THINKPAD":
                         txaDetalles.setText(
-				llenarPreArmadas("Partesy Piezas","LENOVO","CI5-10210U",
+				llenarPreArmadas("Partes y Piezas","LENOVO","CI5-10210U",
 						"1 TB","4 GB ","No Incluye",
 						"No incluye","15.6 pulgadas Full HD","No incluye","No incluye",						
                                                 "FREEDOS","No incluye","776.79"));
                        
+                        break;
+                        case "Workstation móvil HP EliteBook":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","HP","Core i7-3610M",
+						"1 TB","8 GB ","720p HD ",
+						"De 8 celdas (83 WHr) Li-Ion","1,36 x 15 x 10,1 cm (3,45 x 38,2 x 25,75 cm) ","Blu-ray R / RE DVD + /-RW SuperMulti DL","AMD FirePro ™ M4000",						
+                                               "Windows 8 64 ", "2 USB 3.0\n"
+                                            + "1 USB 2.0\n"
+                                            + "1 USB 2.0 de carga\n"
+                                            + "1 eSATA / USB 2.0 combo\n"
+                                            + "1 DisplayPort", "2,449.00"));
+                       
+                        break;
+                        case "Notebook Dell Inspiron 15 5593":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","Core i7-1065G7",
+						"256 GB","8 GB ","720p HD ",
+						"3 celdas, 42 WHr, batería integrada","15.6 FullHD con retroiluminación LED antirreflejo", "No incluye", " GDDR5 de 4 GB",
+                                            "Windows 10 (64bit)", "2 USB 3.1 de primera generación\n"
+                                            + "1 USB 2.0\n"
+                                            + "1 HDMI\n"
+                                            + "1 USB 3.1 de primera generación Tipo-C\n"
+                                            + "1 RJ45-10/100 Mbps", "1,149.99"));
+
+                        break;
+                        case "Laptop ASUS TUF":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","Quad-core AMD Ryzen 7 R7-3750H",
+						"1 TB","16 GB ","720p HD ",
+						"48WHrs, 3S1P, 3-cell Li-ion","15.6PULG Full HD (1920*1080)", "No incluye", "NVIDIA GeForce GTX 1660 Ti 6GB",
+                                            "Windows 10 (64bit)", "2x USB Type A 3.1", "1,299.99"));
+
+                        break;
+                        case "Notebook Lenovo ideaPad":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","LENOVO","Core i7-9750H 6-Cores",
+						"1 TB","12 GB ","No incluye",
+						"Hasta 9,5 horas* con tecnología Rapid Charge","IPS WLed Full HD 1920x1080p","No incluye", "NVIDIA® GeForce® GTX 1650 de 4 GB",
+                                            " preinstalado de fábrica", "No incluye", "1,419.99"));
+
+                        break;
+                        case "Notebook Dell Inspiron 3579 G3":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","Intel Core i7-8750H de 8ª generación - 6 Núcleos",
+						"1 TB","16 GB ","No incluye",
+						"No incluye","15.6\" LED Full HD", "No incluye", "NVIDIA® GeForce® GTX 1050 Ti ",
+                                            "Windows 10 Home 64bit", "No incluye", "1,415.99"));
+
+                        break;
+                        case "Notebook Dell Inspiron 15 5593":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","Core i7-1065G7",
+						"256 GB","8 GB ","720p HD ",
+						"3 celdas, 42 WHr, batería integrada","15.6 FullHD con retroiluminación LED antirreflejo", "No incluye", " GDDR5 de 4 GB",
+                                            "Windows 8 64 ", "2 USB 3.1 de primera generación\n"
+                                            + "1 USB 2.0\n"
+                                            + "1 HDMI\n"
+                                            + "1 USB 3.1 de primera generación Tipo-C\n"
+                                            + "1 RJ45-10/100 Mbps", "1,149.99"));
+
+                        break;
+                        case "Notebook Dell Inspiron 15 5593":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","Core i7-1065G7",
+						"256 GB","8 GB ","720p HD ",
+						"3 celdas, 42 WHr, batería integrada","15.6 FullHD con retroiluminación LED antirreflejo", "No incluye", " GDDR5 de 4 GB",
+                                            "Windows 8 64 ", "2 USB 3.1 de primera generación\n"
+                                            + "1 USB 2.0\n"
+                                            + "1 HDMI\n"
+                                            + "1 USB 3.1 de primera generación Tipo-C\n"
+                                            + "1 RJ45-10/100 Mbps", "1,149.99"));
+
                         break;
                         
                 }
@@ -2768,6 +2840,21 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("LENOVO L340 GAMING");
                         cmbLaptop.addItem("LENOVO S145-14ILL");
                         cmbLaptop.addItem("LENOVO THINKPAD");
+                        cmbLaptop.addItem("Workstation móvil HP EliteBook");
+                        cmbLaptop.addItem("Notebook Dell Inspiron 15 5593");
+                        cmbLaptop.addItem("Laptop ASUS TUF");
+                        cmbLaptop.addItem("Notebook Lenovo ideaPad");
+                        cmbLaptop.addItem("Notebook Dell Inspiron 3579 G3");
+                        cmbLaptop.addItem("Notebook Dell Inspiron 15 5570");
+                        cmbLaptop.addItem("Notebook HP Spectre");
+                        cmbLaptop.addItem("Laptop HP 240 G5");
+                        cmbLaptop.addItem("Ultrabook Dell Inspiron");
+                        cmbLaptop.addItem("Notebok HP Pavilion");
+                        cmbLaptop.addItem("Apple MacBook Pro");
+                        cmbLaptop.addItem("Netbook Samsung NP");
+                        cmbLaptop.addItem("Netbook Acer Aspire");
+                        cmbLaptop.addItem("Workstation móvil HP EliteBook");
+                        cmbLaptop.addItem("Notebook Dell Inspiron 14 3493");
                         
                         
                         break;
