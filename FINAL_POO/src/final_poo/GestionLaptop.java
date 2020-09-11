@@ -2192,6 +2192,42 @@ public class GestionLaptop extends javax.swing.JFrame {
 						"Batería integrada de polímero de litio de 58.0 vatios-hora","13.3 pantalla retina","Si incluye","Gráficos Intel Iris Plus 645",						
                                                 "macOS","Dos puertos Thunderbolt 3 (USB-C)","2,199.00"));
                         break;
+                        case "240 G7":
+                        txaDetalles.setText(
+				llenarPreArmadas("Bestpc.","HP","I7 8565U DE 1.8GHZ A 4.6GHZ",
+						"1TB 5400 RPM SATA","8GB DDR4 2400MHz","NO Incluye",
+						"NO APLICA","14\" HD (1366 x 768) Anti-Glare Non-Touch","NO incluye"," Interna Intel® UHD Graphics 620",						
+                                                "FreeDOS 2.0","No aplica","1,170.00"));
+                        break;
+                        case "Dell Inspiron 15 3593":
+                        txaDetalles.setText(
+				llenarPreArmadas("Bestpc.","Dell","CORE I3 1005G1 (HASTA 3.4 GHZ)",
+						"1 TB","4 GB","panorámica de alta definición (720p)",
+						"NO APLICA","Hasta Pantalla de 15.6 pulg","NO incluye","Intel® UHD con memoria gráfica compartida",						
+                                                "UBUNTU","1 tarjeta SD\n"
+                                        + "1 puerto USB 2.0\n"
+                                        + "1 unidad de disco óptico (opcional)\n"
+                                        + "1 pestaña para candado en forma de cuña\n"
+                                        + "1 conector de alimentación\n"
+                                        + "1 puerto HDMI 1.4b\n"
+                                        + "1 RJ-45\n"
+                                        + "2 puertos USB 3.1 de 1.ª gen.", "793.99"));
+                        break;
+                        case "3493-3464BLK":
+                        txaDetalles.setText(
+				llenarPreArmadas("Bestpc.","DELL","Intel® Core I5-1035G4",
+						"1 TB","4 GB","SI Incluye",
+						"No aplica","15.6","No incluye","No incluye",						
+                                                "Windows 10","No aplica","897.00"));
+                        break;
+                        case "DK1003DX":
+                        txaDetalles.setText(
+				llenarPreArmadas("Bestpc.","HP","Core i3 1005G1",
+						"128 GB","4 GB ","NO Incluye",
+						"Iones de litio de 3 celdas y 41 Wh","14\"","NO incluye","Gráficos AMD Radeon ™",						
+                                                "Windows 10 Home en modo S","1 velocidad de señalización SuperSpeed ​​USB Type-C® 5Gbps\n2 SuperSpeed ​​USB Tipo-A Velocidad de señalización de 5 Gbps\n"
+                                                        + "1 HDMI 1.4b; 1 RJ-45\n1 pin inteligente de CA\n1 combo de auriculares / micrófono","499,96 "));
+                        break;
     
                 }
         }
@@ -2384,10 +2420,65 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("Lenovo Core i3 7ma");
                         break;
                     case "Manabí":
+                         cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
+                        cmbLaptop.addItem("DELL XPS 13 9380");
+                        cmbLaptop.addItem("Dell inspiron 3493");
+                        cmbLaptop.addItem("Dell Core I3 4gb");
+                        cmbLaptop.addItem("Portatil Dell Core I7 14 Pulgadas");
+                        cmbLaptop.addItem("Laptop Dell Core I5 14 Pulgadas");
+                        cmbLaptop.addItem("LAPTOP DELL 360");
+                        cmbLaptop.addItem("HP 240 G7");
+                        cmbLaptop.addItem("Laptop HP Gamer");
+                        cmbLaptop.addItem("HP AMD Ryzen 3 3250");
+                        cmbLaptop.addItem("TOUCHSMART");
+                        cmbLaptop.addItem("HP AMD A6");
+                        cmbLaptop.addItem("HP AMD A9 core i5");
+                        cmbLaptop.addItem("HP Gamer Ryzen 5 3500");
+                        cmbLaptop.addItem("HP Ryzen 7 gamer");
+                        cmbLaptop.addItem("HP Core i3 10ma");
+                        cmbLaptop.addItem("HP Core i7 10ma");
+                        cmbLaptop.addItem("RBELL");
+                        cmbLaptop.addItem("Toshiba Click 2 en 1");
+                        cmbLaptop.addItem("Acer Aspire");
+                        cmbLaptop.addItem("ASUS Gamer");
+                        cmbLaptop.addItem("Asus Core i3 10ma");
+                        cmbLaptop.addItem("Asus Gamer Core i7 9na");
+                        cmbLaptop.addItem("Asus AMD R3 3200");
+                        cmbLaptop.addItem("ASUS Intel");
+                        cmbLaptop.addItem("Lenovo Core i7 8va");
+                        cmbLaptop.addItem("Lenovo Ryzen 5 3500");
+                        cmbLaptop.addItem("Lenovo Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i5 10ma");
+                        cmbLaptop.addItem("Lenovo AMD Ryzen 3 3250U");
+                        cmbLaptop.addItem("Lenovo Gamer Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 7ma");
                         break;
                     case "Napo":
+                         cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
+                        
                         break;
                     case "Pastaza":
+                         cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
+                        
                         break;
                     case "Pichincha":
                         cmbLaptop.removeAllItems();
@@ -2442,6 +2533,23 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("Lenovo AMD A6");
                         cmbLaptop.addItem("Lenovo Gamer");
                         cmbLaptop.addItem("Lenovo Core i3 8va Platinum");
+                        break;
+                    case "Santo Domingo de los Tsáchilas":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
+                        cmbLaptop.addItem("240 G7");
+                        cmbLaptop.addItem("Dell Inspiron 15 3593");
+                        cmbLaptop.addItem("3493-3464BLK");
+                        cmbLaptop.addItem("DK1003DX");
+                        break;
+                    case "Tungurahua":
+                        break;
+                               
 		}
 		}
         }
