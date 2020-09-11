@@ -34,6 +34,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 btaEProcesador = new javax.swing.ButtonGroup();
                 btaDisco = new javax.swing.ButtonGroup();
                 btaVentilacion = new javax.swing.ButtonGroup();
+                btaCA = new javax.swing.ButtonGroup();
                 jPanel1 = new javax.swing.JPanel();
                 panelEProcesador = new javax.swing.JPanel();
                 rbtnEi7 = new javax.swing.JRadioButton();
@@ -264,6 +265,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 panelCA.setBorder(javax.swing.BorderFactory.createTitledBorder("Capacidad Almacenamiento"));
                 panelCA.setEnabled(false);
 
+                btaCA.add(rbtnCAGB);
                 rbtnCAGB.setText("GB");
                 rbtnCAGB.setEnabled(false);
                 rbtnCAGB.addItemListener(new java.awt.event.ItemListener() {
@@ -272,6 +274,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                         }
                 });
 
+                btaCA.add(rbtnCATB);
                 rbtnCATB.setText("TB");
                 rbtnCATB.setEnabled(false);
                 rbtnCATB.addItemListener(new java.awt.event.ItemListener() {
@@ -1289,7 +1292,6 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			rbtnVentilador.setEnabled(true);
 			rbtnLiquida.setEnabled(true);
 			panelVentilacion.setEnabled(true);
-
 			panelRam.setEnabled(true);
 			cmbRam.setEnabled(true);
 			panelFuente.setEnabled(true);
@@ -1297,6 +1299,15 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			panelAlmacenamiento.setEnabled(true);
 			rbtnHDD.setEnabled(true);
 			rbtnSSD.setEnabled(true);
+			
+			panelEProcesador1.setEnabled(true);
+			rbtnE7.setEnabled(true);
+			rbtnE5.setEnabled(true);
+			rbtnE3.setEnabled(true);
+			panelCA.setEnabled(true);
+			rbtnCAGB.setEnabled(true);
+			rbtnCATB.setEnabled(true);
+			cbmCA.setEnabled(true);
 		} else if (evt.getStateChange() == ItemEvent.DESELECTED) {
 			rbtnEi7.setEnabled(false);
 			rbtnEi5.setEnabled(false);
@@ -1312,6 +1323,14 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			panelAlmacenamiento.setEnabled(false);
 			rbtnHDD.setEnabled(false);
 			rbtnSSD.setEnabled(false);
+			panelEProcesador1.setEnabled(false);
+			rbtnE7.setEnabled(false);
+			rbtnE5.setEnabled(false);
+			rbtnE3.setEnabled(false);
+			panelCA.setEnabled(false);
+			rbtnCAGB.setEnabled(false);
+			rbtnCATB.setEnabled(false);
+			cbmCA.setEnabled(false);			
 		}
         }//GEN-LAST:event_cbxActivar2ItemStateChanged
 
@@ -1319,10 +1338,10 @@ public class GestionEscritorio extends javax.swing.JFrame {
 		// TODO add your handling code here:
 		if (evt.getStateChange() == ItemEvent.SELECTED) {
 			cbxPrearmadaEscritorio.setEnabled(true);
-			txaDetallesEscritorio.setEnabled(true);
+			panelEPrearmadas.setEnabled(true);
 		} else if (evt.getStateChange() == ItemEvent.DESELECTED) {
 			cbxPrearmadaEscritorio.setEnabled(false);
-			txaDetallesEscritorio.setEnabled(false);
+			panelEPrearmadas.setEnabled(false);
 		}
         }//GEN-LAST:event_cbxActivar1ItemStateChanged
 
@@ -1435,6 +1454,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 	}
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
+        private javax.swing.ButtonGroup btaCA;
         private javax.swing.ButtonGroup btaDisco;
         private javax.swing.ButtonGroup btaEProcesador;
         private javax.swing.ButtonGroup btaVentilacion;
