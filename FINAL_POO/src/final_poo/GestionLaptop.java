@@ -2605,28 +2605,98 @@ public class GestionLaptop extends javax.swing.JFrame {
                                             "Windows 10 Home 64bit", "No incluye", "1,415.99"));
 
                         break;
-                        case "Notebook Dell Inspiron 15 5593":
+                        case "Notebook Dell Inspiron 3779 G3":
                         txaDetalles.setText(
-				llenarPreArmadas("Tecnosmart.","DELL","Core i7-1065G7",
-						"256 GB","8 GB ","720p HD ",
-						"3 celdas, 42 WHr, batería integrada","15.6 FullHD con retroiluminación LED antirreflejo", "No incluye", " GDDR5 de 4 GB",
-                                            "Windows 8 64 ", "2 USB 3.1 de primera generación\n"
-                                            + "1 USB 2.0\n"
-                                            + "1 HDMI\n"
-                                            + "1 USB 3.1 de primera generación Tipo-C\n"
-                                            + "1 RJ45-10/100 Mbps", "1,149.99"));
+				llenarPreArmadas("Tecnosmart.","DELL","Intel Core i7-8750H de 8ª generación - 6 Núcleos",
+						"2 TB","16 GB ","720p HD ",
+						"4 celdas","15.6\" LED Full HD", "No incluye", "NVIDIA® GeForce® GTX 1060",
+                                            "Windows 10 Home 64bit ", "No inluye", "1,919.00"));
 
                         break;
-                        case "Notebook Dell Inspiron 15 5593":
+                        case "Notebook Dell Inspiron 15 5570":
                         txaDetalles.setText(
-				llenarPreArmadas("Tecnosmart.","DELL","Core i7-1065G7",
+				llenarPreArmadas("Tecnosmart.","DELL","Core i7-8550U",
+						"1 TB","8 GB ","SI INCLUYE",
+						"Ión de Litio 3 celdas","15.6 FullHD", "No incluye", "Radeon 530",
+                                            "Windows 10 Home (64 Bits)", "USB 2.0	1\n"
+                                        + "USB 3.0	\n"
+                                        + "USB-C	\n"
+                                        + "Lector de Tarjetas	\n"
+                                        + "HDMI", "1,219.99"));
+
+                        break;
+                        case "Notebook HP Spectre":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","HP","Intel Core i5-8250U octava generación",
 						"256 GB","8 GB ","720p HD ",
-						"3 celdas, 42 WHr, batería integrada","15.6 FullHD con retroiluminación LED antirreflejo", "No incluye", " GDDR5 de 4 GB",
-                                            "Windows 8 64 ", "2 USB 3.1 de primera generación\n"
-                                            + "1 USB 2.0\n"
+						"Hasta 16 horas","Táctil Full HD de 33,8 cm (13,3\") en diagonal","No incluye", " Intel® UHD 620",
+                                            "Windows 10 Home 64bit ", "	1 combinación de auriculares y micrófono", "1,648.99"));
+
+                        break;
+                        case "Laptop HP 240 G5":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","HP","Intel® Celeron®",
+						"500 GB","4 GB ","HD HP OPCIONAL ",
+						"Iones de litio de 4 celdas y 41 Wh", "LED HD SVA antirreflejo delgada de 14\" en diagonal (1366 x 768)", "DVDRW", "Gráficos Intel® HD 400",
+                                            "Windows 10 Home", "1 USB 3.0\n"
+                                            + "2 USB 2.0\n"
+                                            + "1 VGA\n"
                                             + "1 HDMI\n"
-                                            + "1 USB 3.1 de primera generación Tipo-C\n"
-                                            + "1 RJ45-10/100 Mbps", "1,149.99"));
+                                            + "1 conector combinado de auriculares y micrófono\n"
+                                            + "1 alimentación de CA\n"
+                                            + "1 RJ-45 9 ", "339.99"));
+
+                        break;
+                        
+                        case "Ultrabook Dell Inspiron":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","7 ª generación de procesadores Intel Core i5-7200U",
+						"1 TB","8 GB ","No aplica ",
+						"3 celdas (integrado)","FHD 13,3 pulgadas (1920x1080) IPS Truelife LED retroiluminada", "No incluye", "	Intel HD Graphics 620",
+                                            "Windows 10 Home 64bit ", "No inluye", "1,039.99"));
+
+                        break;
+                        case "Notebok HP Pavilion":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","HP","Intel® Pentium® N3520",
+						"500 GB","4 GB ","HD HP TrueVision",
+						"2 celdas (29 WHr) prismática","Pantalla táctil (11.6\") con retroiluminación LED HD","No incluye", "Intel HD (2,17 GHz, 2 MB de caché, 4 núcleos)",
+                                            "Windows 8.1 de 64", "1 HDMI\n"
+                                            + "2 USB 2.0\n"
+                                            + "1 USB 3.0\n"
+                                            + "1 RJ-45", "768.99"));
+                        break;
+                       
+                        case "Apple MacBook Pro":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","APPLE","Intel® Core™ i5 (3MB caché L3)",
+						"128 GB","4 GB ","no incluye",
+						"No incluye","Pantalla Retina retroiluminada LED de 13.3 pulgadas", "No incluye", "Iris Graphics ",
+                                            "Mac OS X 10.9 Mavericks", "Thunderbolt, USB 3.0", "1,622.90"));
+
+                        break;
+                        case "Netbook Samsung NP":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","Samsung"," Intel® ATOM™ N2100 (1.6 GHz, 800 MHz, 512 KB)",
+						"S-ATA II de 320 GB","DDR3 de 2 GB a 1,066 MHz","Integrada",
+						"No incluye","Pantalla LED WSVGA de 10.1\" (1,024 x 600), antirreflejo", "OS DVD, System S / W Media", "Intel® GMA 3600",
+                                            "Windows® 7 Starter", "2 x USB 2.0", "475.00"));
+
+                        break;
+                        case "Netbook Acer Aspire":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","Acer","ProcesadorIntel Celeron 1007U",
+						"500 GB","4096 MB","Si incluye",
+						"6 Cell","Pantalla11.6 pulgadas", "No incluye", "Intel HD Graphics",
+                                                "Windows 8", "No inluye", "389.99"));
+
+                        break;
+                        case "Notebook Dell Inspiron 14 3493":
+                        txaDetalles.setText(
+				llenarPreArmadas("Tecnosmart.","DELL","Intel® Core™ i5-1035G1 Processor",
+						"256 GB","8 GB ","No incluye",
+						"Integrada, de 3 celdas y 42 WHr","HD  de 14.0\"", "No incluye", "Intel UHD Graphics G1",
+                                                "Linux pre instalado, compatible con Windows", "No inluye", "719.99"));
 
                         break;
                         
@@ -2853,7 +2923,6 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("Apple MacBook Pro");
                         cmbLaptop.addItem("Netbook Samsung NP");
                         cmbLaptop.addItem("Netbook Acer Aspire");
-                        cmbLaptop.addItem("Workstation móvil HP EliteBook");
                         cmbLaptop.addItem("Notebook Dell Inspiron 14 3493");
                         
                         
