@@ -49,6 +49,14 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 rbtnSSD = new javax.swing.JRadioButton();
                 panelFuente = new javax.swing.JPanel();
                 cmbFuente = new javax.swing.JComboBox<>();
+                panelEProcesador1 = new javax.swing.JPanel();
+                rbtnE7 = new javax.swing.JRadioButton();
+                rbtnE5 = new javax.swing.JRadioButton();
+                rbtnE3 = new javax.swing.JRadioButton();
+                panelCA = new javax.swing.JPanel();
+                rbtnCAGB = new javax.swing.JRadioButton();
+                rbtnCATB = new javax.swing.JRadioButton();
+                cbmCA = new javax.swing.JComboBox<>();
                 jPanel2 = new javax.swing.JPanel();
                 btnECotizacion = new javax.swing.JButton();
                 jPanel6 = new javax.swing.JPanel();
@@ -67,7 +75,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 
                 jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Escritorio"));
 
-                panelEProcesador.setBorder(javax.swing.BorderFactory.createTitledBorder("Procesador"));
+                panelEProcesador.setBorder(javax.swing.BorderFactory.createTitledBorder("Procesador Intel"));
                 panelEProcesador.setEnabled(false);
 
                 btaEProcesador.add(rbtnEi7);
@@ -157,7 +165,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                         .addGroup(panelRamLayout.createSequentialGroup()
                                 .addGap(31, 31, 31)
                                 .addComponent(cmbRam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(43, Short.MAX_VALUE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
                 panelAlmacenamiento.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo de almacenamiento"));
@@ -189,7 +197,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                                 .addComponent(rbtnHDD)
                                 .addGap(18, 18, 18)
                                 .addComponent(rbtnSSD)
-                                .addContainerGap(20, Short.MAX_VALUE))
+                                .addContainerGap(44, Short.MAX_VALUE))
                 );
 
                 panelFuente.setBorder(javax.swing.BorderFactory.createTitledBorder("Fuente de poder"));
@@ -205,13 +213,99 @@ public class GestionEscritorio extends javax.swing.JFrame {
                         .addGroup(panelFuenteLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(cmbFuente, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(33, Short.MAX_VALUE))
+                                .addContainerGap(19, Short.MAX_VALUE))
                 );
                 panelFuenteLayout.setVerticalGroup(
                         panelFuenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(panelFuenteLayout.createSequentialGroup()
                                 .addGap(33, 33, 33)
                                 .addComponent(cmbFuente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(41, Short.MAX_VALUE))
+                );
+
+                panelEProcesador1.setBorder(javax.swing.BorderFactory.createTitledBorder("Procesador AMD"));
+                panelEProcesador1.setEnabled(false);
+
+                btaEProcesador.add(rbtnE7);
+                rbtnE7.setText("Ryzen 7");
+                rbtnE7.setEnabled(false);
+
+                btaEProcesador.add(rbtnE5);
+                rbtnE5.setText("Ryzen 5");
+                rbtnE5.setEnabled(false);
+
+                btaEProcesador.add(rbtnE3);
+                rbtnE3.setText("Ryzen 3");
+                rbtnE3.setEnabled(false);
+
+                javax.swing.GroupLayout panelEProcesador1Layout = new javax.swing.GroupLayout(panelEProcesador1);
+                panelEProcesador1.setLayout(panelEProcesador1Layout);
+                panelEProcesador1Layout.setHorizontalGroup(
+                        panelEProcesador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelEProcesador1Layout.createSequentialGroup()
+                                .addGroup(panelEProcesador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(rbtnE7)
+                                        .addComponent(rbtnE5)
+                                        .addComponent(rbtnE3))
+                                .addGap(0, 34, Short.MAX_VALUE))
+                );
+                panelEProcesador1Layout.setVerticalGroup(
+                        panelEProcesador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelEProcesador1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(rbtnE7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rbtnE5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rbtnE3)
+                                .addContainerGap(22, Short.MAX_VALUE))
+                );
+
+                panelCA.setBorder(javax.swing.BorderFactory.createTitledBorder("Capacidad Almacenamiento"));
+                panelCA.setEnabled(false);
+
+                rbtnCAGB.setText("GB");
+                rbtnCAGB.setEnabled(false);
+                rbtnCAGB.addItemListener(new java.awt.event.ItemListener() {
+                        public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                                rbtnCAGBItemStateChanged(evt);
+                        }
+                });
+
+                rbtnCATB.setText("TB");
+                rbtnCATB.setEnabled(false);
+                rbtnCATB.addItemListener(new java.awt.event.ItemListener() {
+                        public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                                rbtnCATBItemStateChanged(evt);
+                        }
+                });
+
+                cbmCA.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar" }));
+                cbmCA.setEnabled(false);
+
+                javax.swing.GroupLayout panelCALayout = new javax.swing.GroupLayout(panelCA);
+                panelCA.setLayout(panelCALayout);
+                panelCALayout.setHorizontalGroup(
+                        panelCALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCALayout.createSequentialGroup()
+                                .addContainerGap(23, Short.MAX_VALUE)
+                                .addGroup(panelCALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(cbmCA, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(panelCALayout.createSequentialGroup()
+                                                .addComponent(rbtnCAGB)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(rbtnCATB)))
+                                .addGap(33, 33, 33))
+                );
+                panelCALayout.setVerticalGroup(
+                        panelCALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelCALayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(panelCALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(rbtnCAGB)
+                                        .addComponent(rbtnCATB))
+                                .addGap(18, 18, 18)
+                                .addComponent(cbmCA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
@@ -223,31 +317,36 @@ public class GestionEscritorio extends javax.swing.JFrame {
                                 .addGap(20, 20, 20)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(panelAlmacenamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(30, 30, 30)
-                                                .addComponent(panelFuente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addComponent(panelEProcesador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(panelEProcesador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(panelAlmacenamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(panelVentilacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(panelFuente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
                                                 .addComponent(panelRam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(panelVentilacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(205, Short.MAX_VALUE))
+                                                .addComponent(panelCA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(27, Short.MAX_VALUE))
                 );
                 jPanel1Layout.setVerticalGroup(
                         jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(panelRam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(panelEProcesador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(panelVentilacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(panelAlmacenamiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(panelFuente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addContainerGap(19, Short.MAX_VALUE))
+                                        .addComponent(panelEProcesador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(panelVentilacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(panelEProcesador1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(panelAlmacenamiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(panelFuente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(panelRam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(panelCA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap(13, Short.MAX_VALUE))
                 );
 
                 javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -277,9 +376,9 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 jPanel6Layout.setHorizontalGroup(
                         jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(cbxProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(39, Short.MAX_VALUE))
+                                .addContainerGap()
+                                .addComponent(cbxProvincia, 0, 253, Short.MAX_VALUE)
+                                .addContainerGap())
                 );
                 jPanel6Layout.setVerticalGroup(
                         jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -320,21 +419,20 @@ public class GestionEscritorio extends javax.swing.JFrame {
                         panelEPrearmadasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(panelEPrearmadasLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(cbxPrearmadaEscritorio, 0, 251, Short.MAX_VALUE)
+                                .addComponent(cbxPrearmadaEscritorio, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())
                 );
                 panelEPrearmadasLayout.setVerticalGroup(
                         panelEPrearmadasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEPrearmadasLayout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())
                         .addGroup(panelEPrearmadasLayout.createSequentialGroup()
-                                .addGap(64, 64, 64)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                                .addContainerGap())
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEPrearmadasLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(cbxPrearmadaEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(76, 76, 76))
                 );
 
                 cbxActivar1.setText("Activar");
@@ -366,21 +464,17 @@ public class GestionEscritorio extends javax.swing.JFrame {
                                 .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())
                         .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(cbxActivar1)
-                                                        .addComponent(panelEPrearmadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(cbxActivar2))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                        .addComponent(cbxActivar1)
+                                        .addComponent(cbxActivar2)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(panelEPrearmadas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(layout.createSequentialGroup()
-                                .addGap(233, 233, 233)
+                                .addGap(254, 254, 254)
                                 .addComponent(btnECotizacion)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
@@ -401,13 +495,13 @@ public class GestionEscritorio extends javax.swing.JFrame {
                                                 .addComponent(cbxActivar1)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(panelEPrearmadas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(cbxActivar2)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(btnECotizacion)
-                                                .addContainerGap(14, Short.MAX_VALUE))))
+                                                .addContainerGap(12, Short.MAX_VALUE))))
                 );
 
                 pack();
@@ -1231,6 +1325,36 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			txaDetallesEscritorio.setEnabled(false);
 		}
         }//GEN-LAST:event_cbxActivar1ItemStateChanged
+
+        private void rbtnCAGBItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_rbtnCAGBItemStateChanged
+                // TODO add your handling code here:
+		if (rbtnCAGB.isSelected()) {
+			cbmCA.removeAllItems();
+			cbmCA.addItem("128");
+			cbmCA.addItem("256");
+			cbmCA.addItem("512");
+		} else if (rbtnCATB.isSelected()) {
+			cbmCA.removeAllItems();
+			cbmCA.addItem("1");
+			cbmCA.addItem("2");
+			cbmCA.addItem("4");
+		}
+        }//GEN-LAST:event_rbtnCAGBItemStateChanged
+
+        private void rbtnCATBItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_rbtnCATBItemStateChanged
+                // TODO add your handling code here:
+		if (rbtnCAGB.isSelected()) {
+			cbmCA.removeAllItems();
+			cbmCA.addItem("128");
+			cbmCA.addItem("256");
+			cbmCA.addItem("512");
+		} else if (rbtnCATB.isSelected()) {
+			cbmCA.removeAllItems();
+			cbmCA.addItem("1");
+			cbmCA.addItem("2");
+			cbmCA.addItem("4");
+		}
+        }//GEN-LAST:event_rbtnCATBItemStateChanged
 	/*
 
 	 */
@@ -1316,6 +1440,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
         private javax.swing.ButtonGroup btaVentilacion;
         private javax.swing.JButton btnECotizacion;
         private javax.swing.JButton btnInicio;
+        private javax.swing.JComboBox<String> cbmCA;
         private javax.swing.JCheckBox cbxActivar1;
         private javax.swing.JCheckBox cbxActivar2;
         private javax.swing.JComboBox<String> cbxPrearmadaEscritorio;
@@ -1327,11 +1452,18 @@ public class GestionEscritorio extends javax.swing.JFrame {
         private javax.swing.JPanel jPanel6;
         private javax.swing.JScrollPane jScrollPane2;
         private javax.swing.JPanel panelAlmacenamiento;
+        private javax.swing.JPanel panelCA;
         private javax.swing.JPanel panelEPrearmadas;
         private javax.swing.JPanel panelEProcesador;
+        private javax.swing.JPanel panelEProcesador1;
         private javax.swing.JPanel panelFuente;
         private javax.swing.JPanel panelRam;
         private javax.swing.JPanel panelVentilacion;
+        private javax.swing.JRadioButton rbtnCAGB;
+        private javax.swing.JRadioButton rbtnCATB;
+        private javax.swing.JRadioButton rbtnE3;
+        private javax.swing.JRadioButton rbtnE5;
+        private javax.swing.JRadioButton rbtnE7;
         private javax.swing.JRadioButton rbtnEi3;
         private javax.swing.JRadioButton rbtnEi5;
         private javax.swing.JRadioButton rbtnEi7;

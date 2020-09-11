@@ -296,9 +296,9 @@ public class GestionLaptop extends javax.swing.JFrame {
                 jPanel6Layout.setHorizontalGroup(
                         jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(cmbProvincias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(40, Short.MAX_VALUE))
+                                .addContainerGap()
+                                .addComponent(cmbProvincias, 0, 271, Short.MAX_VALUE)
+                                .addContainerGap())
                 );
                 jPanel6Layout.setVerticalGroup(
                         jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
