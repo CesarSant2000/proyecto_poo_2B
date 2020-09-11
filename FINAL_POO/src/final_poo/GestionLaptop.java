@@ -366,100 +366,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                 pack();
         }// </editor-fold>//GEN-END:initComponents
 
-    public ArrayList datos(String dato){
-    ArrayList<String> computadores= new ArrayList<>();
-    if (!cmbProvincias.getSelectedItem().toString().equals("Seleccionar figura")) {
-                switch (cmbProvincias.getSelectedItem().toString()) {
-                    case "Azuay":
-                        break;
-                    case "Bolívar":
-                        break;
-                    case "Cañar":
-                        break;
-                    case "Chimborazo":
-                        break;
-                    case "Cotopaxi":
-                        break;
-                    case "Esmeraldas":
-                        break;
-                    case "Guayas":
-                        break;
-                    case "Imbabura":
-                        break;
-                    case "Loja":
-                        break;
-                    case "Los Ríos":
-                        break;
-                    case "Manabí":
-                        break;
-                    case "Napo":
-                        break;
-                    case "Pastaza":
-                        break;
-                    case "Pichincha": 
-                        computadores.add("DELL 15-5593");
-                        computadores.add("DELL G5 -5500");
-                        computadores.add("DELL 14-5493");
-                        computadores.add("DELL -14-3493");
-                        computadores.add("DELL G5-10MA GEN");
-                        computadores.add("DELL-15-3593 (CORE I5)");
-                        computadores.add("DELL 15-3593 (CORE I7)");
-                        computadores.add("PORTATIL HP PROBOOK 440 G6");
-                        computadores.add("PORTÁTIL INSPIRON DELL G7");
-                        computadores.add("MateBook D 15 AMD");
-                        computadores.add("A314-32-C0BJ 14");
-                        computadores.add("MateBook D 14 AMD");
-                        computadores.add("Notebook HP 14-dq1005la");
-                        computadores.add("DELL XPS 13 9380");
-                        computadores.add("Dell inspiron 3493");
-                        computadores.add("Dell Core I3 4gb");
-                        computadores.add("Portatil Dell Core I7 14 Pulgadas");
-                        computadores.add("Laptop Dell Core I5 14 Pulgadas");
-                        computadores.add("LAPTOP DELL 360");
-                        computadores.add("HP 240 G7");
-                        computadores.add("Laptop HP Gamer");
-                        computadores.add("HP AMD Ryzen 3 3250");
-                        computadores.add("TOUCHSMART");
-                        computadores.add("HP AMD A6");
-                        computadores.add("HP AMD A9 core i5");
-                        computadores.add("HP Gamer Ryzen 5 3500");
-                        computadores.add("HP Ryzen 7 gamer");
-                        computadores.add("HP Core i3 10ma");
-                        computadores.add("HP Core i7 10ma");
-                        computadores.add("RBELL");
-                        computadores.add("Toshiba Click 2 en 1");
-                        computadores.add("Acer Aspire");
-                        computadores.add("ASUS Gamer");
-                        computadores.add("Asus Core i3 10ma");
-                        computadores.add("Asus Gamer Core i7 9na");
-                        computadores.add("Asus AMD R3 3200");
-                        computadores.add("ASUS Intel");
-                        computadores.add("Lenovo Core i7 8va");
-                        computadores.add("Lenovo Ryzen 5 3500");
-                        computadores.add("Lenovo Core i5 8va");
-                        computadores.add("Lenovo Core i5 10ma");
-                        computadores.add("Lenovo AMD Ryzen 3 3250U");
-                        computadores.add("Lenovo Gamer Core i5 8va");
-                        computadores.add("Lenovo Core i3 8va");
-                        computadores.add("Lenovo Core i3 7ma");
-                        computadores.add("Gamer Amd Ryzen 3");
-                        computadores.add("Lenovo AMD A6 core i3");
-                        computadores.add("Lenovo Core i3 10ma");
-                        computadores.add("Lenovo AMD A6");
-                        computadores.add("Lenovo Gamer");
-                        computadores.add(" Lenovo Core i3 8va");                                        
-                       
-                
-                }
-        }
-        DefaultComboBoxModel dml = new DefaultComboBoxModel();
-        for (int i = 0; i < computadores.size(); i++) {
-            dml.addElement(computadores.get(i));
-        }
-        
-        return computadores;
-       
-    }
+   
      private String llenarPreArmadas (String tienda, String marca, String procesador,String disco, String memoria, String webcam, String bateria,String pantalla, String unidad,String video, String so,String puertos, String precio){
     return                      "Tienda : " + tienda +"\n"
 				+ "\n"
@@ -805,9 +712,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "1 x combinación de auriculares y micrófono\n"
                                 + "Precio : $ 918.40\n"
                                 +"\n"
-                                + "Tienda : Marcimex"
-                                +"\n"
-                                + "Tipo :MateBook D14\n");
+                                + "Tienda : Marcimex");
                                 
                               
                     case "A314-32-C0BJ 14":
@@ -841,9 +746,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 + "\n"
                                 + "Precio : $ 485.32\n"
                                 +"\n"
-                                + "Tienda : Marcimex"
-                                +"\n"
-                                + "Tipo :MateBook D14\n");
+                                + "Tienda : Marcimex");
                         break;
                     case "Notebook HP 14-dq1005la":
                         txaDetalles.setText("Marca : HP\n"
@@ -2192,9 +2095,107 @@ public class GestionLaptop extends javax.swing.JFrame {
                         case "INSPIRON 3593":
                         txaDetalles.setText(
 				llenarPreArmadas("Gigacomputers","DELL","Intel Core i7-1065G7",
-						"SSD: 256GB","8GB DDR4","NO Incluye",
+						"256GB","8GB DDR4","NO Incluye",
 						"No Aplica","Pantalla 15,6″ FHD","No incluye","NVidea GEFORCE 4GB",						
                                                 "Free","1 tarjeta SD\n1 USB 2.0\n1 ranura de bloqueo en forma de cuña\n1 HDMI 1.4b\n 1 RJ45\n2 USB 3.1 de 1.ª gen\n1 conector para auriculares y micrófono","1,154.99"));
+                        break;
+                        case "HP - 14-CM0135LA E2-9000E_AZUL":
+                        txaDetalles.setText(
+				llenarPreArmadas("Marcimex","HP","AMD de dos núcleos serie E2",
+						"SATA de 500 GB y 5400 rpm"," 4 GB de SDRAM DDR4-1866 (1 x 4 GB)","Si Incluye",
+						" Batería de litio-ion de 3 celdas de 41 Wh"," WLED 220 nits","No incluye","Integrada Gráficos AMD Radeon™ R2",						
+                                                "Windows 10"," 2 x USB SuperSpeed Type-A\n1 x USB 2.0 Type-A\n1 x RJ-45\n1 x HDMI 1.4b\n" +
+                                                "1 x combinación de auriculares y micrófono\n1 x lector de tarjetas SD multiformato","477.84"));
+                        break;
+                        case "Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris":
+                        txaDetalles.setText(
+				llenarPreArmadas("Marcimex","Huawei","AMD Ryzen 5 3500U",
+						"256 GB PCIe SSD","8 GB DDR4","NO Incluye",
+						"Batería de litio-ion 56Wh","IPS / contraste: 800:1 / Ángulo de visión: 178° / •Relación de aspecto: 16:9","No incluye"," AMD Radeon Vega 8",						
+                                                "Windows 10 Home","1 x USB-A 3.0\n2 x USB-A 2.0\n1 x USB-C\n1 x HDMI 1.4b\n1 x combinación de auriculares y micrófono","866.12"));
+                        break;
+                        case "Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris":
+                        txaDetalles.setText(
+				llenarPreArmadas("Marcimex","Huawei","AMD Ryzen 5 3500U",
+						"512 GB PCIe SSD","8 GB DDR4","NO Incluye",
+						"Batería de litio-ion 56Wh","IPS / contraste: 800:1 / Ángulo de visión: 178°","No incluye","AMD Radeon Vega 8",						
+                                                "Windows 10 Home","1 x USB-A 3.0\n1 x USB-A 2.0\n1 x USB-C\n1 x HDMI 1.4b\n1 x combinación de auriculares y micrófono","918.40"));
+                        break;
+                        case "ACER - Laptop A314-32-C0BJ 14\" | Negro":
+                        txaDetalles.setText(
+				llenarPreArmadas("Marcimex","ACER","Intel® Celeron® dual-core processor N4000",
+						"500 GB 2.5-inch 5400 RPM","4 GB DDR4","NO Incluye",
+						"37 Wh 4810 mAh 7.7 V 2-cell Li-ion","14\"HD SVA BrightView con micromarco","No incluye","No incluye",						
+                                                "Windows 10 Home","2 x USB 2.0\n1 x USB 3.0\n1 x RJ-45\n1 x HDMI\n1 x combinación de auriculares y micrófono\n" +
+                                                "1 x lector de tarjetas SD multiformato","485.32"));
+                        break;
+                        case "HP - Laptop 14-DQ1005LA 14\" | Gris":
+                        txaDetalles.setText(
+				llenarPreArmadas("Marcimex","HP","Core™ i7-1065G7(2b) 10ª generación de Intel®",
+						"256 GB SSD","256 GB SSD","SI Incluye",
+						"De litio-ion de 3 celdas de 41 Wh", "14\"HD SVA BrightView con micromarco", "No incluye", "No incluye",
+                                            "Windows 10 Home", "1 x USB 3.1 Gen 1 Type-C™ (Solo transferencia de datos, velocidad de señalización de 5 Gb/s)\n"
+                                            + "2 x USB 3.1 Gen 1 Type-A (Solo transferencia de datos)\n"
+                                            + "1 x HDMI 1.4b\n"
+                                            + "1 x Smart Pin de CA\n"
+                                            + "1 x Conector combinado de audífonos/micrófono\n"
+                                            + "1 x Lector de tarjetas multimedia SD multiformato", "1,200.04"));
+                        break;
+                        case "HP - Laptop CW1001LA 15\" | Dorado":
+                        txaDetalles.setText(
+				llenarPreArmadas("Marcimex","HP","AMD Ryzen™ 3 con gráficos Radeon™ Vega 6",
+						"SATA de 1 TB y 5400 rpm","12 GB de SDRAM DDR4-2400ia","NO Incluye",
+						"Iones de litio de 3 celdas y 41 Wh","BrightView con retroiluminación WLED HD SVA antirreflectante con microborde, de 15,6\" en diagonal (1366 x 768)","No incluye","Gráficos AMD Radeon™ Vega",						
+                                                "Windows 10 Home"," 1 HDMI\n1 combinación de auriculares y micrófono\n1 RJ-45\n1 conector inteligente CA\n1 USB 3.1 Gen 1 Type-C™\n2 USB 3.1 Gen 1 Type-A","849.69"));
+                        break;
+                        case "S532FA-DH55":
+                        txaDetalles.setText(
+				llenarPreArmadas("Toners","Asus","Procesador Intel Core i5-10210U de 10a generación (caché de 6 M, hasta 4,2 GHz)",
+						"512GB PCIe NVMe SSD","8GB DDR4 RAM","NO Incluye",
+						"42WHrs, 3S1P, ion de litio de 3 celdas","Pantalla de bisel NanoEdge de 4,6 pulgadas Full HD de 15,6 pulgadas","No incluye", "Integrados Intel UHD",						
+                                                "Windows 10 Home"," USB 3.1 Tipo-C,\nUSB 3.1 Tipo A,\nUSB 2.0\nHDMI;","1,399.00"));
+                        break;
+                        case "HP 9XM12UA#ABA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Toners","HP","Procesador AMD Athlon Silver 3050U",
+						"128 GB SSD","4GB","HP con micrófono digital integrado",
+						"Iones de litio de 3 celdas y 41 Wh","Pantalla HD BrightView de 14 pulgadas, resolución de 1366 x 768 con impresionante color y claridad","No incluye", "Gráficos AMD Radeon ™Integrado",						
+                                                "Windows 10 Home","1 velocidad de señalización SuperSpeed ​​USB Type-C® 5Gbps\n2 SuperSpeed ​​USB Tipo-A 5 Gbps de velocidad de señalización\n1 HDMI 1.4b; 1 RJ-45\n1 pin inteligente de CA\n1 combo de auriculares / micrófono","578.00 "));
+                        break;
+                        case "Hp-14-DQ1005LA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Toners","HP","10ª generación de Intel® Core™ i7-1065G7(2b) Quad-Core Velocidad del procesador 1,3 GHz de frecuencia base(2b), hasta 3,9 GHz con la tecnología Intel® Turbo Boos",
+						"SD Intel® de 256 GB + 16 GB de memoria Intel® Optane","8 GB DDR4-2666 de SDRAM (1 x 8 GB)","HP TrueVision HD",
+						"De litio-ion de 3 celdas de 41 Wh","14,0\" de diagonal HD SVA BrightView con micromarco, retroiluminación WLED, 220 nits, 45% NTSC (1366 x 768)","No incluye", "Gráficas Intel® Iris® Plus",						
+                                                "Windows 10 Home","1 USB 3.1 Gen 1 Type-C™\n2 USB 3.1 Gen 1 Type-A\n1 HDMI 1.4b\n1 Smart Pin de CA\n1 Conector combinado de audífonos/micrófono","1,120.00"));
+                        break;
+                        case "5XP63EA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Toners","HP","Intel® Core ™ i3-8130U (frecuencia base de 2,2 GHz, hasta 3,4 GHz con tecnología Intel® Turbo Boost, 4 MB de caché, 2 núcleos)",
+						"1 TB 5400 rpm SATA","SDRAM DDR4-2400 de 4 GB (1 x 4 GB)","NO Incluye",
+						"Iones de litio de 3 celdas y 41 Wh con duración de hasta 13 horas y 15 minutos","39,6 cm (15,6 \") en diagonal HD SVA antirreflejo con retroiluminación WLED, 220 nits, 45% NTSC (1366 x 768)","Si incluye","Intel® UHD Graphics 620",						
+                                                "FreeDOS","2 USB 3.1 Gen 1 (solo transferencia de datos)\n1 USB 2.0\n1 HDMI 1.4b; 1 RJ-45\n1 combo de auriculares / micrófono\n1 lector de tarjetas multimedia SD multiformato","650.00"));
+                        break;
+                        case "Lenovo S145 81W6009NAK":
+                        txaDetalles.setText(
+				llenarPreArmadas("Toners","LENOVO","INTEL CORE I7-1065G7 TO 3.9GHZ",
+						"1 TB","8GB ","NO Incluye",
+						"De litio con duración de hasta 6 horas","14 \"FHD (1920 x 1080), antideslumbrant, 45% de gama de colores","No incluye","Intel Iris Plus",						
+                                                "FreeDOS","2x USB-A 3.1 Gen 1\n1x USB-A 2.0\nHDMI\nLector de tarjetas SD\nCombo Auricular – Micrófono","1,039.00"));
+                        break;
+                        case "MUHP2LL-A":
+                        txaDetalles.setText(
+				llenarPreArmadas("Toners","Apple","Intel Core I5 Quad Core de octava generación",
+						"256 GB de almacenamiento SSD","Memoria LPDDR3 de 8 GB a 2133 MHz","NO Incluye",
+						"Batería integrada de polímero de litio de 58.0 vatios-hora","13.3\" pantalla de retina IPS","No incluye","Intel Iris Plus Graphics 645",						
+                                                "macOS","Dos puertos Thunderbolt 3 (USB-C)","2,048.00"));
+                        break;
+                        case "MacBook Pro MXK62LLA":
+                        txaDetalles.setText(
+				llenarPreArmadas("Toners","Apple","Procesador Intel Core i5 Quad Core de cuatro núcleos a 1,4 GHz de octava generación",
+						"256 GB de almacenamiento SSD","Memoria LPDDR3 de 8 GB a 2133 MHz","NO Incluye",
+						"Batería integrada de polímero de litio de 58.0 vatios-hora","13.3 pantalla retina","Si incluye","Gráficos Intel Iris Plus 645",						
+                                                "macOS","Dos puertos Thunderbolt 3 (USB-C)","2,199.00"));
                         break;
     
                 }
@@ -2242,22 +2243,150 @@ public class GestionLaptop extends javax.swing.JFrame {
                         
                         break;
                     case "Bolívar":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
                         break;
                     case "Cañar":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
                         break;
                     case "Chimborazo":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("DELL XPS 13 9380");
+                        cmbLaptop.addItem("Dell inspiron 3493");
+                        cmbLaptop.addItem("Dell Core I3 4gb");
+                        cmbLaptop.addItem("Portatil Dell Core I7 14 Pulgadas");
+                        cmbLaptop.addItem("Laptop Dell Core I5 14 Pulgadas");
+                        cmbLaptop.addItem("LAPTOP DELL 360");
+                        cmbLaptop.addItem("HP 240 G7");
+                        cmbLaptop.addItem("Laptop HP Gamer");
+                        cmbLaptop.addItem("HP AMD Ryzen 3 3250");
+                        cmbLaptop.addItem("TOUCHSMART");
+                        cmbLaptop.addItem("HP AMD A6");
+                        cmbLaptop.addItem("HP AMD A9 core i5");
+                        cmbLaptop.addItem("HP Gamer Ryzen 5 3500");
+                        cmbLaptop.addItem("HP Ryzen 7 gamer");
+                        cmbLaptop.addItem("HP Core i3 10ma");
+                        cmbLaptop.addItem("HP Core i7 10ma");
+                        cmbLaptop.addItem("RBELL");
+                        cmbLaptop.addItem("Toshiba Click 2 en 1");
+                        cmbLaptop.addItem("Acer Aspire");
+                        cmbLaptop.addItem("ASUS Gamer");
+                        cmbLaptop.addItem("Asus Core i3 10ma");
+                        cmbLaptop.addItem("Asus Gamer Core i7 9na");
+                        cmbLaptop.addItem("Asus AMD R3 3200");
+                        cmbLaptop.addItem("ASUS Intel");
+                        cmbLaptop.addItem("Lenovo Core i7 8va");
+                        cmbLaptop.addItem("Lenovo Ryzen 5 3500");
+                        cmbLaptop.addItem("Lenovo Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i5 10ma");
+                        cmbLaptop.addItem("Lenovo AMD Ryzen 3 3250U");
+                        cmbLaptop.addItem("Lenovo Gamer Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 7ma");
+                        cmbLaptop.addItem("Gamer Amd Ryzen 3");
+                        cmbLaptop.addItem("Lenovo AMD A6 core i3");
+                        cmbLaptop.addItem("Lenovo Core i3 10ma");
+                        cmbLaptop.addItem("Lenovo AMD A6");
+                        cmbLaptop.addItem("Lenovo Gamer");
+                        cmbLaptop.addItem("Lenovo Core i3 8va Platinum");
                         break;
                     case "Cotopaxi":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
                         break;
                     case "Esmeraldas":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
                         break;
                     case "Guayas":
                         break;
                     case "Imbabura":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
                         break;
                     case "Loja":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
+                        cmbLaptop.addItem("S532FA-DH55");
+                        cmbLaptop.addItem("HP 9XM12UA#ABA");
+                        cmbLaptop.addItem("Hp-14-DQ1005LA");
+                        cmbLaptop.addItem("5XP63EA");
+                        cmbLaptop.addItem("Lenovo S145 81W6009NAK");
+                        cmbLaptop.addItem("MUHP2LL-A");
+                        cmbLaptop.addItem("MacBook Pro MXK62LLA");                                          
+                        
                         break;
                     case "Los Ríos":
+                        cmbLaptop.removeAllItems();
+                        cmbLaptop.addItem("HP - 14-CM0135LA E2-9000E_AZUL");
+                        cmbLaptop.addItem("Huawei - Huawei - Laptop D15 AMD RYZEN 5 15\" | Gris");
+                        cmbLaptop.addItem("Huawei - Laptop D14 AMD RYZEN 5 14\" | Gris");
+                        cmbLaptop.addItem("ACER - Laptop A314-32-C0BJ 14\" | Negro");
+                        cmbLaptop.addItem("HP - Laptop 14-DQ1005LA 14\" | Gris");
+                        cmbLaptop.addItem("HP - Laptop CW1001LA 15\" | Dorado");
+                        cmbLaptop.addItem("DELL XPS 13 9380");
+                        cmbLaptop.addItem("Dell inspiron 3493");
+                        cmbLaptop.addItem("Dell Core I3 4gb");
+                        cmbLaptop.addItem("Portatil Dell Core I7 14 Pulgadas");
+                        cmbLaptop.addItem("Laptop Dell Core I5 14 Pulgadas");
+                        cmbLaptop.addItem("LAPTOP DELL 360");
+                        cmbLaptop.addItem("HP 240 G7");
+                        cmbLaptop.addItem("Laptop HP Gamer");
+                        cmbLaptop.addItem("HP AMD Ryzen 3 3250");
+                        cmbLaptop.addItem("TOUCHSMART");
+                        cmbLaptop.addItem("HP AMD A6");
+                        cmbLaptop.addItem("HP AMD A9 core i5");
+                        cmbLaptop.addItem("HP Gamer Ryzen 5 3500");
+                        cmbLaptop.addItem("HP Ryzen 7 gamer");
+                        cmbLaptop.addItem("HP Core i3 10ma");
+                        cmbLaptop.addItem("HP Core i7 10ma");
+                        cmbLaptop.addItem("RBELL");
+                        cmbLaptop.addItem("Toshiba Click 2 en 1");
+                        cmbLaptop.addItem("Acer Aspire");
+                        cmbLaptop.addItem("ASUS Gamer");
+                        cmbLaptop.addItem("Asus Core i3 10ma");
+                        cmbLaptop.addItem("Asus Gamer Core i7 9na");
+                        cmbLaptop.addItem("Asus AMD R3 3200");
+                        cmbLaptop.addItem("ASUS Intel");
+                        cmbLaptop.addItem("Lenovo Core i7 8va");
+                        cmbLaptop.addItem("Lenovo Ryzen 5 3500");
+                        cmbLaptop.addItem("Lenovo Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i5 10ma");
+                        cmbLaptop.addItem("Lenovo AMD Ryzen 3 3250U");
+                        cmbLaptop.addItem("Lenovo Gamer Core i5 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 8va");
+                        cmbLaptop.addItem("Lenovo Core i3 7ma");
                         break;
                     case "Manabí":
                         break;
