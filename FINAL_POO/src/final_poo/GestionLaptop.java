@@ -2882,10 +2882,96 @@ public class GestionLaptop extends javax.swing.JFrame {
                         break;
                         case "AMD Ryzen 3 3200U":
                         txaDetalles.setText(
-				llenarPreArmadas("Compugamer","HD","AMD Ryzen 3",
+				llenarPreArmadas("Compugamer","HP","AMD Ryzen 3",
 						"1 TB","8 Gb","No incluye",
 						"No incluye","15.6\"", "No incluye", "No incluye",
                                                 "Windows 10 Home", "No incluye", "519.00"));
+
+                        break;
+                        case "HP Ryzen 5":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","HP","Ryzen 5 3550H",
+						"SSD 256GB","8 Gb","No incluye",
+						"No incluye","15.6 \" (1920x1080) Full HD IPS 144Hz", "No incluye", "No incluye",
+                                                "Windows 10 Home", "No incluye", "699.00"));
+
+                        break;
+                        case "Dell i7-8750h":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","DELL","Intel Core i7 8750H",
+						"1 TB 5400RPM SATA 2.5\" / 256 GB SSD M.2 PCIE 35","16 GB DDR4 2666MHz SODIMM","No incluye",
+						"No incluye","17.3\" FHD IPS LED Narrow HD 60Hz", "No incluye", "NVIDIA GeForce RTX 2060 6GB GDDR6",
+                                                "Windows 10 Home Single Language (64Bit) Spanish", "No incluye", "2,169.00"));
+
+                        break;
+                        case "Lenovo Legion i7":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","LENOVO"," Intel® Core™ i7-9750H (6C / 12T, 2.6 / 4.5GHz, 12MB)",
+						"512GB SSD","8GB DDR4-2666","No incluye",
+					                                   "52.5Wh", "15.6\" FHD (1920x1080) IPS 250nits Anti-glare, 60Hz", "No incluye", "NVIDIA GeForce GTX 1650",
+                                        "Windows® 10 Home (64Bits)", "1 x USB 3.1 Gen 1 (one Always On)\n"
+                                        + "2 x USB 3.1 Gen 1\n"
+                                        + "1 x USB 3.1 Type-C Gen 1 / (with the function of DisplayPort 1.2)\n"
+                                        + "1 x HDMI 2.0\n"
+                                        + "1 x Ethernet (RJ-45)\n"
+                                        + "1 x Mini DisplayPort 1.4\n"
+                                        + "1 x headphone / microphone combo jack", "1,269.00"));
+
+                        break;
+                        case "Gamer HP i7":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","HP","INTEL® CORE™ i7-9750H",
+						"256 GB SSD","DDR4 16 GB SO-DIMM","No incluye",
+						"No incluye","15.6 pulgadas", "No incluye", "Intel UHD Graphics 630",
+                                                "Windows 10", "No incluye", "1,659.00"));
+
+                        break;
+                        case "Asus FX705DT Ryzen7":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","ASUS","AMD Ryzen 7 3750H (4 núcleos, 6MB caché, 23GHz hasta 40GHz)",
+						"1 TB","8 Gb","No incluye",
+						"512GB SSD","16GB DDR4 2400MHz", "No incluye", "NVIDIA GeForce GTX1650 de 4GB VRAM",
+                                                "Sin sistema operativo", "USB 2.0\nHDMI", "1,320.00"));
+
+                        break;
+                        case "Asus TUF i7":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","ASUS","CPU Intel Kaby Lake Core i7-8750H",
+						"1 TB 5400 rpm HDD (2.5 ″)","DDR4 de 16 GB ","No incluye",
+						"48 Wh, cargador de 120 W","15,6 pulgadas, 1920 x 1080 px, 120 Hz, TN, no táctil, mate", "No incluye", "No incluye",
+                                                "FreeDos", "1 x USB 2.0\n2 x USB 3.0, HDMI\nLAN, lector de tarjetas SD\nmicrófono / auriculares\nKensington Lock", "1,199.00"));
+
+                        break;
+                        case "Asus TUF FX504 i5":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","ASUS","Intel Core i5-8300H 2.30GHz Quad Core",
+						"1TB 5400RPM HDD SATA de 2.5 \"","8GB (1x8GB) DDR4-2666MHz","720p HD",
+						"48 WHrs, 3S1P, ion de litio de 4 celdas","15.6 \"Full HD (1920x1080) 120Hz TN Display", "No incluye", "NVIDIA GeForce GTX 1050 4GB GDDR5",
+                                                "Windows 10 Home de 64 bits", "	2x USB 3.0 Tipo-A\n1x USB 2.0 tipo A\n1x HDMI 1.4\n1x conector de audio combinado", "979.00"));
+
+                        break;
+                        case "Lenovo i7":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","LEGION","Intel® Core™ i7-9750H",
+						"1 TB","8 Gb","720p (HD)",
+						"Integrada (52.5Wh) 230W (Slim Tip)","LED 1920x1080 FullHD", "No incluye", "6GB GDDR6",
+                                                "Sin sistema operativo", " 3 USB 3.1\nUSB-C\nHDMI\nDisplayPort", "1,449.00"));
+
+                        break;
+                        case "Asus TUF FX504 i7":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","ASUS","CPU Intel Kaby Lake Core i7-8750H",
+						"1 TB 5400 rpm HDD (2.5 ″)","DDR4 de 8 GB ","SI incluye",
+						"48 Wh, cargador de 120 W","15,6 pulgadas, 1920 x 1080 px, 120 Hz, TN, no táctil, mate", "No incluye", "No incluye",
+                                                "FreeDos", "1 x USB 2.0, 2 x USB 3.0\nHDMI\nLAN\nlector de tarjetas SD\nmicrófono / auriculares\nKensington Lock", "1,129.00"));
+
+                        break;
+                        case "Ryzen7":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","ASUS","Ryzen7 - 3750",
+						"256 GB","8 Gb","No incluye",
+						"Ion de litio","15.6 pulgadas", "No incluye", "NVIDIA GeForce GTX 1660ti",
+                                                "Free", "No incluye", "1,349.00"));
 
                         break;
                     
@@ -3128,7 +3214,19 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("AMD Ryzen 5 2500U");
                         cmbLaptop.addItem("HP AMD R5 3500U");
                         cmbLaptop.addItem("AMD Ryzen 3 3200U");
-                                                
+                        cmbLaptop.addItem("HP Ryzen 5");
+                        cmbLaptop.addItem("Dell i7-8750h");
+                        cmbLaptop.addItem("Lenovo Legion i7");
+                        cmbLaptop.addItem("Gamer HP i7");
+                        cmbLaptop.addItem("Asus FX705DT Ryzen7");
+                        cmbLaptop.addItem("Asus TUF i7");
+                        cmbLaptop.addItem("Asus TUF FX504 i5");
+                        cmbLaptop.addItem("Lenovo i7");
+                        cmbLaptop.addItem("Asus TUF FX504 i7");
+                        cmbLaptop.addItem("Ryzen7");
+                        
+
+                        
                         break;
                     case "Imbabura":
                         cmbLaptop.removeAllItems();
