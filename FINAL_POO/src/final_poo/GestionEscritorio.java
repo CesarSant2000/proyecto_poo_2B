@@ -485,8 +485,17 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			cbxPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
 			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("A1");
-			cbxPrearmadaEscritorio.addItem("A2");
+			cbxPrearmadaEscritorio.addItem("HP EliteDesk 705 G4 AMD Ryzen 5 Pro 2400g 8GB 1TB DW W10-Pro");
+			cbxPrearmadaEscritorio.addItem("HP EliteDesk 800 G4 I7-8700 8GB 1TB DW SFF W10-PRO Black");
+			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070 UFF I7-8565 16GB 256GB-M.2 W10-PRO Black");
+			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070 I7-9700 8GB 1TB DVD WIN10-PRO SFF BLACK");
+			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 3070 I5-9700 4GB 1TB 1W10-PRO SFF BLACK – MONITOR E2020H");
+			cbxPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5 8GB 512GB-SSD 27Inc 5K Retina 4USB3.0 OS Silver");
+			cbxPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5 8GB 256GB-SSD 27Inc 5K Retina 4USB3.0 OS Silve");
+			cbxPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5 8GB 1TB 27Inc 5K Retina 4USB3.0 OS Silver");
+			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL GOLD UBUNTU");
+			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL i3 UBUNTU");
+			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL AMD UBUNTU");
 		} else if (cbxProvincia.getSelectedItem().equals("Los Ríos")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
@@ -501,8 +510,10 @@ public class GestionEscritorio extends javax.swing.JFrame {
 			cbxPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
 			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("A1");
-			cbxPrearmadaEscritorio.addItem("A2");
+			cbxPrearmadaEscritorio.addItem("Computadora de escritorio Intel Celeron");
+			cbxPrearmadaEscritorio.addItem("Computadora de escritorio Intel i5");
+			cbxPrearmadaEscritorio.addItem("Computadora de escritorio XTRATECH");
+			cbxPrearmadaEscritorio.addItem("Computadora de escritorio AMD Athlon");
 		} else if (cbxProvincia.getSelectedItem().equals("Napo")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
@@ -836,6 +847,90 @@ public class GestionEscritorio extends javax.swing.JFrame {
 					"1 TB HDD 7200 RPM", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "Radeon",
 					"Windows 10 Home", "No especifica informacion", "1,198.02"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 800 G4 I7-8700 8GB 1TB DW SFF W10-PRO Black")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Toners", "HP", "Intel Core I7-8700",
+					"1 TB HDD 7200 RPM", "8GB DDR4", "No Incluye",
+					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
+					"Windows 10 Home", "USB 3.0 x 4", "1,342.72"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070 UFF I7-8565 16GB 256GB-M.2 W10-PRO Black")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Toners", "DELL", "Intel Core I7-8565",
+					"1 TB HDD 7200 RPM + 256GB-M.2", "16GB DDR4", "No Incluye",
+					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
+					"Windows 10 PRO", "USB 3.0 x 5", "1,408.35"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070 I7-9700 8GB 1TB DVD WIN10-PRO SFF BLACK")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Toners", "DELL", "Intel Core I7-9700",
+					"1 TB HDD 7200 RPM", "8GB DDR4", "No Incluye",
+					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
+					"Windows 10 PRO", "USB 3.0 x 5", "1,227.52"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 3070 I5-9700 4GB 1TB 1W10-PRO SFF BLACK – MONITOR E2020H")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Toners", "DELL", "Intel Core I5-9500",
+					"1 TB HDD 7200 RPM", "4GB DDR4", "No Incluye",
+					"No Aplica", "MONITOR E2020H", "DVD WRITER", "INTEL GRAPHICS",
+					"Windows 10 PRO", "USB 3.0 x 5", "1,021.44"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5 8GB 512GB-SSD 27Inc 5K Retina 4USB3.0 OS Silver")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Toners", "APPLE", "Intel Core I5-9500",
+					"512GB SSD", "8GB DDR4", "Si",
+					"No Aplica", "27Inc 5K Retina", "DVD WRITER", "INTEL GRAPHICS",
+					"MacOS", "4USB3.0", "3,141.12"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5 8GB 256GB-SSD 27Inc 5K Retina 4USB3.0 OS Silver")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Toners", "APPLE", "Intel Core I5-9500",
+					"256GB SSD", "8GB DDR4", "Si",
+					"No Aplica", "27Inc 5K Retina", "DVD WRITER", "INTEL GRAPHICS",
+					"MacOS", "4USB3.0", "2,705.92"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5 8GB 1TB 27Inc 5K Retina 4USB3.0 OS Silver")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Toners", "APPLE", "Intel Core I5-9500",
+					"1TB HDD", "8GB DDR4", "Si",
+					"No Aplica", "27Inc 5K Retina", "DVD WRITER", "INTEL GRAPHICS",
+					"MacOS", "4USB3.0", "2,540.80"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR CPU XTRATECH INTEL GOLD UBUNTU")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Toners", "XTRATECH", "Intel Pentium Gold",
+					"1TB HDD", "4GB DDR4", "No Incluye",
+					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
+					"Ubuntu", "USB3.0 x 3", "358.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR CPU XTRATECH INTEL i3 UBUNTU")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Toners", "XTRATECH", "INTEL CORE I3-9100F 3.6GHZ",
+					"1TB HDD", "8GB DDR4", "No Incluye",
+					"No Aplica", "No Incluye", "DVD WRITER", "ASUS 1GB",
+					"Ubuntu", "USB3.0 x 3", "358.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR CPU XTRATECH INTEL AMD UBUNTU")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Toners", "XTRATECH", "AMD E1-6010 DUAL-CORE",
+					"1TB HDD", "8GB DDR4", "No Incluye",
+					"No Aplica", "No Incluye", "DVD WRITER", "Radeon Graphics",
+					"Ubuntu", "USB3.1 x 3", "358.00"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio Intel Celeron")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Compulaser", "Sin Marca", "Intel Celeron Core i3 de 9na Generación",
+					"1TB HDD", "8GB DDR4", "No Incluye",
+					"No Aplica", "20Inc", "DVD WRITER \n Teclado \n Mouse", "INTEL GRAPHICS",
+					"Windows 10", "USB3.1 x 3", "749.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio Intel i5")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Compulaser", "Sin Marca", "Intel Core i5 de 9na Generación",
+					"1TB HDD", "8GB DDR4", "Si",
+					"No Aplica", "20Inc", "DVD WRITER \n Teclado \n Mouse", "INTEL GRAPHICS",
+					"Windows 10", "USB3.1 x 3", "824.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio XTRATECH")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Compulaser", "Sin Marca", "AMD Athlon 3000G 3.5 Ghz",
+					"1TB HDD", "4GB DDR4", "Si",
+					"No Aplica", "20Inc", "DVD WRITER \n Teclado \n Mouse", "Radeon",
+					"Windows 10", "USB3.1 x 3", "516.99"));
+		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio AMD Athlon")) {
+			txaDetallesEscritorio.setText(
+				llenarPreArmadas("Compulaser", "Sin Marca", "AMD Athlon 3000G 3.5 Ghz",
+					"1TB HDD", "4GB DDR4", "Si",
+					"No Aplica", "20Inc", "DVD WRITER \n Teclado \n Mouse", "Radeon",
+					"Windows 10", "USB3.1 x 3", "690.00"));
 		} else {
 		}
         }//GEN-LAST:event_cbxPrearmadaEscritorioItemStateChanged
@@ -845,18 +940,12 @@ public class GestionEscritorio extends javax.swing.JFrame {
 	    nuevaVentana.setVisible(true);
 	    this.setVisible(false);
     }//GEN-LAST:event_btnInicioActionPerformed
-/*
-cbxPrearmadaEscritorio.addItem("HP EliteDesk 705 G4 AMD Ryzen 5 Pro 2400g 8GB 1TB DW W10-Pro");
-cbxPrearmadaEscritorio.addItem("A1");
-cbxPrearmadaEscritorio.addItem("A1");
-cbxPrearmadaEscritorio.addItem("A1");
-cbxPrearmadaEscritorio.addItem("A1");
-cbxPrearmadaEscritorio.addItem("A1");
-cbxPrearmadaEscritorio.addItem("A1");
-cbxPrearmadaEscritorio.addItem("A1");
-cbxPrearmadaEscritorio.addItem("A1");
-    
-*/
+	/*
+    cbxPrearmadaEscritorio.addItem("Computadora de escritorio Intel Celeron");
+    cbxPrearmadaEscritorio.addItem("Computadora de escritorio Intel i5");
+    cbxPrearmadaEscritorio.addItem("Computadora de escritorio XTRATECH");
+    cbxPrearmadaEscritorio.addItem("Computadora de escritorio AMD Athlon");
+	 */
 	private String llenarPreArmadas(String tienda, String marca, String procesador,
 		String disco, String memoria,
 		String webcam, String bateria,
