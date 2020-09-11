@@ -2816,6 +2816,79 @@ public class GestionLaptop extends javax.swing.JFrame {
                                                 "Windows 10 Home 64 bits español", "3 puertos USB\nHDMI", "2,189.00"));
 
                         break;
+                        case "Notebook LENOVO IDEAPAD S145":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","LENOVO","AMD Ryzen 3",
+						"1 TB","8 Gb","No incluye",
+						"No incluye","LED de 14\"", "No incluye", "Radeon Vega 3 Graphics Integrado",
+                                                "Windows 10", "USB 3.1 - 2.0\nHDMI\nLector de tarejetas", "539.00"));
+
+                        break;
+                        case "Dell 3493 i3":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","DELL","i3-1005G1",
+						"1000 GB","4 Gb","No incluye",
+						"No incluye","HD 1366 x 768 Pixeles", "No incluye", "No incluye",
+                                                "Ubuntu", "Ethernet LAN \nCombo de salida de auriculares / micrófono del puerto\nCharging port type\nUSB 3.1 - 2.0\nHDMI\nLector de tarejetas", "549.00"));
+
+                        break;
+                        case "Dell 3493 i5":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","DELL","Intel® Core™ i5-10xxx",
+						"256 GB","8 Gb","No incluye",
+						"No incluye","Full HD 14\"", "No incluye", "No incluye",
+                                                "Ubuntu", "Combo de salida de auriculares / micrófono del puerto\nEthernet LAN\nUSB 3.1 - 2.0\nHDMI\nLector de tarejetas", "719.00"));
+
+                        break;
+                        case "Dell Core i5":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","DELL","Intel Core I5-1035G4 1.1GHZ",
+						"256 GB","4GB DDR4","SI incluye",
+						"No incluye","FULL HD de 14\"", "No incluye", "No incluye",
+                                                "Windows 10", "No incluye", "599.00"));
+
+                        break;
+                        case "Dell Latitude 3000 14":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","DELL","Intel® Core™ i5 de 10ma Generación",
+						"256GB DDR4-SDRAM","8 Gb","No incluye",
+						"No incluye","14pulg", "No incluye", "No incluye",
+                                                "Ubuntu","Combo de salida de auriculares / micrófono del puerto\nEthernet LAN\nUSB 3.1 - 2.0\nHDMI\nLector de tarejetas", "659.00"));
+
+                        break;
+                        case "Dell Inspiron 3480 - 14":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","DELL","Intel® Core™ i5-8xxx",
+						"1000 GB DDR4-SDRAM","8 GB","No incluye",
+						"No incluye","14pulg", "No incluye", "No incluye",
+                                                "Windows 10 Home", "Combo de salida de auriculares / micrófono del puerto\nEthernet LAN\nUSB 3.1 - 2.0\nHDMI\nLector de tarejetas", "616.00"));
+
+                        break;
+                        case "AMD Ryzen 5 2500U":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","HP","AMD Ryzen 5 2500U (2000 MHz - 3600 MHz)",
+						"1 TB","8 Gb","1",
+						"3 celdas (41000 mWh)","LED 15.6\" (1366x768)", "No incluye", "AMD Radeon RX Vega 8 (Integrada)",
+                                                "Windows 10 Home", "USB 3.1 - 2.0\nHDMI", "680.00"));
+
+                        break;
+                        case "HP AMD R5 3500U":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","HP","AMD Ryzen 5 3500U with Radeon™ Vega 8 Graphics",
+						"1 TB","8 Gb","No incluye",
+						"No incluye","LED de 14\"", "No incluye","Gráficos AMD Radeon™ Vega 8",
+                                                "Windows 10 Home 64Bits", "No incluye", "610.00"));
+
+                        break;
+                        case "AMD Ryzen 3 3200U":
+                        txaDetalles.setText(
+				llenarPreArmadas("Compugamer","HD","AMD Ryzen 3",
+						"1 TB","8 Gb","No incluye",
+						"No incluye","15.6\"", "No incluye", "No incluye",
+                                                "Windows 10 Home", "No incluye", "519.00"));
+
+                        break;
+                    
                         
                 }
         }
@@ -3046,6 +3119,15 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("Lenovo GAMING L340-15IRH");
                         cmbLaptop.addItem("Dell Inspiron G3 15-3590");
                         cmbLaptop.addItem("Dell Gaming G5 5590");
+                        cmbLaptop.addItem("Notebook LENOVO IDEAPAD S145");
+                        cmbLaptop.addItem("Dell 3493 i3");
+                        cmbLaptop.addItem("Dell 3493 i5");
+                        cmbLaptop.addItem("Dell Core i5");
+                        cmbLaptop.addItem("Dell Latitude 3000 14");
+                        cmbLaptop.addItem("Dell Inspiron 3480 - 14");
+                        cmbLaptop.addItem("AMD Ryzen 5 2500U");
+                        cmbLaptop.addItem("HP AMD R5 3500U");
+                        cmbLaptop.addItem("AMD Ryzen 3 3200U");
                                                 
                         break;
                     case "Imbabura":
