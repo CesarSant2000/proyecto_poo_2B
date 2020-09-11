@@ -2776,6 +2776,46 @@ public class GestionLaptop extends javax.swing.JFrame {
                                                 "Linux pre instalado, compatible con Windows", "No inluye", "719.99"));
 
                         break;
+                        case "Dell Vostro 3481":
+                        txaDetalles.setText(
+				llenarPreArmadas("1700digital.","DELL","Intel Core i3-7020U",
+						"1000Gb SATA","8Gb DDR4 ampliable a 16","HD integrada con microfono",
+						"No incluye","LED 14″ Wide HD", "No incluye", "No incluye",
+                                                "Windows 10 PRO", "monitor, 3 USB (1 es tipo 3.0), sonido\nHDMI", "759.00"));
+
+                        break;
+                        case "HP Pavilion 13-an0007la":
+                        txaDetalles.setText(
+				llenarPreArmadas("1700digital.","HP","Intel Core I5-8265U 8va. generacion",
+						"256 Gb M.2 PCIe extra rápido"," 8Gb DDR4 ampliable a 16GB","Integrada con microfono",
+						"Dura 9 a 11 horas","LED 13.3″ Full HD 1920 x 1080 IPS", "No incluye", "No incluye",
+                                                "Windows 10 Home 64 español", "monitor, 3 USB , sonido\nHDMI", "989.00"));
+
+                        break;
+                        case "Lenovo GAMING L340-15IRH":
+                        txaDetalles.setText(
+				llenarPreArmadas("1700digital.","LENOVO","Intel Core I7 9750H Six Core",
+						"1000Gb SATA"," 8Gb DDR4 2666 – crece a 16Gb","HD 720p integrada con microfono digital",
+						"No incluye","LED 15.6  FULL HD  1920 x 1080  IPS  Anti-Reflejo", "No incluye", "No incluye",
+                                                "Windows 10 Home 64 bits español", "3 puertos USB (2 son 3.1 y 1 es C)\nHDMI", "1,397.00"));
+
+                        break;
+                        case "Dell Inspiron G3 15-3590":
+                        txaDetalles.setText(
+				llenarPreArmadas("1700digital.","DELL"," Intel Core I7-9750H  9na. generacion",
+						"1000Gb SATA","8Gb DDR4 2400 – crece a 32Gb","integrada con microfono",
+						"No incluye"," LED 15.6 Wide FULL High Definition", "No usa DVD, diseño delgado", "No incluye",
+                                                "Windows 10 Home 64 español original", "3 puertos USB\nHDMI", "1,789.00"));
+
+                        break;
+                        case "Dell Gaming G5 5590":
+                        txaDetalles.setText(
+				llenarPreArmadas("1700digital.","DELL","Intel Core I7 9750H Six Core de 9na. generacion",
+						"1000Gb SATA","16 Gb DDR4 2666 – crece a 32Gb","HD 720p integrada con microfono digital",
+						"No incluye","LED 15.6 FULL HD  1920 x 1080  IPS  Anti-Reflejo", "No incluye", "No incluye",
+                                                "Windows 10 Home 64 bits español", "3 puertos USB\nHDMI", "2,189.00"));
+
+                        break;
                         
                 }
         }
@@ -3000,9 +3040,13 @@ public class GestionLaptop extends javax.swing.JFrame {
                         cmbLaptop.addItem("Apple MacBook Pro");
                         cmbLaptop.addItem("Netbook Samsung NP");
                         cmbLaptop.addItem("Netbook Acer Aspire");
-                        cmbLaptop.addItem("Notebook Dell Inspiron 14 3493");
-                        
-                        
+                        cmbLaptop.addItem("Notebook Dell Inspiron 14 3493");                
+                        cmbLaptop.addItem("Dell Vostro 3481");
+                        cmbLaptop.addItem("HP Pavilion 13-an0007la");
+                        cmbLaptop.addItem("Lenovo GAMING L340-15IRH");
+                        cmbLaptop.addItem("Dell Inspiron G3 15-3590");
+                        cmbLaptop.addItem("Dell Gaming G5 5590");
+                                                
                         break;
                     case "Imbabura":
                         cmbLaptop.removeAllItems();
