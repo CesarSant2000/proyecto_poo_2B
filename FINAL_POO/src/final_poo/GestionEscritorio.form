@@ -8,6 +8,8 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="btaVentilacion">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="btaCA">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -545,6 +547,9 @@
           <SubComponents>
             <Component class="javax.swing.JRadioButton" name="rbtnCAGB">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="btaCA"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="GB"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
@@ -554,6 +559,9 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="rbtnCATB">
               <Properties>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="btaCA"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="TB"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
