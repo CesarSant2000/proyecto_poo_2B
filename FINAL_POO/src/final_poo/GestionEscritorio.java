@@ -24,6 +24,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 
     /**
      * Creates new form GestionEscritorio
+     *
      * @param tiendas
      */
     public GestionEscritorio(ArrayList<Tiendas> tiendas) {
@@ -1245,46 +1246,49 @@ public class GestionEscritorio extends javax.swing.JFrame {
 
         private void cbxActivar2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxActivar2ItemStateChanged
             // TODO add your handling code here:
-            if (evt.getStateChange() == ItemEvent.SELECTED) {
-                rbtnEi7.setEnabled(true);
-                rbtnEi5.setEnabled(true);
-                rbtnEi3.setEnabled(true);
-                panelEProcesador.setEnabled(true);
-                rbtnVentilador.setEnabled(true);
-                rbtnLiquida.setEnabled(true);
-                panelVentilacion.setEnabled(true);
-                panelRam.setEnabled(true);
-                cmbRam.setEnabled(true);
-                panelFuente.setEnabled(true);
-                cmbFuente.setEnabled(true);
-                panelAlmacenamiento.setEnabled(true);
-                rbtnHDD.setEnabled(true);
-                rbtnSSD.setEnabled(true);
+            if (!mostrarAdvertencia(evt)) {
+                if (evt.getStateChange() == ItemEvent.SELECTED) {
+                    rbtnEi7.setEnabled(true);
+                    rbtnEi5.setEnabled(true);
+                    rbtnEi3.setEnabled(true);
+                    panelEProcesador.setEnabled(true);
+                    rbtnVentilador.setEnabled(true);
+                    rbtnLiquida.setEnabled(true);
+                    panelVentilacion.setEnabled(true);
+                    panelRam.setEnabled(true);
+                    cmbRam.setEnabled(true);
+                    panelFuente.setEnabled(true);
+                    cmbFuente.setEnabled(true);
+                    panelAlmacenamiento.setEnabled(true);
+                    rbtnHDD.setEnabled(true);
+                    rbtnSSD.setEnabled(true);
 
-                panelEProcesador1.setEnabled(true);
-                rbtnE7.setEnabled(true);
-                rbtnE5.setEnabled(true);
-                rbtnE9.setEnabled(true);
-            } else if (evt.getStateChange() == ItemEvent.DESELECTED) {
-                rbtnEi7.setEnabled(false);
-                rbtnEi5.setEnabled(false);
-                rbtnEi3.setEnabled(false);
-                panelEProcesador.setEnabled(false);
-                rbtnVentilador.setEnabled(false);
-                rbtnLiquida.setEnabled(false);
-                panelVentilacion.setEnabled(false);
-                panelRam.setEnabled(false);
-                cmbRam.setEnabled(false);
-                panelFuente.setEnabled(false);
-                cmbFuente.setEnabled(false);
-                panelAlmacenamiento.setEnabled(false);
-                rbtnHDD.setEnabled(false);
-                rbtnSSD.setEnabled(false);
-                panelEProcesador1.setEnabled(false);
-                rbtnE7.setEnabled(false);
-                rbtnE5.setEnabled(false);
-                rbtnE9.setEnabled(false);
+                    panelEProcesador1.setEnabled(true);
+                    rbtnE7.setEnabled(true);
+                    rbtnE5.setEnabled(true);
+                    rbtnE9.setEnabled(true);
+                } else if (evt.getStateChange() == ItemEvent.DESELECTED) {
+                    rbtnEi7.setEnabled(false);
+                    rbtnEi5.setEnabled(false);
+                    rbtnEi3.setEnabled(false);
+                    panelEProcesador.setEnabled(false);
+                    rbtnVentilador.setEnabled(false);
+                    rbtnLiquida.setEnabled(false);
+                    panelVentilacion.setEnabled(false);
+                    panelRam.setEnabled(false);
+                    cmbRam.setEnabled(false);
+                    panelFuente.setEnabled(false);
+                    cmbFuente.setEnabled(false);
+                    panelAlmacenamiento.setEnabled(false);
+                    rbtnHDD.setEnabled(false);
+                    rbtnSSD.setEnabled(false);
+                    panelEProcesador1.setEnabled(false);
+                    rbtnE7.setEnabled(false);
+                    rbtnE5.setEnabled(false);
+                    rbtnE9.setEnabled(false);
+                }
             }
+
         }//GEN-LAST:event_cbxActivar2ItemStateChanged
 
         private void cbxActivar1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxActivar1ItemStateChanged
@@ -1323,6 +1327,20 @@ public class GestionEscritorio extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, error, "Provincia no seleccionada", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnECotizacionActionPerformed
+
+    public boolean mostrarAdvertencia(java.awt.event.ItemEvent evt) {
+        boolean esPichincha = cbxProvincia.getSelectedItem().toString().equals("Pichincha");
+        boolean esGuayas = cbxProvincia.getSelectedItem().toString().equals("Guayas");
+        boolean esAzuay = cbxProvincia.getSelectedItem().toString().equals("Azuay");
+        boolean esLoja = cbxProvincia.getSelectedItem().toString().equals("Loja");
+        boolean tieneTiendas = esPichincha || esGuayas || esAzuay || esLoja;
+        if (!tieneTiendas) {
+            String advertencia = "La provincia seleccionada no tiene tiendas de partes";
+            JOptionPane.showMessageDialog(rootPane, advertencia, "Advertencia", JOptionPane.WARNING_MESSAGE);
+            return true;
+        }
+        return false;
+    }
 
     public boolean llenarRAM(String provincia) {
         if (cmbRam.getSelectedIndex() != 0) {
@@ -1385,11 +1403,11 @@ public class GestionEscritorio extends javax.swing.JFrame {
     }
 
     public boolean llenarVentilacion(String provincia) {
-        if(rbtnLiquida.isSelected()){
+        if (rbtnLiquida.isSelected()) {
             productosDeseados.addAll(Tiendas.obtenerProductos(tiendas, provincia, 5, "Liquida", tipoComputador));
             return true;
         }
-        if(rbtnVentilador.isSelected()){
+        if (rbtnVentilador.isSelected()) {
             productosDeseados.addAll(Tiendas.obtenerProductos(tiendas, provincia, 5, "Standard", tipoComputador));
             return true;
         }
