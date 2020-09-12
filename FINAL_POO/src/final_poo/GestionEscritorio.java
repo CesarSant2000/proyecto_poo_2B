@@ -24,6 +24,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 
     /**
      * Creates new form GestionEscritorio
+     * @param tiendas
      */
     public GestionEscritorio(ArrayList<Tiendas> tiendas) {
         initComponents();
@@ -1264,10 +1265,6 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 rbtnE7.setEnabled(true);
                 rbtnE5.setEnabled(true);
                 rbtnE9.setEnabled(true);
-//                panelCA.setEnabled(true);
-//                rbtnCAGB.setEnabled(true);
-//                rbtnCATB.setEnabled(true);
-//                cbmCA.setEnabled(true);
             } else if (evt.getStateChange() == ItemEvent.DESELECTED) {
                 rbtnEi7.setEnabled(false);
                 rbtnEi5.setEnabled(false);
@@ -1287,10 +1284,6 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 rbtnE7.setEnabled(false);
                 rbtnE5.setEnabled(false);
                 rbtnE9.setEnabled(false);
-//                panelCA.setEnabled(false);
-//                rbtnCAGB.setEnabled(false);
-//                rbtnCATB.setEnabled(false);
-//                cbmCA.setEnabled(false);
             }
         }//GEN-LAST:event_cbxActivar2ItemStateChanged
 
@@ -1352,7 +1345,6 @@ public class GestionEscritorio extends javax.swing.JFrame {
         } else {
             return false;
         }
-
     }
 
     public boolean llenarProcesador(String provincia) {

@@ -305,7 +305,7 @@ public class GestionLogin extends javax.swing.JFrame {
                 nuevaVentana.setVisible(true);
                 this.setVisible(false);
             } else if (!cbxEscritorio.isSelected() && cbxLaptop.isSelected()) {
-                GestionLaptop nuevaVentana = new GestionLaptop();
+                GestionLaptop nuevaVentana = new GestionLaptop(tiendas);
                 nuevaVentana.setVisible(true);
                 this.setVisible(false);
             } else {
