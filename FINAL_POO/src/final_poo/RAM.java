@@ -28,5 +28,12 @@ public class RAM extends Producto{
 
     public double getNBFrequency() {
         return NBFrequency;
-    }    
+    }   
+    
+    @Override
+    public String toString() {
+        return "Producto: RAM\nTamaño: "+size+"GB\nTipo: "+type+"\nFrecuencia: "
+                +NBFrequency+"\nMarca: "+super.getFabricante()+"\nPrecio: "
+                +super.getPrecio()+"\nPara: "+super.tipoComputador+"\n\n";
+    }
 }

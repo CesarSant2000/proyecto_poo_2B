@@ -15,5 +15,11 @@ public class Procesador extends Producto{
 
     public String getModelo() {
         return modelo;
-    }   
+    } 
+    
+    @Override
+    public String toString() {
+        return "Producto: Procesador\nModelo: "+modelo+"\nTipo: "+super.getFabricante()
+                +"\nPrecio: "+super.getPrecio()+"\nPara: "+super.tipoComputador+"\n\n";
+    }
 }

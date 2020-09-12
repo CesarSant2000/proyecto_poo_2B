@@ -91,7 +91,7 @@
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btnECotizacion" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -114,24 +114,25 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <Component id="panelEProcesador" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="panelEProcesador1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="panelAlmacenamiento" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="panelVentilacion" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="panelFuente" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="panelRam" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="panelCA" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="27" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="panelEProcesador1" min="-2" max="-2" attributes="0"/>
+                      <Component id="panelRam" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="panelAlmacenamiento" min="-2" max="-2" attributes="0"/>
+                      <Component id="panelVentilacion" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -141,15 +142,16 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="panelEProcesador" alignment="0" max="32767" attributes="0"/>
-                      <Component id="panelVentilacion" alignment="0" max="32767" attributes="0"/>
                       <Component id="panelEProcesador1" alignment="1" max="32767" attributes="0"/>
                       <Component id="panelAlmacenamiento" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="panelFuente" max="32767" attributes="0"/>
-                      <Component id="panelRam" max="32767" attributes="0"/>
-                      <Component id="panelCA" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="panelFuente" max="32767" attributes="0"/>
+                          <Component id="panelRam" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="panelVentilacion" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="13" max="32767" attributes="0"/>
               </Group>
@@ -189,7 +191,7 @@
                       <Component id="rbtnEi5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="rbtnEi3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="22" max="32767" attributes="0"/>
+                      <EmptySpace pref="39" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -295,8 +297,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="cmbRam" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="29" max="32767" attributes="0"/>
+                      <Component id="cmbRam" pref="94" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -314,12 +316,13 @@
             <Component class="javax.swing.JComboBox" name="cmbRam">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="5">
-                    <StringItem index="0" value="4 GB"/>
-                    <StringItem index="1" value="8 GB"/>
-                    <StringItem index="2" value="16 GB"/>
-                    <StringItem index="3" value="32 GB"/>
-                    <StringItem index="4" value="64 GB"/>
+                  <StringArray count="6">
+                    <StringItem index="0" value="Seleccionar"/>
+                    <StringItem index="1" value="4 GB"/>
+                    <StringItem index="2" value="8 GB"/>
+                    <StringItem index="3" value="16 GB"/>
+                    <StringItem index="4" value="32 GB"/>
+                    <StringItem index="5" value="64 GB"/>
                   </StringArray>
                 </Property>
                 <Property name="enabled" type="boolean" value="false"/>
@@ -420,13 +423,14 @@
             <Component class="javax.swing.JComboBox" name="cmbFuente">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="6">
-                    <StringItem index="0" value="400 W"/>
-                    <StringItem index="1" value="500 W"/>
-                    <StringItem index="2" value="600 W"/>
-                    <StringItem index="3" value="700 W"/>
-                    <StringItem index="4" value="800 W"/>
-                    <StringItem index="5" value="1000 W"/>
+                  <StringArray count="7">
+                    <StringItem index="0" value="Seleccionar"/>
+                    <StringItem index="1" value="400 W"/>
+                    <StringItem index="2" value="500 W"/>
+                    <StringItem index="3" value="600 W"/>
+                    <StringItem index="4" value="700 W"/>
+                    <StringItem index="5" value="800 W"/>
+                    <StringItem index="6" value="1000 W"/>
                   </StringArray>
                 </Property>
                 <Property name="enabled" type="boolean" value="false"/>
@@ -450,13 +454,14 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="rbtnE7" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="rbtnE5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="rbtnE3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="rbtnE9" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
+                      <EmptySpace pref="28" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -464,12 +469,12 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="rbtnE9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="rbtnE7" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="rbtnE5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="rbtnE3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="22" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -478,7 +483,7 @@
             <Component class="javax.swing.JRadioButton" name="rbtnE7">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btaEProcesador1"/>
+                  <ComponentRef name="btaEProcesador"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ryzen 7"/>
                 <Property name="enabled" type="boolean" value="false"/>
@@ -487,102 +492,20 @@
             <Component class="javax.swing.JRadioButton" name="rbtnE5">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btaEProcesador1"/>
+                  <ComponentRef name="btaEProcesador"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ryzen 5"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="rbtnE3">
+            <Component class="javax.swing.JRadioButton" name="rbtnE9">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btaEProcesador1"/>
+                  <ComponentRef name="btaEProcesador"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Ryzen 3"/>
+                <Property name="text" type="java.lang.String" value="Ryzen 9"/>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="panelCA">
-          <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Capacidad Almacenamiento"/>
-              </Border>
-            </Property>
-            <Property name="enabled" type="boolean" value="false"/>
-          </Properties>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="23" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="cbmCA" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="rbtnCAGB" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="rbtnCATB" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="rbtnCAGB" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rbtnCATB" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="cbmCA" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JRadioButton" name="rbtnCAGB">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btaCA"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="GB"/>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="rbtnCAGBItemStateChanged"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="rbtnCATB">
-              <Properties>
-                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                  <ComponentRef name="btaCA"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="TB"/>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="rbtnCATBItemStateChanged"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JComboBox" name="cbmCA">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="1">
-                    <StringItem index="0" value="Seleccionar"/>
-                  </StringArray>
-                </Property>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -607,6 +530,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Crear Cotizacion"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnECotizacionActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel6">
       <Properties>

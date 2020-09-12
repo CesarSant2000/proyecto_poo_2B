@@ -24,4 +24,10 @@ public class Almacenamiento extends Producto{
         return size;
     }
     
+    @Override
+    public String toString() {
+        return "Producto: Disco\nTipo: "+tipo+"\nTamaño: "+size+"\nMarca: "
+                +super.getFabricante()+"\nPrecio: "+super.getPrecio()+"\nPara: "+super.tipoComputador+"\n\n";
+    }
+    
 }

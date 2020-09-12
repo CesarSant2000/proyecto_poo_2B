@@ -17,4 +17,10 @@ public class FuenteDePoder extends Producto{
         return tipo;
     }
     
+    @Override
+    public String toString() {
+        return "Producto: Fuente de poder\nTipo: "+tipo+"\nMarca: "+super.getFabricante()
+                +"\nPrecio: "+super.getPrecio()+"\nPara: "+super.tipoComputador+"\n\n";
+    }
+    
 }

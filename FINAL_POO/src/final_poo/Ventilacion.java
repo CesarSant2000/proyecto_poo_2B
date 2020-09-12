@@ -16,5 +16,11 @@ public class Ventilacion extends Producto{
 
     public String getTipo() {
         return tipo;
-    }    
+    } 
+    
+    @Override
+    public String toString() {
+        return "Producto: Ventilacion\nTipo: "+tipo+"\nMarca: "+super.getFabricante()
+                +"\nPrecio: "+super.getPrecio()+"\nPara: "+super.tipoComputador+"\n\n";
+    }
 }
