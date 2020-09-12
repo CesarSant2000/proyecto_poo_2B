@@ -32,18 +32,18 @@ public class GestionLogin extends javax.swing.JFrame {
         LinkedList<Producto> misProductosPCShop = new LinkedList<>();
 
         //Agregar RAM
-        misProductosPCShop.add(new RAM(8, "DDR4", 2133, "Ambas", "Kingston", 76));
-        misProductosPCShop.add(new RAM(4, "DDR3", 1333, "Ambas", "Kingston", 64));
+        misProductosPCShop.add(new RAM(8, "DDR4", 2133, "Ambas", "Kingston", "PCSHOP",76));
+        misProductosPCShop.add(new RAM(4, "DDR3", 1333, "Ambas", "Kingston", "PCSHOP", 64));
         //Agregar Almacenamiento
-        misProductosPCShop.add(new Almacenamiento("SSD", "240GB", "Ambas", "Kingston", 78.99));
-        misProductosPCShop.add(new Almacenamiento("SSD", "480GB", "Ambas", "WD", 89.99));
-        misProductosPCShop.add(new Almacenamiento("HDD", "1TB", "Laptop", "Toshiba", 73.99));
+        misProductosPCShop.add(new Almacenamiento("SSD", "240GB", "Ambas", "Kingston", "PCSHOP", 78.99));
+        misProductosPCShop.add(new Almacenamiento("SSD", "480GB", "Ambas", "WD", "PCSHOP", 89.99));
+        misProductosPCShop.add(new Almacenamiento("HDD", "1TB", "Laptop", "Toshiba", "PCSHOP", 73.99));
         //Agregar Procesador
-        misProductosPCShop.add(new Procesador("i3-9100", "Ambas", "Intel", 209.99));
-        misProductosPCShop.add(new Procesador("i5-9400", "Ambas", "Intel", 299.99));
-        misProductosPCShop.add(new Procesador("i7-9700", "Ambas", "Intel", 525));
+        misProductosPCShop.add(new Procesador("i3-9100", "Ambas", "Intel", "PCSHOP", 209.99));
+        misProductosPCShop.add(new Procesador("i5-9400", "Ambas", "Intel", "PCSHOP", 299.99));
+        misProductosPCShop.add(new Procesador("i7-9700", "Ambas", "Intel", "PCSHOP", 525));
         //Agregar Fuente de poder
-        misProductosPCShop.add(new FuenteDePoder("800", "Escritorio", "Altek", 20));
+        misProductosPCShop.add(new FuenteDePoder("800", "Escritorio", "PCSHOP", "Altek", 20));
         //No tiene ventilacion
 
         tiendas.add(new Tiendas("PCShop", "Pichincha", "Quito", misProductosPCShop));
@@ -52,38 +52,38 @@ public class GestionLogin extends javax.swing.JFrame {
         LinkedList<Producto> misProductosTecnoMega = new LinkedList<>();
 
         //Agregar RAM
-        misProductosTecnoMega.add(new RAM(8, "DDR3L", 1600, "Ambas", "A-Data", 46.67));
-        misProductosTecnoMega.add(new RAM(8, "DDR4", 2400, "Ambas", "A-Data", 40.22));
-        misProductosTecnoMega.add(new RAM(4, "DDR4", 2400, "Ambas", "A-Data", 21.67));
-        misProductosTecnoMega.add(new RAM(32, "DDR4", 2400, "Ambas", "Corsair", 180.67));
-        misProductosTecnoMega.add(new RAM(16, "DDR4", 2400, "Ambas", "Crucial", 104.44));
-        misProductosTecnoMega.add(new RAM(8, "DDR4", 2400, "Ambas", "DELL", 155.44));
-        misProductosTecnoMega.add(new RAM(16, "DDR4", 2666, "Ambas", "DELL", 220));
+        misProductosTecnoMega.add(new RAM(8, "DDR3L", 1600, "Ambas", "A-Data", "TECNOMEGA", 46.67));
+        misProductosTecnoMega.add(new RAM(8, "DDR4", 2400, "Ambas", "A-Data", "TECNOMEGA", 40.22));
+        misProductosTecnoMega.add(new RAM(4, "DDR4", 2400, "Ambas", "A-Data", "TECNOMEGA", 21.67));
+        misProductosTecnoMega.add(new RAM(32, "DDR4", 2400, "Ambas", "Corsair", "TECNOMEGA", 180.67));
+        misProductosTecnoMega.add(new RAM(16, "DDR4", 2400, "Ambas", "Crucial", "TECNOMEGA", 104.44));
+        misProductosTecnoMega.add(new RAM(8, "DDR4", 2400, "Ambas", "DELL", "TECNOMEGA", 155.44));
+        misProductosTecnoMega.add(new RAM(16, "DDR4", 2666, "Ambas", "DELL", "TECNOMEGA", 220));
         //Agregar Almacenamiento
-        misProductosTecnoMega.add(new Almacenamiento("SSD", "256GB", "Laptop", "A-Data", 57.56));
-        misProductosTecnoMega.add(new Almacenamiento("SSD", "480GB", "Laptop", "A-Data", 78.89));
-        misProductosTecnoMega.add(new Almacenamiento("HDD", "4TB", "Ambas", "DELL", 266.67));
-        misProductosTecnoMega.add(new Almacenamiento("HDD", "4TB", "Ambas", "HP", 533.67));
-        misProductosTecnoMega.add(new Almacenamiento("SSD", "500GB", "Ambas", "HP", 81.67));
-        misProductosTecnoMega.add(new Almacenamiento("SSD", "1TB", "Ambas", "HP", 146.11));
-        misProductosTecnoMega.add(new Almacenamiento("SSD", "1TB", "Ambas", "Kingston", 145.56));
+        misProductosTecnoMega.add(new Almacenamiento("SSD", "256GB", "Laptop", "A-Data", "TECNOMEGA", 57.56));
+        misProductosTecnoMega.add(new Almacenamiento("SSD", "480GB", "Laptop", "A-Data", "TECNOMEGA", 78.89));
+        misProductosTecnoMega.add(new Almacenamiento("HDD", "4TB", "Ambas", "DELL", "TECNOMEGA", 266.67));
+        misProductosTecnoMega.add(new Almacenamiento("HDD", "4TB", "Ambas", "HP", "TECNOMEGA", 533.67));
+        misProductosTecnoMega.add(new Almacenamiento("SSD", "500GB", "Ambas", "HP", "TECNOMEGA", 81.67));
+        misProductosTecnoMega.add(new Almacenamiento("SSD", "1TB", "Ambas", "HP", "TECNOMEGA", 146.11));
+        misProductosTecnoMega.add(new Almacenamiento("SSD", "1TB", "Ambas", "Kingston", "TECNOMEGA", 145.56));
         //Agregar Procesador
-        misProductosTecnoMega.add(new Procesador("5", "Escritorio", "Ryzen", 273.33));
-        misProductosTecnoMega.add(new Procesador("7", "Ambas", "Ryzen", 453.33));
-        misProductosTecnoMega.add(new Procesador("9", "Ambas", "Ryzen", 686.87));
-        misProductosTecnoMega.add(new Procesador("i9-10850", "Ambas", "Intel", 644.44));
-        misProductosTecnoMega.add(new Procesador("i5-9400", "Ambas", "Intel", 230));
-        misProductosTecnoMega.add(new Procesador("i7-9700", "Ambas", "Intel", 944.44));
+        misProductosTecnoMega.add(new Procesador("5", "Escritorio", "Ryzen", "TECNOMEGA", 273.33));
+        misProductosTecnoMega.add(new Procesador("7", "Ambas", "Ryzen", "TECNOMEGA", 453.33));
+        misProductosTecnoMega.add(new Procesador("9", "Ambas", "Ryzen", "TECNOMEGA", 686.87));
+        misProductosTecnoMega.add(new Procesador("i9-10850", "Ambas", "Intel", "TECNOMEGA", 644.44));
+        misProductosTecnoMega.add(new Procesador("i5-9400", "Ambas", "Intel", "TECNOMEGA", 230));
+        misProductosTecnoMega.add(new Procesador("i7-9700", "Ambas", "Intel", "TECNOMEGA", 944.44));
         //Agregar fuente de poder
-        misProductosTecnoMega.add(new FuenteDePoder("800W", "Escritorio", "Asus", 271.11));
-        misProductosTecnoMega.add(new FuenteDePoder("ATX", "Escritorio", "Corsair", 520));
-        misProductosTecnoMega.add(new FuenteDePoder("RM750X", "Escritorio", "Corsair", 172.67));
-        misProductosTecnoMega.add(new FuenteDePoder("495W", "Escritorio", "DELL", 185.56));
+        misProductosTecnoMega.add(new FuenteDePoder("800W", "Escritorio", "Asus", "TECNOMEGA", 271.11));
+        misProductosTecnoMega.add(new FuenteDePoder("ATX", "Escritorio", "Corsair", "TECNOMEGA", 520));
+        misProductosTecnoMega.add(new FuenteDePoder("RM750X", "Escritorio", "Corsair", "TECNOMEGA", 172.67));
+        misProductosTecnoMega.add(new FuenteDePoder("495W", "Escritorio", "DELL", "TECNOMEGA", 185.56));
         //Agregar ventilacion
-        misProductosTecnoMega.add(new Ventilacion("Standard", "Escritorio", "DELL", 17.89));
-        misProductosTecnoMega.add(new Ventilacion("Liquida", "Escritorio", "Asus", 221.11));
-        misProductosTecnoMega.add(new Ventilacion("Standard", "Escritorio", "Instel", 34.44));
-        misProductosTecnoMega.add(new Ventilacion("Standard", "Escritorio", "DELL", 21.11));
+        misProductosTecnoMega.add(new Ventilacion("Standard", "Escritorio", "DELL", "TECNOMEGA", 17.89));
+        misProductosTecnoMega.add(new Ventilacion("Liquida", "Escritorio", "Asus", "TECNOMEGA", 221.11));
+        misProductosTecnoMega.add(new Ventilacion("Standard", "Escritorio", "Instel", "TECNOMEGA", 34.44));
+        misProductosTecnoMega.add(new Ventilacion("Standard", "Escritorio", "DELL", "TECNOMEGA", 21.11));
 
         tiendas.add(new Tiendas("TecnoMega", "Pichincha", "Quito", misProductosTecnoMega));
 
@@ -92,24 +92,24 @@ public class GestionLogin extends javax.swing.JFrame {
         LinkedList<Producto> misProductosPartesYPiezas = new LinkedList<>();
 
         //Agregar RAM
-        misProductosPartesYPiezas.add(new RAM(8, "DDR3", 1600, "Ambas", "Kingston", 50));
-        misProductosPartesYPiezas.add(new RAM(8, "DDR4", 2666, "Escritorio", "HP", 46.43));
+        misProductosPartesYPiezas.add(new RAM(8, "DDR3", 1600, "Ambas", "Kingston", "Partes y Piezas", 50));
+        misProductosPartesYPiezas.add(new RAM(8, "DDR4", 2666, "Escritorio", "HP", "Partes y Piezas", 46.43));
         //Agregar Almacenamiento
-        misProductosPartesYPiezas.add(new Almacenamiento("SSD", "240GB", "Ambas", "Kingston", 39.73));
-        misProductosPartesYPiezas.add(new Almacenamiento("SSD", "250GB", "Ambas", "HP", 44.64));
-        misProductosPartesYPiezas.add(new Almacenamiento("SSD", "240GB", "Ambas", "WD", 38.84));
+        misProductosPartesYPiezas.add(new Almacenamiento("SSD", "240GB", "Ambas", "Kingston", "Partes y Piezas", 39.73));
+        misProductosPartesYPiezas.add(new Almacenamiento("SSD", "250GB", "Ambas", "HP", "Partes y Piezas", 44.64));
+        misProductosPartesYPiezas.add(new Almacenamiento("SSD", "240GB", "Ambas", "WD", "Partes y Piezas", 38.84));
         //Agregar Procesador
-        misProductosPartesYPiezas.add(new Procesador("i7 9700", "Ambas", "Intel", 437.50));
-        misProductosPartesYPiezas.add(new Procesador("i5 9400", "Ambas", "Intel", 236.61));
-        misProductosPartesYPiezas.add(new Procesador("i3-10100", "Ambas", "Intel", 183.04));
-        misProductosPartesYPiezas.add(new Procesador("7", "Ambas", "Ryzen", 486.61));
-        misProductosPartesYPiezas.add(new Procesador("5", "Ambas", "Ryzen", 294.64));
+        misProductosPartesYPiezas.add(new Procesador("i7 9700", "Ambas", "Intel", "Partes y Piezas", 437.50));
+        misProductosPartesYPiezas.add(new Procesador("i5 9400", "Ambas", "Intel", "Partes y Piezas", 236.61));
+        misProductosPartesYPiezas.add(new Procesador("i3-10100", "Ambas", "Intel", "Partes y Piezas", 183.04));
+        misProductosPartesYPiezas.add(new Procesador("7", "Ambas", "Ryzen", "Partes y Piezas", 486.61));
+        misProductosPartesYPiezas.add(new Procesador("5", "Ambas", "Ryzen", "Partes y Piezas", 294.64));
         //Agregar fuente de poder
-        misProductosPartesYPiezas.add(new FuenteDePoder("800W", "Escritorio", "Asus", 290.18));
-        misProductosPartesYPiezas.add(new FuenteDePoder("600W", "Escritorio", "EVGA", 70.54));
+        misProductosPartesYPiezas.add(new FuenteDePoder("800W", "Escritorio", "Asus", "Partes y Piezas", 290.18));
+        misProductosPartesYPiezas.add(new FuenteDePoder("600W", "Escritorio", "EVGA", "Partes y Piezas", 70.54));
         //Agregar ventilacion
-        misProductosPartesYPiezas.add(new Ventilacion("Liquida", "Escritorio", "Corsair", 263.39));
-        misProductosPartesYPiezas.add(new Ventilacion("Standard", "Escritorio", "Intel", 25.89));
+        misProductosPartesYPiezas.add(new Ventilacion("Liquida", "Escritorio", "Corsair", "Partes y Piezas", 263.39));
+        misProductosPartesYPiezas.add(new Ventilacion("Standard", "Escritorio", "Intel", "Partes y Piezas", 25.89));
 
         tiendas.add(new Tiendas("Partes y Piezas", "Guayas", "Guayaquil", misProductosPartesYPiezas));
 
@@ -117,25 +117,25 @@ public class GestionLogin extends javax.swing.JFrame {
         LinkedList<Producto> misProductosTecnosmart = new LinkedList<>();
 
         //Agregar RAM
-        misProductosTecnosmart.add(new RAM(16, "DDR4", 2666, "Ambas", "Corsair", 259.99));
-        misProductosTecnosmart.add(new RAM(16, "DDR4", 2133, "Ambas", "Kingston", 149.99));
-        misProductosTecnosmart.add(new RAM(32, "DDR4", 3000, "Ambas", "Corsair", 339.99));
+        misProductosTecnosmart.add(new RAM(16, "DDR4", 2666, "Ambas", "Corsair", "TECNOSMART", 259.99));
+        misProductosTecnosmart.add(new RAM(16, "DDR4", 2133, "Ambas", "Kingston", "TECNOSMART", 149.99));
+        misProductosTecnosmart.add(new RAM(32, "DDR4", 3000, "Ambas", "Corsair", "TECNOSMART", 339.99));
         //Agregar Almacenamiento
-        misProductosTecnosmart.add(new Almacenamiento("HDD", "10TB", "Ambas", "WD", 517.99));
-        misProductosTecnosmart.add(new Almacenamiento("HDD", "1TB", "Ambas", "SeaGate", 67.99));
-        misProductosTecnosmart.add(new Almacenamiento("HDD", "4TB", "Ambas", "WD", 156.99));
+        misProductosTecnosmart.add(new Almacenamiento("HDD", "10TB", "Ambas", "WD", "TECNOSMART", 517.99));
+        misProductosTecnosmart.add(new Almacenamiento("HDD", "1TB", "Ambas", "SeaGate", "TECNOSMART", 67.99));
+        misProductosTecnosmart.add(new Almacenamiento("HDD", "4TB", "Ambas", "WD", "TECNOSMART", 156.99));
         //Agregar Procesador
-        misProductosTecnosmart.add(new Procesador("i5-10400", "Ambas", "Intel", 282.99));
-        misProductosTecnosmart.add(new Procesador("i7-9800X", "Ambas", "Intel", 839.99));
-        misProductosTecnosmart.add(new Procesador("i3-8300", "Ambas", "Intel", 194.99));
+        misProductosTecnosmart.add(new Procesador("i5-10400", "Ambas", "Intel", "TECNOSMART", 282.99));
+        misProductosTecnosmart.add(new Procesador("i7-9800X", "Ambas", "Intel", "TECNOSMART", 839.99));
+        misProductosTecnosmart.add(new Procesador("i3-8300", "Ambas", "Intel", "TECNOSMART", 194.99));
         //Agregar fuente de poder
-        misProductosTecnosmart.add(new FuenteDePoder("800w", "Escritorio", "Speed Mind", 44.90));
-        misProductosTecnosmart.add(new FuenteDePoder("700W", "Escritorio", "EVGA", 199.99));
-        misProductosTecnosmart.add(new FuenteDePoder("700W", "Escritorio", "Corsair", 118.99));
+        misProductosTecnosmart.add(new FuenteDePoder("800w", "Escritorio", "Speed Mind", "TECNOSMART", 44.90));
+        misProductosTecnosmart.add(new FuenteDePoder("700W", "Escritorio", "EVGA", "TECNOSMART", 199.99));
+        misProductosTecnosmart.add(new FuenteDePoder("700W", "Escritorio", "Corsair", "TECNOSMART", 118.99));
         //Agregar ventilacion
-        misProductosTecnosmart.add(new Ventilacion("Liquida", "Escritorio", "ThermalTake", 319.99));
-        misProductosTecnosmart.add(new Ventilacion("Standard", "Escritorio", "Corsair", 135.99));
-        misProductosTecnosmart.add(new Ventilacion("Standard", "Escritorio", "Corsair", 89.99));
+        misProductosTecnosmart.add(new Ventilacion("Liquida", "Escritorio", "ThermalTake", "TECNOSMART", 319.99));
+        misProductosTecnosmart.add(new Ventilacion("Standard", "Escritorio", "Corsair", "TECNOSMART", 135.99));
+        misProductosTecnosmart.add(new Ventilacion("Standard", "Escritorio", "Corsair", "TECNOSMART", 89.99));
 
         tiendas.add(new Tiendas("TECNOSMART", "Guayas", "Guayaquil", misProductosTecnosmart));
 
@@ -144,26 +144,26 @@ public class GestionLogin extends javax.swing.JFrame {
         LinkedList<Producto> misProductosCompuPLus = new LinkedList<>();
 
         //Agregar RAM
-        misProductosCompuPLus.add(new RAM(8, "DDR4", 4133, "Ambas", "XPG", 99));
-        misProductosCompuPLus.add(new RAM(8, "DDR4", 2933, "Ambas", "Kingston", 89));
-        misProductosCompuPLus.add(new RAM(32, "DDR", 3000, "Ambas", "Corsair", 240));
+        misProductosCompuPLus.add(new RAM(8, "DDR4", 4133, "Ambas", "XPG", "COMPUPLUS", 99));
+        misProductosCompuPLus.add(new RAM(8, "DDR4", 2933, "Ambas", "Kingston", "COMPUPLUS", 89));
+        misProductosCompuPLus.add(new RAM(32, "DDR", 3000, "Ambas", "Corsair", "COMPUPLUS", 240));
         //Agregar Almacenamiento
-        misProductosCompuPLus.add(new Almacenamiento("SSD", "512GB", "Ambas", "SP", 130));
-        misProductosCompuPLus.add(new Almacenamiento("SSD", "500GB", "Ambas", "WD", 90));
-        misProductosCompuPLus.add(new Almacenamiento("HDD", "2TB", "Ambas", "SeaGate", 95));
+        misProductosCompuPLus.add(new Almacenamiento("SSD", "512GB", "Ambas", "SP", "COMPUPLUS", 130));
+        misProductosCompuPLus.add(new Almacenamiento("SSD", "500GB", "Ambas", "WD", "COMPUPLUS", 90));
+        misProductosCompuPLus.add(new Almacenamiento("HDD", "2TB", "Ambas", "SeaGate", "COMPUPLUS", 95));
         //Agregar Procesador
-        misProductosCompuPLus.add(new Procesador("i3 9100F", "Ambas", "Intel", 129));
-        misProductosCompuPLus.add(new Procesador("i7 9700F", "Ambas", "Intel", 499));
-        misProductosCompuPLus.add(new Procesador("i5 9400F", "Ambas", "Intel", 235));
-        misProductosCompuPLus.add(new Procesador("5", "Ambas", "Ryzen", 230));
-        misProductosCompuPLus.add(new Procesador("7", "Ambas", "Ryzen", 499));
-        misProductosCompuPLus.add(new Procesador("9", "Ambas", "Ryzen", 750));
+        misProductosCompuPLus.add(new Procesador("i3 9100F", "Ambas", "Intel", "COMPUPLUS", 129));
+        misProductosCompuPLus.add(new Procesador("i7 9700F", "Ambas", "Intel", "COMPUPLUS", 499));
+        misProductosCompuPLus.add(new Procesador("i5 9400F", "Ambas", "Intel", "COMPUPLUS", 235));
+        misProductosCompuPLus.add(new Procesador("5", "Ambas", "Ryzen", "COMPUPLUS", 230));
+        misProductosCompuPLus.add(new Procesador("7", "Ambas", "Ryzen", "COMPUPLUS", 499));
+        misProductosCompuPLus.add(new Procesador("9", "Ambas", "Ryzen", "COMPUPLUS", 750));
         //Agregar fuente de poder
-        misProductosCompuPLus.add(new FuenteDePoder("1000W", "Escritorio", "Corsair", 250));
-        misProductosCompuPLus.add(new FuenteDePoder("500W", "Escritorio", "EVGA", 70));
-        misProductosCompuPLus.add(new FuenteDePoder("800W", "Escritorio", "ASUS", 299));
+        misProductosCompuPLus.add(new FuenteDePoder("1000W", "Escritorio", "Corsair", "COMPUPLUS", 250));
+        misProductosCompuPLus.add(new FuenteDePoder("500W", "Escritorio", "EVGA", "COMPUPLUS", 70));
+        misProductosCompuPLus.add(new FuenteDePoder("800W", "Escritorio", "ASUS", "COMPUPLUS", 299));
         //Agregar ventilacion
-        misProductosCompuPLus.add(new Ventilacion("Standard", "Escritorio", "Corsair", 49));
+        misProductosCompuPLus.add(new Ventilacion("Standard", "Escritorio", "Corsair", "COMPUPLUS", 49));
 
         tiendas.add(new Tiendas("Compu Plus", "Azuay", "Cuenca", misProductosCompuPLus));
 
@@ -171,12 +171,12 @@ public class GestionLogin extends javax.swing.JFrame {
         LinkedList<Producto> misProductosGiga = new LinkedList<>();
 
         //Agregar RAM
-        misProductosGiga.add(new RAM(8, "DDR3L", 2666, "Laptop", "Kingston", 56.99));
-        misProductosGiga.add(new RAM(16, "DDR4", 3000, "Laptop", "Kingston", 103.99));
+        misProductosGiga.add(new RAM(8, "DDR3L", 2666, "Laptop", "Kingston", "GIGA", 56.99));
+        misProductosGiga.add(new RAM(16, "DDR4", 3000, "Laptop", "Kingston", "GIGA", 103.99));
         //Agregar Almacenamiento
-        misProductosGiga.add(new Almacenamiento("SSD", "240GB", "Laptop", "Kingston", 49.99));
-        misProductosGiga.add(new Almacenamiento("SSD", "480GB", "Laptop", "Kingston", 84.99));
-        misProductosGiga.add(new Almacenamiento("SSD", "120GB", "Laptop", "Kingston", 35.99));
+        misProductosGiga.add(new Almacenamiento("SSD", "240GB", "Laptop", "Kingston", "GIGA", 49.99));
+        misProductosGiga.add(new Almacenamiento("SSD", "480GB", "Laptop", "Kingston", "GIGA", 84.99));
+        misProductosGiga.add(new Almacenamiento("SSD", "120GB", "Laptop", "Kingston", "GIGA", 35.99));
         //Agregar Procesador (NO HAY)
         //Agregar fuente de poder (NO HAY)
         //Agregar ventilacion (NO HAY)
@@ -188,20 +188,20 @@ public class GestionLogin extends javax.swing.JFrame {
         LinkedList<Producto> misProductosToners = new LinkedList<>();
 
         //Agregar RAM
-        misProductosToners.add(new RAM(8, "DDR4", 2666, "Ambas", "HP", 52));
-        misProductosToners.add(new RAM(4, "DDR4", 2666, "Ambas", "Kingston", 36.80));
-        misProductosToners.add(new RAM(2, "DDR4", 2666, "Laptop", "Kingston", 59));
+        misProductosToners.add(new RAM(8, "DDR4", 2666, "Ambas", "HP", "TONERS", 52));
+        misProductosToners.add(new RAM(4, "DDR4", 2666, "Ambas", "Kingston", "TONERS", 36.80));
+        misProductosToners.add(new RAM(2, "DDR4", 2666, "Laptop", "Kingston", "TONERS", 59));
         //Agregar Almacenamiento
-        misProductosToners.add(new Almacenamiento("SSD", "480GB", "Ambas", "A-Data", 96.40));
-        misProductosToners.add(new Almacenamiento("SSD", "2TB", "Ambas", "HP", 404.67));
-        misProductosToners.add(new Almacenamiento("HDD", "2TB", "Ambas", "A-Data", 112));
+        misProductosToners.add(new Almacenamiento("SSD", "480GB", "Ambas", "A-Data", "TONERS", 96.40));
+        misProductosToners.add(new Almacenamiento("SSD", "2TB", "Ambas", "HP", "TONERS", 404.67));
+        misProductosToners.add(new Almacenamiento("HDD", "2TB", "Ambas", "A-Data", "TONERS", 112));
         //Agregar Procesador
-        misProductosToners.add(new Procesador("i3-9100F", "Ambas", "Intel", 142.80));
-        misProductosToners.add(new Procesador("i5-9400F", "Ambas", "Intel", 263.40));
-        misProductosToners.add(new Procesador("i7-9700K", "Ambas", "Intel", 577));
+        misProductosToners.add(new Procesador("i3-9100F", "Ambas", "Intel", "TONERS", 142.80));
+        misProductosToners.add(new Procesador("i5-9400F", "Ambas", "Intel", "TONERS", 263.40));
+        misProductosToners.add(new Procesador("i7-9700K", "Ambas", "Intel", "TONERS", 577));
         //Agregar fuente de poder
-        misProductosToners.add(new FuenteDePoder("700W", "Escritorio", "Altek", 19.80));
-        misProductosToners.add(new FuenteDePoder("600W", "Escritorio", "Anera", 22.40));
+        misProductosToners.add(new FuenteDePoder("700W", "Escritorio", "Altek", "TONERS", 19.80));
+        misProductosToners.add(new FuenteDePoder("600W", "Escritorio", "Anera", "TONERS", 22.40));
         //Agregar ventilacion (NO HAY)
 
         tiendas.add(new Tiendas("Toners", "Loja", "Loja", misProductosToners));
