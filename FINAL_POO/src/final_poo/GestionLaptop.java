@@ -61,7 +61,7 @@ public class GestionLaptop extends javax.swing.JFrame {
         rbtnL7 = new javax.swing.JRadioButton();
         rbtnL5 = new javax.swing.JRadioButton();
         rbtnL9 = new javax.swing.JRadioButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        cbxActivar1 = new javax.swing.JCheckBox();
         cbxActivar2 = new javax.swing.JCheckBox();
         btnLCotizzacion = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
@@ -138,7 +138,7 @@ public class GestionLaptop extends javax.swing.JFrame {
         panelBateriaLayout.setVerticalGroup(
             panelBateriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBateriaLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(rbtnBSi)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(rbtnBNo)
@@ -197,7 +197,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                 .addComponent(rbtnHDD)
                 .addGap(18, 18, 18)
                 .addComponent(rbtnSSD)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelLProcesador.setBorder(javax.swing.BorderFactory.createTitledBorder("Procesador"));
@@ -285,29 +285,28 @@ public class GestionLaptop extends javax.swing.JFrame {
                     .addComponent(panelRam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(panelLProcesador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(115, 115, 115)
-                        .addComponent(panelAlmacenamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panelLProcesador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelBateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(89, 89, 89)
+                .addComponent(panelAlmacenamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelLProcesador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelLProcesador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelAlmacenamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelRam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelBateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panelAlmacenamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(panelLProcesador1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(panelLProcesador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panelRam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelBateria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
-        jCheckBox1.setText("Activar");
+        cbxActivar1.setText("Activar");
 
         cbxActivar2.setText("Activar");
         cbxActivar2.addItemListener(new java.awt.event.ItemListener() {
@@ -374,7 +373,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox1)
+                            .addComponent(cbxActivar1)
                             .addComponent(cbxActivar2))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -397,7 +396,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jCheckBox1)
+                .addComponent(cbxActivar1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15)
@@ -1938,7 +1937,7 @@ public class GestionLaptop extends javax.swing.JFrame {
 
     private void cmbProvinciasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbProvinciasItemStateChanged
         // TODO add your handling code here:
-
+        desactivarPartes();
         if (evt.getStateChange() == ItemEvent.SELECTED) {
             if (!cmbProvincias.getSelectedItem().toString().equals("Seleccionar figura")) {
                 switch (cmbProvincias.getSelectedItem().toString()) {
@@ -2482,7 +2481,8 @@ public class GestionLaptop extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLCotizzacionActionPerformed
 
     private void cbxActivar2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxActivar2ItemStateChanged
-        if (evt.getStateChange() == ItemEvent.SELECTED) {
+        if (!mostrarAdvertencia(evt)) {
+            if (evt.getStateChange() == ItemEvent.SELECTED) {
                 rbtnLi7.setEnabled(true);
                 rbtnLi5.setEnabled(true);
                 rbtnLi3.setEnabled(true);
@@ -2497,7 +2497,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                 rbtnL7.setEnabled(true);
                 rbtnL5.setEnabled(true);
                 rbtnL9.setEnabled(true);
-                
+
                 panelBateria.setEnabled(true);
                 rbtnBNo.setEnabled(true);
                 rbtnBSi.setEnabled(true);
@@ -2515,11 +2515,12 @@ public class GestionLaptop extends javax.swing.JFrame {
                 rbtnL7.setEnabled(false);
                 rbtnL5.setEnabled(false);
                 rbtnL9.setEnabled(false);
-                
+
                 panelBateria.setEnabled(false);
                 rbtnBNo.setEnabled(false);
                 rbtnBSi.setEnabled(false);
             }
+        }
     }//GEN-LAST:event_cbxActivar2ItemStateChanged
 
     public boolean llenarRAM(String provincia) {
@@ -2534,7 +2535,7 @@ public class GestionLaptop extends javax.swing.JFrame {
     }
 
     public boolean llenarAlmacenamiento(String provincia) {
-        if (rbtnHDD.isSelected()) {
+        if (rbtnSSD.isSelected()) {
             productosDeseados.addAll(Tiendas.obtenerProductos(tiendas, provincia, 2, "SSD", tipoComputador));
             return true;
         } else if (rbtnHDD.isSelected()) {
@@ -2612,11 +2613,11 @@ public class GestionLaptop extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInicio;
     private javax.swing.JButton btnLCotizzacion;
+    private javax.swing.JCheckBox cbxActivar1;
     private javax.swing.JCheckBox cbxActivar2;
     private javax.swing.JComboBox<String> cmbLaptop;
     private javax.swing.JComboBox<String> cmbProvincias;
     private javax.swing.JComboBox<String> cmbRAM;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
@@ -2641,4 +2642,41 @@ public class GestionLaptop extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbtnSSD;
     private javax.swing.JTextArea txaDetalles;
     // End of variables declaration//GEN-END:variables
+
+    private void desactivarPartes() {
+        cbxActivar2.setSelected(false);
+
+        rbtnLi7.setEnabled(false);
+        rbtnLi5.setEnabled(false);
+        rbtnLi3.setEnabled(false);
+        panelLProcesador.setEnabled(false);
+        panelRam.setEnabled(false);
+        cmbRAM.setEnabled(false);
+        panelAlmacenamiento.setEnabled(false);
+        rbtnHDD.setEnabled(false);
+        rbtnSSD.setEnabled(false);
+        panelLProcesador1.setEnabled(false);
+        rbtnL7.setEnabled(false);
+        rbtnL5.setEnabled(false);
+        rbtnL9.setEnabled(false);
+
+        panelBateria.setEnabled(false);
+        rbtnBNo.setEnabled(false);
+        rbtnBSi.setEnabled(false);
+    }
+
+    public boolean mostrarAdvertencia(java.awt.event.ItemEvent evt) {
+        boolean esPichincha = cmbProvincias.getSelectedItem().toString().equals("Pichincha");
+        boolean esGuayas = cmbProvincias.getSelectedItem().toString().equals("Guayas");
+        boolean esAzuay = cmbProvincias.getSelectedItem().toString().equals("Azuay");
+        boolean esLoja = cmbProvincias.getSelectedItem().toString().equals("Loja");
+        boolean tieneTiendas = esPichincha || esGuayas || esAzuay || esLoja;
+        if (!tieneTiendas) {
+            String advertencia = "La provincia seleccionada no tiene tiendas de partes"
+                    + "\nProvincias con tiendas: Pichincha, Azuay, Guayas, Loja";
+            JOptionPane.showMessageDialog(rootPane, advertencia, "Advertencia", JOptionPane.WARNING_MESSAGE);
+            return true;
+        }
+        return false;
+    }
 }
