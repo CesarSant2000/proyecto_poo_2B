@@ -11,12 +11,14 @@ public class RAM extends Producto{
     private String type;
     private double NBFrequency;
 
-    public RAM(int size, String type, double NBFrequency, String tipoComputador, String fabricante, double precio) {
-        super(tipoComputador, fabricante, precio);
+    public RAM(int size, String type, double NBFrequency, String tipoComputador, String fabricante, String tienda, double precio) {
+        super(tipoComputador, fabricante, tienda, precio);
         this.size = size;
         this.type = type;
         this.NBFrequency = NBFrequency;
-    }  
+    }
+
+     
     
     public int getSize() {
         return size;
@@ -28,5 +30,13 @@ public class RAM extends Producto{
 
     public double getNBFrequency() {
         return NBFrequency;
-    }    
+    }   
+    
+    @Override
+    public String toString() {
+        return "Producto: RAM\nTamaño: "+size+"GB\nTipo: "+type+"\nFrecuencia: "
+                +NBFrequency+"\nMarca: "+super.getFabricante()+"\nPrecio: "
+                +super.getPrecio()+"\nTienda: "+super.getTienda()
+                +"\nPara: "+super.tipoComputador+"\n\n";
+    }
 }
