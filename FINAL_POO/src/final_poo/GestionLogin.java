@@ -5,9 +5,13 @@
  */
 package final_poo;
 
+import java.awt.Graphics;
+import java.awt.Image;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 
 /**
@@ -17,13 +21,16 @@ import javax.swing.JOptionPane;
 public class GestionLogin extends javax.swing.JFrame {
 
     ArrayList<Tiendas> tiendas = new ArrayList<>();
-
+    FondoPanel fondo = new FondoPanel();
     /**
      * Creates new form Login
      */
     public GestionLogin() {
         initComponents();
         agregarProductos();
+	this.setContentPane(fondo);
+	
+	initComponents();
     }
 
     public void agregarProductos() {
@@ -225,13 +232,18 @@ public class GestionLogin extends javax.swing.JFrame {
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
                 setTitle("Parts & Bits");
+                setBackground(new java.awt.Color(153, 153, 153));
+                setForeground(java.awt.Color.darkGray);
                 setIconImage(getIconImage());
 
+                cbxEscritorio.setForeground(new java.awt.Color(204, 255, 255));
                 cbxEscritorio.setText("Escritorio");
 
+                cbxLaptop.setForeground(new java.awt.Color(204, 255, 255));
                 cbxLaptop.setText("Laptop");
 
                 btnEntrar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+                btnEntrar.setForeground(new java.awt.Color(102, 102, 102));
                 btnEntrar.setText("ENTRAR");
                 btnEntrar.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -244,6 +256,7 @@ public class GestionLogin extends javax.swing.JFrame {
                 jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/login_Laptop.png"))); // NOI18N
 
                 jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+                jLabel3.setForeground(new java.awt.Color(204, 255, 255));
                 jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
                 jLabel3.setText("PARTS & BITS");
 
@@ -358,4 +371,17 @@ public class GestionLogin extends javax.swing.JFrame {
         private javax.swing.JLabel jLabel2;
         private javax.swing.JLabel jLabel3;
         // End of variables declaration//GEN-END:variables
+
+	class FondoPanel extends JPanel{
+		private Image imagen;
+		@Override
+		public void paint(Graphics g){
+			imagen = new ImageIcon(getClass().getResource("/resources/background.jpg")).getImage();
+			g.drawImage(imagen,0,0, getWidth(),getHeight(),this);
+			
+			setOpaque(false);
+			
+			super.paint(g);
+		}
+	}
 }
