@@ -297,7 +297,7 @@ public class GestionLogin extends javax.swing.JFrame {
 
         private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
             if (cbxEscritorio.isSelected() && cbxLaptop.isSelected()) {
-                GestionAmbas nuevaVentana = new GestionAmbas();
+                GestionAmbas nuevaVentana = new GestionAmbas(tiendas);
                 nuevaVentana.setVisible(true);
                 this.setVisible(false);
             } else if (cbxEscritorio.isSelected() && !cbxLaptop.isSelected()) {

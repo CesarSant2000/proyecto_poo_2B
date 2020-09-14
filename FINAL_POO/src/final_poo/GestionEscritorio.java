@@ -474,6 +474,8 @@ public class GestionEscritorio extends javax.swing.JFrame {
 
         private void cbxProvinciaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxProvinciaItemStateChanged
             // TODO add your handling code here:
+            desactivarPartes();
+            
             if (cbxProvincia.getSelectedItem().equals("Seleccionar")) {
                 // we know that the user picked "Course 1", now change box2 to match
                 // first clear everything
@@ -1335,11 +1337,35 @@ public class GestionEscritorio extends javax.swing.JFrame {
         boolean esLoja = cbxProvincia.getSelectedItem().toString().equals("Loja");
         boolean tieneTiendas = esPichincha || esGuayas || esAzuay || esLoja;
         if (!tieneTiendas) {
-            String advertencia = "La provincia seleccionada no tiene tiendas de partes";
+            String advertencia = "La provincia seleccionada no tiene tiendas de partes"
+                    + "\nProvincias con tiendas: Pichincha, Azuay, Guayas, Loja";
             JOptionPane.showMessageDialog(rootPane, advertencia, "Advertencia", JOptionPane.WARNING_MESSAGE);
             return true;
         }
         return false;
+    }
+
+    public void desactivarPartes() {
+        cbxActivar2.setSelected(false);
+        
+        rbtnEi7.setEnabled(false);
+        rbtnEi5.setEnabled(false);
+        rbtnEi3.setEnabled(false);
+        panelEProcesador.setEnabled(false);
+        rbtnVentilador.setEnabled(false);
+        rbtnLiquida.setEnabled(false);
+        panelVentilacion.setEnabled(false);
+        panelRam.setEnabled(false);
+        cmbRam.setEnabled(false);
+        panelFuente.setEnabled(false);
+        cmbFuente.setEnabled(false);
+        panelAlmacenamiento.setEnabled(false);
+        rbtnHDD.setEnabled(false);
+        rbtnSSD.setEnabled(false);
+        panelEProcesador1.setEnabled(false);
+        rbtnE7.setEnabled(false);
+        rbtnE5.setEnabled(false);
+        rbtnE9.setEnabled(false);
     }
 
     public boolean llenarRAM(String provincia) {
