@@ -258,7 +258,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                                 .addComponent(rbtnLi3))
                 );
 
-                panelLProcesador1.setBorder(javax.swing.BorderFactory.createTitledBorder("Procesador AMD"));
+                panelLProcesador1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Procesador AMD", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(204, 255, 255))); // NOI18N
                 panelLProcesador1.setForeground(new java.awt.Color(204, 255, 255));
                 panelLProcesador1.setEnabled(false);
 
