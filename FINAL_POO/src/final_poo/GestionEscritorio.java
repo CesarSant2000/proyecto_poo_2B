@@ -74,11 +74,11 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 rbtnE9 = new javax.swing.JRadioButton();
                 jPanel2 = new javax.swing.JPanel();
                 btnECotizacion = new javax.swing.JButton();
-                jPanel6 = new FondoPanel();
-                cbxProvincia = new javax.swing.JComboBox<>();
+                panelEProvinciaBuscar = new FondoPanel();
+                cmbProvincia = new javax.swing.JComboBox<>();
                 cbxActivar2 = new javax.swing.JCheckBox();
                 panelEPrearmadas = new FondoPanel();
-                cbxPrearmadaEscritorio = new javax.swing.JComboBox<>();
+                cmbPrearmadaEscritorio = new javax.swing.JComboBox<>();
                 jScrollPane2 = new javax.swing.JScrollPane();
                 txaDetallesEscritorio = new javax.swing.JTextArea();
                 cbxActivar1 = new javax.swing.JCheckBox();
@@ -346,29 +346,29 @@ public class GestionEscritorio extends javax.swing.JFrame {
                         }
                 });
 
-                jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PROVINCIA QUE DESEA BUSCAR", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(204, 255, 255))); // NOI18N
+                panelEProvinciaBuscar.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PROVINCIA QUE DESEA BUSCAR", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(204, 255, 255))); // NOI18N
 
-                cbxProvincia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Azuay", "Bolívar", "Cañar", "Chimborazo", "Cotopaxi", "Esmeraldas", "Guayas", "Imbabura", "Loja", "Los Ríos", "Manabí", "Napo", "Pastaza", "Pichincha", "Santo Domingo de los Tsáchilas", "Tungurahua" }));
-                cbxProvincia.addItemListener(new java.awt.event.ItemListener() {
+                cmbProvincia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar", "Azuay", "Bolívar", "Cañar", "Chimborazo", "Cotopaxi", "Esmeraldas", "Guayas", "Imbabura", "Loja", "Los Ríos", "Manabí", "Napo", "Pastaza", "Pichincha", "Santo Domingo de los Tsáchilas", "Tungurahua" }));
+                cmbProvincia.addItemListener(new java.awt.event.ItemListener() {
                         public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                                cbxProvinciaItemStateChanged(evt);
+                                cmbProvinciaItemStateChanged(evt);
                         }
                 });
 
-                javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-                jPanel6.setLayout(jPanel6Layout);
-                jPanel6Layout.setHorizontalGroup(
-                        jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
+                javax.swing.GroupLayout panelEProvinciaBuscarLayout = new javax.swing.GroupLayout(panelEProvinciaBuscar);
+                panelEProvinciaBuscar.setLayout(panelEProvinciaBuscarLayout);
+                panelEProvinciaBuscarLayout.setHorizontalGroup(
+                        panelEProvinciaBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelEProvinciaBuscarLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(cbxProvincia, 0, 253, Short.MAX_VALUE)
+                                .addComponent(cmbProvincia, 0, 253, Short.MAX_VALUE)
                                 .addContainerGap())
                 );
-                jPanel6Layout.setVerticalGroup(
-                        jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
+                panelEProvinciaBuscarLayout.setVerticalGroup(
+                        panelEProvinciaBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelEProvinciaBuscarLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(cbxProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cmbProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
@@ -383,12 +383,12 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 panelEPrearmadas.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pre-armadas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(204, 255, 255))); // NOI18N
                 panelEPrearmadas.setEnabled(false);
 
-                cbxPrearmadaEscritorio.setForeground(new java.awt.Color(204, 255, 255));
-                cbxPrearmadaEscritorio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar" }));
-                cbxPrearmadaEscritorio.setEnabled(false);
-                cbxPrearmadaEscritorio.addItemListener(new java.awt.event.ItemListener() {
+                cmbPrearmadaEscritorio.setForeground(new java.awt.Color(204, 255, 255));
+                cmbPrearmadaEscritorio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar" }));
+                cmbPrearmadaEscritorio.setEnabled(false);
+                cmbPrearmadaEscritorio.addItemListener(new java.awt.event.ItemListener() {
                         public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                                cbxPrearmadaEscritorioItemStateChanged(evt);
+                                cmbPrearmadaEscritorioItemStateChanged(evt);
                         }
                 });
 
@@ -405,7 +405,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                         panelEPrearmadasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(panelEPrearmadasLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(cbxPrearmadaEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cmbPrearmadaEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())
@@ -417,7 +417,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                                 .addContainerGap())
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEPrearmadasLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(cbxPrearmadaEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cmbPrearmadaEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(76, 76, 76))
                 );
 
@@ -446,7 +446,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(panelEProvinciaBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(125, 125, 125)
                                 .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())
@@ -471,7 +471,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
                                 .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(panelEProvinciaBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -494,553 +494,553 @@ public class GestionEscritorio extends javax.swing.JFrame {
                 pack();
         }// </editor-fold>//GEN-END:initComponents
 
-        private void cbxProvinciaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxProvinciaItemStateChanged
+        private void cmbProvinciaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbProvinciaItemStateChanged
 		// TODO add your handling code here:
 		desactivarPartes();
 
-		if (cbxProvincia.getSelectedItem().equals("Seleccionar")) {
+		if (cmbProvincia.getSelectedItem().equals("Seleccionar")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-		} else if (cbxProvincia.getSelectedItem().equals("Azuay")) {
+			cmbPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+		} else if (cmbProvincia.getSelectedItem().equals("Azuay")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("HP ALL IN ONE 22-B201LA");
-			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i3 MAX");
-			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i7 PLUS");
-			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i7 MAX");
-			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i5 MAX");
-			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i3 PLUS");
-			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i9 ULTRA CREATORS");
-			cbxPrearmadaEscritorio.addItem("CPU GAMER INTEL i9 ULTRA");
-		} else if (cbxProvincia.getSelectedItem().equals("Bolívar")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("HP ALL IN ONE 22-B201LA");
+			cmbPrearmadaEscritorio.addItem("CPU GAMER INTEL i3 MAX");
+			cmbPrearmadaEscritorio.addItem("CPU GAMER INTEL i7 PLUS");
+			cmbPrearmadaEscritorio.addItem("CPU GAMER INTEL i7 MAX");
+			cmbPrearmadaEscritorio.addItem("CPU GAMER INTEL i5 MAX");
+			cmbPrearmadaEscritorio.addItem("CPU GAMER INTEL i3 PLUS");
+			cmbPrearmadaEscritorio.addItem("CPU GAMER INTEL i9 ULTRA CREATORS");
+			cmbPrearmadaEscritorio.addItem("CPU GAMER INTEL i9 ULTRA");
+		} else if (cmbProvincia.getSelectedItem().equals("Bolívar")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
-			cbxPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
-		} else if (cbxProvincia.getSelectedItem().equals("Cañar")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
+			cmbPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
+		} else if (cmbProvincia.getSelectedItem().equals("Cañar")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
-			cbxPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
-		} else if (cbxProvincia.getSelectedItem().equals("Chimborazo")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
+			cmbPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
+		} else if (cmbProvincia.getSelectedItem().equals("Chimborazo")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Pc Intel core 2 duo");
-		} else if (cbxProvincia.getSelectedItem().equals("Cotopaxi")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Pc Intel core 2 duo");
+		} else if (cmbProvincia.getSelectedItem().equals("Cotopaxi")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Cpu Computador Gamer Intel Core I7 9na Gen 1tb 16gb Gtx1650");
-			cbxPrearmadaEscritorio.addItem("Computador Completo Para Hogar Cyber Oficina Core 2");
-			cbxPrearmadaEscritorio.addItem("Pc Cpu Gamer Lenovo Ryzen 7 2tb + 128ssd + 16 Gb + Video 4gb");
-			cbxPrearmadaEscritorio.addItem("CPc Gamer I7 I5 I3 Ryzen 5 7 Video Gtx 1660 2060 570");
-			cbxPrearmadaEscritorio.addItem("Lenovo Intel Core I5 9na 8 Gb + 1 Tb 4.1ghz");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 9na Gen 1tb 4gb Led 20 Computadora");
-			cbxPrearmadaEscritorio.addItem("Cpu Computadora Intel Core I5 8va Gen 1tb 4gb");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
-		} else if (cbxProvincia.getSelectedItem().equals("Esmeraldas")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Cpu Computador Gamer Intel Core I7 9na Gen 1tb 16gb Gtx1650");
+			cmbPrearmadaEscritorio.addItem("Computador Completo Para Hogar Cyber Oficina Core 2");
+			cmbPrearmadaEscritorio.addItem("Pc Cpu Gamer Lenovo Ryzen 7 2tb + 128ssd + 16 Gb + Video 4gb");
+			cmbPrearmadaEscritorio.addItem("CPc Gamer I7 I5 I3 Ryzen 5 7 Video Gtx 1660 2060 570");
+			cmbPrearmadaEscritorio.addItem("Lenovo Intel Core I5 9na 8 Gb + 1 Tb 4.1ghz");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 9na Gen 1tb 4gb Led 20 Computadora");
+			cmbPrearmadaEscritorio.addItem("Cpu Computadora Intel Core I5 8va Gen 1tb 4gb");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
+		} else if (cmbProvincia.getSelectedItem().equals("Esmeraldas")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
-			cbxPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
-		} else if (cbxProvincia.getSelectedItem().equals("Guayas")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
+			cmbPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
+		} else if (cmbProvincia.getSelectedItem().equals("Guayas")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5");
-			cbxPrearmadaEscritorio.addItem("APPLE iMac Intel Core I7");
-			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 3070");
-			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070");
-			cbxPrearmadaEscritorio.addItem("DELL AIO OPTIPLEX 5270");
-			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070 UFF");
-			cbxPrearmadaEscritorio.addItem("DELL AIO Inspiron 5490");
-			cbxPrearmadaEscritorio.addItem("HP ProDesk 400 G6");
-			cbxPrearmadaEscritorio.addItem("HP AIO ProOne 400 G5");
-			cbxPrearmadaEscritorio.addItem("HP EliteDesk 800 G4");
-			cbxPrearmadaEscritorio.addItem("HP EliteDesk 705 G4");
-			cbxPrearmadaEscritorio.addItem("HP ProDesk 400 G6");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("QUASAD AIO Intel Celeron G4930");
-			cbxPrearmadaEscritorio.addItem("QUASAD I7-8700 Z370");
-			cbxPrearmadaEscritorio.addItem("QUASAD AIO T24");
-			cbxPrearmadaEscritorio.addItem("Dell Optiplex 7060");
-			cbxPrearmadaEscritorio.addItem("Dell Optiplex 3060");
-			cbxPrearmadaEscritorio.addItem("Dell Optiplex 3060 SFF");
-			cbxPrearmadaEscritorio.addItem("PBA Torre");
-		} else if (cbxProvincia.getSelectedItem().equals("Imbabura")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5");
+			cmbPrearmadaEscritorio.addItem("APPLE iMac Intel Core I7");
+			cmbPrearmadaEscritorio.addItem("DELL OPTIPLEX 3070");
+			cmbPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070");
+			cmbPrearmadaEscritorio.addItem("DELL AIO OPTIPLEX 5270");
+			cmbPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070 UFF");
+			cmbPrearmadaEscritorio.addItem("DELL AIO Inspiron 5490");
+			cmbPrearmadaEscritorio.addItem("HP ProDesk 400 G6");
+			cmbPrearmadaEscritorio.addItem("HP AIO ProOne 400 G5");
+			cmbPrearmadaEscritorio.addItem("HP EliteDesk 800 G4");
+			cmbPrearmadaEscritorio.addItem("HP EliteDesk 705 G4");
+			cmbPrearmadaEscritorio.addItem("HP ProDesk 400 G6");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("QUASAD AIO Intel Celeron G4930");
+			cmbPrearmadaEscritorio.addItem("QUASAD I7-8700 Z370");
+			cmbPrearmadaEscritorio.addItem("QUASAD AIO T24");
+			cmbPrearmadaEscritorio.addItem("Dell Optiplex 7060");
+			cmbPrearmadaEscritorio.addItem("Dell Optiplex 3060");
+			cmbPrearmadaEscritorio.addItem("Dell Optiplex 3060 SFF");
+			cmbPrearmadaEscritorio.addItem("PBA Torre");
+		} else if (cmbProvincia.getSelectedItem().equals("Imbabura")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
-			cbxPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
-		} else if (cbxProvincia.getSelectedItem().equals("Loja")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
+			cmbPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
+		} else if (cmbProvincia.getSelectedItem().equals("Loja")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("HP EliteDesk 705 G4 AMD Ryzen 5 Pro 2400g 8GB 1TB DW W10-Pro");
-			cbxPrearmadaEscritorio.addItem("HP EliteDesk 800 G4 I7-8700 8GB 1TB DW SFF W10-PRO Black");
-			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070 UFF I7-8565 16GB 256GB-M.2 W10-PRO Black");
-			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070 I7-9700 8GB 1TB DVD WIN10-PRO SFF BLACK");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("DELL OPTIPLEX 3070 I5-9700 4GB 1TB 1W10-PRO SFF BLACK – MONITOR E2020H");
-			cbxPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5 8GB 512GB-SSD 27Inc 5K Retina 4USB3.0 OS Silver");
-			cbxPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5 8GB 256GB-SSD 27Inc 5K Retina 4USB3.0 OS Silve");
-			cbxPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5 8GB 1TB 27Inc 5K Retina 4USB3.0 OS Silver");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL GOLD UBUNTU");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL i3 UBUNTU");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL AMD UBUNTU");
-		} else if (cbxProvincia.getSelectedItem().equals("Los Ríos")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("HP EliteDesk 705 G4 AMD Ryzen 5 Pro 2400g 8GB 1TB DW W10-Pro");
+			cmbPrearmadaEscritorio.addItem("HP EliteDesk 800 G4 I7-8700 8GB 1TB DW SFF W10-PRO Black");
+			cmbPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070 UFF I7-8565 16GB 256GB-M.2 W10-PRO Black");
+			cmbPrearmadaEscritorio.addItem("DELL OPTIPLEX 7070 I7-9700 8GB 1TB DVD WIN10-PRO SFF BLACK");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("DELL OPTIPLEX 3070 I5-9700 4GB 1TB 1W10-PRO SFF BLACK – MONITOR E2020H");
+			cmbPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5 8GB 512GB-SSD 27Inc 5K Retina 4USB3.0 OS Silver");
+			cmbPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5 8GB 256GB-SSD 27Inc 5K Retina 4USB3.0 OS Silve");
+			cmbPrearmadaEscritorio.addItem("APPLE iMac Intel Core I5 8GB 1TB 27Inc 5K Retina 4USB3.0 OS Silver");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL GOLD UBUNTU");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL i3 UBUNTU");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL AMD UBUNTU");
+		} else if (cmbProvincia.getSelectedItem().equals("Los Ríos")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
-			cbxPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
-		} else if (cbxProvincia.getSelectedItem().equals("Manabí")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
+			cmbPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
+		} else if (cmbProvincia.getSelectedItem().equals("Manabí")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Computadora de escritorio Intel Celeron");
-			cbxPrearmadaEscritorio.addItem("Computadora de escritorio Intel i5");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("Computadora de escritorio XTRATECH");
-			cbxPrearmadaEscritorio.addItem("Computadora de escritorio AMD Athlon");
-		} else if (cbxProvincia.getSelectedItem().equals("Napo")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Computadora de escritorio Intel Celeron");
+			cmbPrearmadaEscritorio.addItem("Computadora de escritorio Intel i5");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("Computadora de escritorio XTRATECH");
+			cmbPrearmadaEscritorio.addItem("Computadora de escritorio AMD Athlon");
+		} else if (cmbProvincia.getSelectedItem().equals("Napo")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
-			cbxPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
-		} else if (cbxProvincia.getSelectedItem().equals("Pastaza")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
+			cmbPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
+		} else if (cmbProvincia.getSelectedItem().equals("Pastaza")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
-			cbxPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
-		} else if (cbxProvincia.getSelectedItem().equals("Pichincha")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
+			cmbPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
+		} else if (cmbProvincia.getSelectedItem().equals("Pichincha")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("HOGAR CI3-8");
-			cbxPrearmadaEscritorio.addItem("SEMIPROFESIONAL CI5-8");
-			cbxPrearmadaEscritorio.addItem("PROFESIONAL CI7-16");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR ARMADO I3");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR ARMADO I7");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR ARMADO I3-8VA GEN");
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("HOGAR CI3-8");
+			cmbPrearmadaEscritorio.addItem("SEMIPROFESIONAL CI5-8");
+			cmbPrearmadaEscritorio.addItem("PROFESIONAL CI7-16");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR ARMADO I3");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR ARMADO I7");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR ARMADO I3-8VA GEN");
 
-		} else if (cbxProvincia.getSelectedItem().equals("Santo Domingo de los Tsáchilas")) {
+		} else if (cmbProvincia.getSelectedItem().equals("Santo Domingo de los Tsáchilas")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL GOLD UBUNTU");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL i3 UBUNTU");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL AMD UBUNTU");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
-			cbxPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
-			cbxPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
-		} else if (cbxProvincia.getSelectedItem().equals("Tungurahua")) {
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL GOLD UBUNTU");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL i3 UBUNTU");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL AMD UBUNTU");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
+			cmbPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20");
+			cmbPrearmadaEscritorio.addItem("Cpu Intel Core I5 8va Gen 1tb 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
+		} else if (cmbProvincia.getSelectedItem().equals("Tungurahua")) {
 			// we know that the user picked "Course 1", now change box2 to match
 			// first clear everything
-			cbxPrearmadaEscritorio.removeAllItems();
+			cmbPrearmadaEscritorio.removeAllItems();
 			// now add back relevant values
-			cbxPrearmadaEscritorio.addItem("Seleccionar");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
-			cbxPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
-			cbxPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
-			cbxPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
-			cbxPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
-			cbxPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL GOLD UBUNTU");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL i3 UBUNTU");
-			cbxPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL AMD UBUNTU");
-			cbxPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
+			cmbPrearmadaEscritorio.addItem("Seleccionar");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C000LA/ AMD A6 A6-9225");
+			cmbPrearmadaEscritorio.addItem("Hp AIO 22-C038LA AMD DUAL");
+			cmbPrearmadaEscritorio.addItem("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO CORE I7, 2TB, 16GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP GAMER CORE I9 8VA, RX550 2GB");
+			cmbPrearmadaEscritorio.addItem("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO RYZEN 3 1TB, 8GB");
+			cmbPrearmadaEscritorio.addItem("CPU LENOVO AMD A9, 1tb, 4gb");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original Core i3 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("All in One HP 24 pulg touch, core i5 8va");
+			cmbPrearmadaEscritorio.addItem("CPU Lenovo Core i5 9na, 1tb");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL GOLD UBUNTU");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL i3 UBUNTU");
+			cmbPrearmadaEscritorio.addItem("COMPUTADOR CPU XTRATECH INTEL AMD UBUNTU");
+			cmbPrearmadaEscritorio.addItem("CPU HP Original AMD A8 PRO 7600, 4gb");
 		} else {
 			// ...
 		}
-        }//GEN-LAST:event_cbxProvinciaItemStateChanged
+        }//GEN-LAST:event_cmbProvinciaItemStateChanged
 
-        private void cbxPrearmadaEscritorioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxPrearmadaEscritorioItemStateChanged
+        private void cmbPrearmadaEscritorioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbPrearmadaEscritorioItemStateChanged
 		// TODO add your handling code here:
 
-		if (cbxPrearmadaEscritorio.getSelectedItem() == null) {
+		if (cmbPrearmadaEscritorio.getSelectedItem() == null) {
 			txaDetallesEscritorio.setText("");
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Seleccionar")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Seleccionar")) {
 			txaDetallesEscritorio.setText("");
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HOGAR CI3-8")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("HOGAR CI3-8")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("PcLaptop", "PC HOGAR", "INTEL CORE I3",
 					"1 TB", "8 RAM DDR4", "Webcam + Micrófono",
 					"No Aplica", "20Inc", "DVD WRITER", "INTEL GRAPHICS",
 					"WINDOWS 10 ORIGINAL", "USB 3.0 x 3", "629.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("SEMIPROFESIONAL CI5-8")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("SEMIPROFESIONAL CI5-8")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("PcLaptop", "PC SEMIPROFESIONAL", "INTEL CORE I5",
 					"2 TB", "8 RAM DDR4", "Webcam + Micrófono",
 					"No Aplica", "20Inc", "DVD WRITER", "INTEL GRAPHICS",
 					"WINDOWS 10 ORIGINAL", "USB 3.0 x 3", "749.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("PROFESIONAL CI7-16")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("PROFESIONAL CI7-16")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("PcLaptop", "PC PROFESIONAL", "INTEL CORE I7",
 					"2 TB", "16 RAM DDR4", "Webcam + Micrófono",
 					"No Aplica", "20Inc", "DVD WRITER", "4 GB DEDICADO PCI XPRESS",
 					"WINDOWS 10 ORIGINAL", "USB 3.0 x 3", "1,099.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I3")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I3")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("PcShop", "PCSHOP", "Intel Core I3-9100 - 3.6ghz",
 					"WD 1tb 7200rpm", "Kingston 8gb Ddr4 Pc-2400", "No Incluye",
 					"No Aplica", "LG 19.5", "DVD WRITER", "INTEL GRAPHICS",
 					"WINDOWS 10 ORIGINAL", "USB 3.0 x 3", "560.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I7")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I7")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("PcShop", "PCSHOP", "Intel Core I7-9700 - 3.0ghz",
 					"WD 1tb 7200rpm", "Kingston 8gb Ddr4 Pc-2400", "No Incluye",
 					"No Aplica", "LG 19.5", "DVD WRITER", "INTEL GRAPHICS",
 					"WINDOWS 10 ORIGINAL", "USB 3.0 x 3", "899.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I3-8VA GEN")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR ARMADO I3-8VA GEN")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("PcShop", "PCSHOP", "Intel Core I3-8100 - 3.6ghz",
 					"WD 1tb 7200rpm", "Adata 4gb Pc-2400 Ddr4", "No Incluye",
 					"No Aplica", "HP 18.5", "DVD WRITER", "INTEL GRAPHICS",
 					"WINDOWS 10 ORIGINAL", "USB 3.0 x 3", "516.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "Apple", "Intel Core I5",
 					"512GB-SSD", "8GB", "Si",
 					"No Aplica", "27Inc 5K Retina", "DVD WRITER", "INTEL GRAPHICS",
 					"Mac OS", "USB 3.0 x 4", "2,726.67"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I7")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I7")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "Apple", "Intel Core I7",
 					"512GB-SSD", "8GB", "Si",
 					"No Aplica", "27Inc 5K Retina", "DVD WRITER", "INTEL GRAPHICS",
 					"Mac OS", "USB 3.0 x 4", "3,128.89"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 3070")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 3070")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "Dell", "Intel Core I5-9700",
 					"512GB-SSD", "4GB", "Si",
 					"No Aplica", "MONITOR E2020H 20.5", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 6", "886.67"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "Dell", "Intel Core I7-8565",
 					"256GB-M.2", "16GB", "Si",
 					"No Aplica", "MONITOR E2020H 20.5", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 6", "1,272.22"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL AIO OPTIPLEX 5270")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("DELL AIO OPTIPLEX 5270")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "Dell", "Intel Core I5-9500",
 					"256GB-M.2", "8GB", "No Incluye",
 					"No Aplica", "DELL 20.5", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 5", "1,041.11"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070 UFF")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070 UFF")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "Dell", "Intel Core I5-8250",
 					"256GB-SDD", "8GB", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 6", "994.44"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL AIO Inspiron 5490")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("DELL AIO Inspiron 5490")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "Dell", "Intel Core I5-10210U",
 					"1TB HDD", "12GB", "Si",
 					"No Aplica", "23.8 TOUCH", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 3", "1,133.33"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ProDesk 400 G6")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("HP ProDesk 400 G6")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "HP", "Intel Core I7-9700",
 					"1TB HDD", "8GB", "Si",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 3", "716.67"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP AIO ProOne 400 G5")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("HP AIO ProOne 400 G5")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "HP", "Intel Core I7-9700",
 					"1TB HDD", "8GB", "Si",
 					"No Aplica", "23.8Inc", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.1 x 2", "887.78"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 800 G4")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 800 G4")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "HP", "Intel Core I7-8700",
 					"1TB HDD", "8GB", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.1 x 5", "1,165.56"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 705 G4")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 705 G4")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "HP", "AMD Ryzen 5 Pro 2400g",
 					"1TB HDD", "8GB", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "Radeon",
 					" WIndows 10 PRO", "USB 3.1 x 5", "1,082.22"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ProDesk 400 G6")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("HP ProDesk 400 G6")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "HP", "Intel Core I7-9700",
 					"1TB HDD", "8GB", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 2", "964.44"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("QUASAD AIO Intel Celeron G4930")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("QUASAD AIO Intel Celeron G4930")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "QUASAD", "Intel Celeron G4930",
 					"256GB-SSD", "8GB", "Si",
 					"No Aplica", "23.8Inc", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 3", "480.21"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("QUASAD I7-8700 Z370")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("QUASAD I7-8700 Z370")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "QUASAD", "Intel Core I7-8700",
 					"1TB", "8GB", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 6", "929.74"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("QUASAD AIO T24")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("QUASAD AIO T24")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Tecnomega Storep", "QUASAD", "Intel Core I7-7700",
 					"240GB SSD", "8GB", "Si",
 					"No Aplica", "23.8Inc", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 3", "1,073.19"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 7060")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 7060")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("TecnoSmart", "Dell", "Intel Core i5 8500",
 					"1TB HDD", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 4", "1,094.99"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 3060")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 3060")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("TecnoSmart", "Dell", "Intel Core i5 8400",
 					"1TB HDD", "4GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 4", "889.99"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 3060 SFF")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Dell Optiplex 3060 SFF")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("TecnoSmart", "Dell", "Intel Core i5 8400",
 					"500GB SSD", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 10 PRO", "USB 3.0 x 4", "964.99"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("PBA Torre")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("PBA Torre")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("TecnoSmart", "Dell", "AMD Ryzen 7 3700x",
 					"1TB HDD", "16GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "GTX 1650 SUPER 4GB",
 					" WIndows 10 PRO", "USB 3.1 x 6", "1,264.99"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP ALL IN ONE 22-B201LA")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("HP ALL IN ONE 22-B201LA")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Computadoras De Venta", "Hp", "AMD Quad-Core A6-7310",
 					"1TB HDD", "4 GB de DRAM DDR3", "No Incluye",
 					"No Aplica", "21,5Inc", "DVD WRITER", "Radeon™ R4",
 					" WIndows 10", "USB 3.1 x 2", "580.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i3 MAX")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i3 MAX")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC", "New Era", "Intel Core i3 9100F",
 					"1TB HDD", "8 GB de DRAM DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "GTX 1030 2GB",
 					" WIndows 10", "USB 3.1 x 4", "700.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i7 PLUS")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i7 PLUS")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC", "New Era", "Intel Core i7 10700",
 					"2TB HDD + 128GB SSD", "16 GB de DRAM DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "GTX 1660 SUPER 6GB",
 					" WIndows 10", "USB 3.1 x 6", "1600.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i7 MAX")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i7 MAX")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC", "New Era", "Intel Core i3 9700F",
 					"1TB HDD + 128GB SSD", "16 GB de DRAM DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "GTX 1650 SUPER 4GB",
 					" WIndows 10", "USB 3.1 x 4", "1300.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i5 MAX")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i5 MAX")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC", "New Era", "Intel Core i5 9400F",
 					"480GB SSD", "8 GB de DRAM DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "GTX 1650 SUPER 4GB",
 					" WIndows 10", "USB 3.1 x 4", "900.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i3 PLUS")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i3 PLUS")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC", "New Era", "Intel Core i3 10100",
 					"1TB HDD + 240GB SSD", "8 GB de DRAM DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "GTX 1030 2GB",
 					" WIndows 10", "USB 3.1 x 4", "800.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i9 ULTRA CREATORS")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i9 ULTRA CREATORS")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC", "New Era", "Intel Core i9 9900k",
 					"2TB HDD + 128GB SSD M.2", "32 GB de DRAM DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "RTX 2070 SUPER 8GB",
 					" WIndows 10 PRO", "USB 3.1 x 6", "3000.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i9 ULTRA")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU GAMER INTEL i9 ULTRA")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("CompuPlucEC", "New Era", "Intel Core i9 9900k",
 					"2TB HDD + 128GB SSD M.2", "16 GB de DRAM DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "RTX 2060 SUPER 8GB",
 					" WIndows 10 PRO", "USB 3.1 x 6", "2500.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Pc Intel core 2 duo")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Pc Intel core 2 duo")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("SERVICOMPU", "Dell", "Intel core 2 duo",
 					"64GB HDD", "2 GB de DRAM DDR2", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					" WIndows 8.1", "USB 2.0 x 3", "249.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computador Completo Para Hogar Cyber Oficina Core 2")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Computador Completo Para Hogar Cyber Oficina Core 2")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("PUERTO LIBRE", "Dell", "Intel core 2 duo 3.0ghz",
 					"160GB HDD", "2 GB de DRAM DDR2", "No Incluye",
 					"No Aplica", "15Inc", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 Home", "USB 2.0 x 3", "130.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Pc Cpu Gamer Lenovo Ryzen 7 2tb + 128ssd + 16 Gb + Video 4gb")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Pc Cpu Gamer Lenovo Ryzen 7 2tb + 128ssd + 16 Gb + Video 4gb")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("PUERTO LIBRE", "LENOVO", "AMD Ryzen 7 2700",
 					"2TB HDD", "16 GB de DRAM DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "AMD Radeon ™ RX 560 4GB",
 					"Windows 10 Home", "USB 3.0 x 3", "979.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPc Gamer I7 I5 I3 Ryzen 5 7 Video Gtx 1660 2060 570")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPc Gamer I7 I5 I3 Ryzen 5 7 Video Gtx 1660 2060 570")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("DIGITAL", "Sin Marca", "AMD Ryzen 3 2300",
 					"1TB HDD", "4 GB de DRAM DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "Graficos Integrados",
 					"Windows 10 Home", "USB 3.0 x 3", "429.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Lenovo Intel Core I5 9na 8 Gb + 1 Tb 4.1ghz")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Lenovo Intel Core I5 9na 8 Gb + 1 Tb 4.1ghz")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("PUERTO LIBRE", "Sin Marca", "Intel Core i5-9400 2.90GHz, hasta 4.10GHz con Turbo Boost, 6 núcleo, 9 MB Cache",
 					"1 TB HDD 7200 RPM", "8 GB DDR4 2666 MHz", "No Incluye",
@@ -1054,7 +1054,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 					+ "7-1 lector de tarjetas multimedia\n"
 					+ "2 x conector de micrófono (1 posterior / 1 frontal)\n"
 					+ "2 x auriculares", "679.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Cpu Intel Core I5 9na Gen 1tb 4gb Led 20 Computadora")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Cpu Intel Core I5 9na Gen 1tb 4gb Led 20 Computadora")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Gold Buyer", "Sin Marca", "Intel Core i5-9400 2.90GHz",
 					"1 TB HDD 7200 RPM", "4 GB DDR4", "No Incluye",
@@ -1065,7 +1065,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 					+ "7-1 lector de tarjetas multimedia\n"
 					+ "2 x conector de micrófono (1 posterior / 1 frontal)\n"
 					+ "2 x auriculares", "525.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Cpu Computadora Intel Core I5 8va Gen 1tb 4gb")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Cpu Computadora Intel Core I5 8va Gen 1tb 4gb")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Gold Buyer", "Sin Marca", "Intel Core I5-8400 8va",
 					"1 TB HDD 7200 RPM", "4 GB DDR4", "No Incluye",
@@ -1073,7 +1073,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 					"Windows 10 Home", "6 Puertos USB\n"
 					+ "Teclado USB\n"
 					+ "Mouse USB", "385.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Gold Buyer", "Sin Marca", "Intel Core I5-8400 8va",
 					"1 TB HDD 7200 RPM", "4 GB DDR4", "No Incluye",
@@ -1081,7 +1081,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 					"Windows 10 Home", "7 Puertos USB\n"
 					+ "Teclado USB\n"
 					+ "Mouse USB", "475.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Cpu Intel Core I5 8va Gen 1tb 4gb Led 20")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Gold Buyer", "Sin Marca", "Intel Core I5-8400 8va",
 					"1 TB HDD 7200 RPM", "4 GB DDR4", "No Incluye",
@@ -1089,169 +1089,169 @@ public class GestionEscritorio extends javax.swing.JFrame {
 					"Windows 10 Home", "7 Puertos USB\n"
 					+ "Teclado USB\n"
 					+ "Mouse USB", "375.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 705 G4 AMD Ryzen 5 Pro 2400g 8GB 1TB DW W10-Pro")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 705 G4 AMD Ryzen 5 Pro 2400g 8GB 1TB DW W10-Pro")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Toners", "HP", "AMD Ryzen 5 Pro 2400g",
 					"1 TB HDD 7200 RPM", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "Radeon",
 					"Windows 10 Home", "No especifica informacion", "1,198.02"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 800 G4 I7-8700 8GB 1TB DW SFF W10-PRO Black")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("HP EliteDesk 800 G4 I7-8700 8GB 1TB DW SFF W10-PRO Black")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Toners", "HP", "Intel Core I7-8700",
 					"1 TB HDD 7200 RPM", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 Home", "USB 3.0 x 4", "1,342.72"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070 UFF I7-8565 16GB 256GB-M.2 W10-PRO Black")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070 UFF I7-8565 16GB 256GB-M.2 W10-PRO Black")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Toners", "DELL", "Intel Core I7-8565",
 					"1 TB HDD 7200 RPM + 256GB-M.2", "16GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 PRO", "USB 3.0 x 5", "1,408.35"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070 I7-9700 8GB 1TB DVD WIN10-PRO SFF BLACK")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 7070 I7-9700 8GB 1TB DVD WIN10-PRO SFF BLACK")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Toners", "DELL", "Intel Core I7-9700",
 					"1 TB HDD 7200 RPM", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 PRO", "USB 3.0 x 5", "1,227.52"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 3070 I5-9700 4GB 1TB 1W10-PRO SFF BLACK – MONITOR E2020H")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("DELL OPTIPLEX 3070 I5-9700 4GB 1TB 1W10-PRO SFF BLACK – MONITOR E2020H")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Toners", "DELL", "Intel Core I5-9500",
 					"1 TB HDD 7200 RPM", "4GB DDR4", "No Incluye",
 					"No Aplica", "MONITOR E2020H", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 PRO", "USB 3.0 x 5", "1,021.44"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5 8GB 512GB-SSD 27Inc 5K Retina 4USB3.0 OS Silver")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5 8GB 512GB-SSD 27Inc 5K Retina 4USB3.0 OS Silver")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Toners", "APPLE", "Intel Core I5-9500",
 					"512GB SSD", "8GB DDR4", "Si",
 					"No Aplica", "27Inc 5K Retina", "DVD WRITER", "INTEL GRAPHICS",
 					"MacOS", "4USB3.0", "3,141.12"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5 8GB 256GB-SSD 27Inc 5K Retina 4USB3.0 OS Silver")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5 8GB 256GB-SSD 27Inc 5K Retina 4USB3.0 OS Silver")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Toners", "APPLE", "Intel Core I5-9500",
 					"256GB SSD", "8GB DDR4", "Si",
 					"No Aplica", "27Inc 5K Retina", "DVD WRITER", "INTEL GRAPHICS",
 					"MacOS", "4USB3.0", "2,705.92"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5 8GB 1TB 27Inc 5K Retina 4USB3.0 OS Silver")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("APPLE iMac Intel Core I5 8GB 1TB 27Inc 5K Retina 4USB3.0 OS Silver")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Toners", "APPLE", "Intel Core I5-9500",
 					"1TB HDD", "8GB DDR4", "Si",
 					"No Aplica", "27Inc 5K Retina", "DVD WRITER", "INTEL GRAPHICS",
 					"MacOS", "4USB3.0", "2,540.80"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR CPU XTRATECH INTEL GOLD UBUNTU")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR CPU XTRATECH INTEL GOLD UBUNTU")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Toners", "XTRATECH", "Intel Pentium Gold",
 					"1TB HDD", "4GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					"Ubuntu", "USB3.0 x 3", "358.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR CPU XTRATECH INTEL i3 UBUNTU")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR CPU XTRATECH INTEL i3 UBUNTU")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Toners", "XTRATECH", "INTEL CORE I3-9100F 3.6GHZ",
 					"1TB HDD", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "ASUS 1GB",
 					"Ubuntu", "USB3.0 x 3", "358.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR CPU XTRATECH INTEL AMD UBUNTU")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("COMPUTADOR CPU XTRATECH INTEL AMD UBUNTU")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Toners", "XTRATECH", "AMD E1-6010 DUAL-CORE",
 					"1TB HDD", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "Radeon Graphics",
 					"Ubuntu", "USB3.1 x 3", "358.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio Intel Celeron")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio Intel Celeron")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Compulaser", "Sin Marca", "Intel Celeron Core i3 de 9na Generación",
 					"1TB HDD", "8GB DDR4", "No Incluye",
 					"No Aplica", "20Inc", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10", "USB3.1 x 3 \n Teclado \n Mouse", "749.99"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio Intel i5")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio Intel i5")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Compulaser", "Sin Marca", "Intel Core i5 de 9na Generación",
 					"1TB HDD", "8GB DDR4", "Si",
 					"No Aplica", "20Inc", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10", "USB3.1 x 3 \n Teclado \n Mouse", "824.99"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio XTRATECH")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio XTRATECH")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Compulaser", "Sin Marca", "AMD Athlon 3000G 3.5 Ghz",
 					"1TB HDD", "4GB DDR4", "Si",
 					"No Aplica", "20Inc", "DVD WRITER", "Radeon",
 					"Windows 10", "USB3.1 x 3 \n Teclado \n Mouse", "516.99"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio AMD Athlon")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Computadora de escritorio AMD Athlon")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Compulaser", "Sin Marca", "AMD Athlon 3000G 3.5 Ghz",
 					"1TB HDD", "4GB DDR4", "Si",
 					"No Aplica", "20Inc", "DVD WRITER ", "Radeon",
 					"Windows 10", "USB3.1 x 3 \n Teclado \n Mouse", "690.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Hp AIO 22-C000LA/ AMD A6 A6-9225")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Hp AIO 22-C000LA/ AMD A6 A6-9225")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("BestPC", "HP", "AMD A6-9225",
 					"1TB HDD", "4GB DDR4", "Si",
 					"No Aplica", "21,5Inc LED", "DVD WRITER", "Radeon",
 					"Windows 10 Home", "USB3.1 x 3", "650.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Hp AIO 22-C038LA AMD DUAL")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Hp AIO 22-C038LA AMD DUAL")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("BestPC", "HP", "AMD A6-9225",
 					"1TB HDD + 256 GB SSD", "4GB DDR4", "Si",
 					"No Aplica", "21,5Inc LED", "DVD WRITER", "Radeon",
 					"Windows 10 Home", "USB3.0 x 3", "717,76"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("Cpu Xtratech Intel Core I5 DISCO 1TB / 8GB RAM")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("BestPC", "Xtratech", "INTEL CORE I5-7400 TO 3.5GHZ",
 					"1TB HDD", "8GB DDR4", "Si",
 					"No Aplica", "21,5Inc LED", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 Home", "USB3.0 x 6", "642.94"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU LENOVO CORE I7, 2TB, 16GB")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU LENOVO CORE I7, 2TB, 16GB")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Novicompu", "Lenovo", "INTEL CORE i7 8700k",
 					"2TB HDD", "16GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 Home", "USB3.0 x 6", "895.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU HP ORIGINAL Celeron 8VA, 1TB, 4GB")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Novicompu", "HP", "Intel Celeron 8va",
 					"1TB HDD", "4GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 Home", "USB3.0 x 6", "459.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU HP GAMER CORE I9 8VA, RX550 2GB")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU HP GAMER CORE I9 8VA, RX550 2GB")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Novicompu", "HP", "Intel Core i9 8va",
 					"4TB HDD", "16GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "RX550 2GB",
 					"Windows 10 Home", "USB3.0 x 6", "3499.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU HP ORIGINAL CORE I3 8VA, 1TB, 8GB")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Novicompu", "HP", "Intel Core i3 8va",
 					"1TB HDD", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 Home", "USB3.0 x 6", "485.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU LENOVO RYZEN 3 1TB, 8GB")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU LENOVO RYZEN 3 1TB, 8GB")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Novicompu", "Lenovo", "RYZEN 3 2200G 3.5GHZ",
 					"1TB HDD", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "AMD RADEON VEGA 8",
 					"Windows 10 Home", "USB3.0 x 6", "440.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU LENOVO AMD A9, 1tb, 4gb")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU LENOVO AMD A9, 1tb, 4gb")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Novicompu", "Lenovo", "AMD A9",
 					"1TB HDD", "4GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "AMD RADEON",
 					"Windows 10 Home", "USB3.0 x 6 \n Bluetooth", "275.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU HP Original Core i3 9na, 1tb")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU HP Original Core i3 9na, 1tb")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Novicompu", "HP", "Intel Core i3 9na generacion",
 					"1TB HDD + 128GB SSD", "8GB DDR4", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 Home", "USB3.0 x 4", "535.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("All in One HP 24 pulg touch, core i5 8va")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("All in One HP 24 pulg touch, core i5 8va")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Novicompu", "HP", "Intel Core i5 8na generacion",
 					"1TB HDD", "8GB DDR4 + 16GB Optane", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 Home", "USB3.0 x 2", "960.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU Lenovo Core i5 9na, 1tb")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU Lenovo Core i5 9na, 1tb")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Novicompu", "Lenovo", "Intel Core i5 9na generacion",
 					"256GB SSD", "12GB DDR4 + 16GB Optane", "No Incluye",
 					"No Aplica", "No Incluye", "DVD WRITER", "INTEL GRAPHICS",
 					"Windows 10 Home", "USB3.0 x 2", "677.00"));
-		} else if (cbxPrearmadaEscritorio.getSelectedItem().equals("CPU Lenovo Core i5 9na, 1tb")) {
+		} else if (cmbPrearmadaEscritorio.getSelectedItem().equals("CPU Lenovo Core i5 9na, 1tb")) {
 			txaDetallesEscritorio.setText(
 				llenarPreArmadas("Novicompu", "Lenovo", "Intel Core i5 9na generacion",
 					"256GB SSD", "12GB DDR4 + 16GB Optane", "No Incluye",
@@ -1260,7 +1260,7 @@ public class GestionEscritorio extends javax.swing.JFrame {
 		} else {
 			txaDetallesEscritorio.setText("Escoja una computadora");
 		}
-        }//GEN-LAST:event_cbxPrearmadaEscritorioItemStateChanged
+        }//GEN-LAST:event_cmbPrearmadaEscritorioItemStateChanged
 
     private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
 	    GestionLogin nuevaVentana = new GestionLogin();
@@ -1318,17 +1318,17 @@ public class GestionEscritorio extends javax.swing.JFrame {
         private void cbxActivar1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxActivar1ItemStateChanged
 		// TODO add your handling code here:
 		if (evt.getStateChange() == ItemEvent.SELECTED) {
-			cbxPrearmadaEscritorio.setEnabled(true);
+			cmbPrearmadaEscritorio.setEnabled(true);
 			panelEPrearmadas.setEnabled(true);
 		} else if (evt.getStateChange() == ItemEvent.DESELECTED) {
-			cbxPrearmadaEscritorio.setEnabled(false);
+			cmbPrearmadaEscritorio.setEnabled(false);
 			panelEPrearmadas.setEnabled(false);
 		}
         }//GEN-LAST:event_cbxActivar1ItemStateChanged
 
     private void btnECotizacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnECotizacionActionPerformed
-	    if (cbxProvincia.getSelectedIndex() != 0) {
-		    String provincia = cbxProvincia.getSelectedItem().toString();
+	    if (cmbProvincia.getSelectedIndex() != 0) {
+		    String provincia = cmbProvincia.getSelectedItem().toString();
 		    boolean RAMSeleccionada = llenarRAM(provincia);
 		    boolean almacenamientoSeleccionado = llenarAlmacenamiento(provincia);
 		    boolean procesadorSeleccionado = llenarProcesador(provincia);
@@ -1353,10 +1353,10 @@ public class GestionEscritorio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnECotizacionActionPerformed
 
 	public boolean mostrarAdvertencia(java.awt.event.ItemEvent evt) {
-		boolean esPichincha = cbxProvincia.getSelectedItem().toString().equals("Pichincha");
-		boolean esGuayas = cbxProvincia.getSelectedItem().toString().equals("Guayas");
-		boolean esAzuay = cbxProvincia.getSelectedItem().toString().equals("Azuay");
-		boolean esLoja = cbxProvincia.getSelectedItem().toString().equals("Loja");
+		boolean esPichincha = cmbProvincia.getSelectedItem().toString().equals("Pichincha");
+		boolean esGuayas = cmbProvincia.getSelectedItem().toString().equals("Guayas");
+		boolean esAzuay = cmbProvincia.getSelectedItem().toString().equals("Azuay");
+		boolean esLoja = cmbProvincia.getSelectedItem().toString().equals("Loja");
 		boolean tieneTiendas = esPichincha || esGuayas || esAzuay || esLoja;
 		if (!tieneTiendas) {
 			String advertencia = "La provincia seleccionada no tiene tiendas de partes"
@@ -1551,18 +1551,18 @@ public class GestionEscritorio extends javax.swing.JFrame {
         private javax.swing.JButton btnInicio;
         private javax.swing.JCheckBox cbxActivar1;
         private javax.swing.JCheckBox cbxActivar2;
-        private javax.swing.JComboBox<String> cbxPrearmadaEscritorio;
-        private javax.swing.JComboBox<String> cbxProvincia;
         private javax.swing.JComboBox<String> cmbFuente;
+        private javax.swing.JComboBox<String> cmbPrearmadaEscritorio;
+        private javax.swing.JComboBox<String> cmbProvincia;
         private javax.swing.JComboBox<String> cmbRam;
         private javax.swing.JPanel jPanel1;
         private javax.swing.JPanel jPanel2;
-        private javax.swing.JPanel jPanel6;
         private javax.swing.JScrollPane jScrollPane2;
         private javax.swing.JPanel panelAlmacenamiento;
         private javax.swing.JPanel panelEPrearmadas;
         private javax.swing.JPanel panelEProcesador;
         private javax.swing.JPanel panelEProcesador1;
+        private javax.swing.JPanel panelEProvinciaBuscar;
         private javax.swing.JPanel panelFuente;
         private javax.swing.JPanel panelRam;
         private javax.swing.JPanel panelVentilacion;
