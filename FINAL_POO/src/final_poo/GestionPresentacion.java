@@ -26,11 +26,11 @@ public class GestionPresentacion extends javax.swing.JFrame {
 
     public void presentarProductos() {
         if (productosDeseados.isEmpty()) {
-            jTextArea1.setText("Lo sentimos. No existen productos con esas caracteristicas");
+            txaPresentacion.setText("Lo sentimos. No existen productos con esas caracteristicas");
         } else {
-            jTextArea1.setText("RESULTADOS DE SU BUSQUEDA:\n\n");
+            txaPresentacion.setText("RESULTADOS DE SU BUSQUEDA:\n\n");
             for (Producto productoDeseado : productosDeseados) {
-                jTextArea1.append(productoDeseado.toString());
+                txaPresentacion.append(productoDeseado.toString());
             }
         }
 
@@ -46,18 +46,18 @@ public class GestionPresentacion extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txaPresentacion = new javax.swing.JTextArea();
         btnInicio = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        lblPartsBits = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jScrollPane1.setEnabled(false);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txaPresentacion.setEditable(false);
+        txaPresentacion.setColumns(20);
+        txaPresentacion.setRows(5);
+        jScrollPane1.setViewportView(txaPresentacion);
 
         btnInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/home.png"))); // NOI18N
         btnInicio.setMaximumSize(new java.awt.Dimension(50, 50));
@@ -70,9 +70,9 @@ public class GestionPresentacion extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("PARTS & BITS");
+        lblPartsBits.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        lblPartsBits.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPartsBits.setText("PARTS & BITS");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,7 +84,7 @@ public class GestionPresentacion extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblPartsBits, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(116, 116, 116)
                         .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -95,7 +95,7 @@ public class GestionPresentacion extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(lblPartsBits))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 691, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -147,8 +147,8 @@ public class GestionPresentacion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInicio;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblPartsBits;
+    private javax.swing.JTextArea txaPresentacion;
     // End of variables declaration//GEN-END:variables
 }
