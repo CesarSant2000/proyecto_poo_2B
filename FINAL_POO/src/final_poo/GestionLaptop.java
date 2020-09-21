@@ -447,6 +447,7 @@ public class GestionLaptop extends javax.swing.JFrame {
                 );
 
                 pack();
+                setLocationRelativeTo(null);
         }// </editor-fold>//GEN-END:initComponents
 
 	private String llenarPreArmadas(String tienda, String marca, String procesador, String disco, String memoria, String webcam, String bateria, String pantalla, String unidad, String video, String so, String puertos, String precio) {
